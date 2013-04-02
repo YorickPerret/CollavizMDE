@@ -7,25 +7,19 @@ using collaviz::SupportedObject
 using VisitorMondePackage::*
 using Generator::WorldGenerator
 using kermeta::io::FileIO
-using ecore
+using Helper::*
 
 package mainPackage{
 	class MainGenerator
 	{
-
-		operation loadModel(uri : String) : Collaviz is do
-			var repository : ResourceSet init ResourceSet.new
-			var resource : Resource init repository.createResource(uri)
-			resource.load(void)
-			result ?= resource.getContents.one
-		end
 		
 		@main "" // declares that operation as a possible entry point of the program
 		operation mainOperation(uriModel : String, nameWorld : String) : Void is do 
 			//chargement du model
 			stdio.writeln("loading model")						
 			var c : Collaviz
-			c ?= loadModel(uriModel)
+			var helper : CollavizHelper init CollavizHelper.new
+			c ?= helper.loadModel(uriModel)
 			var visitor : VisitorInterface init VisitorCollaviz.new
 			if c!= void then
 				stdio.writeln("load model success")

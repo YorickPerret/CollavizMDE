@@ -15,5 +15,8 @@ project CollavizKermeta2 {
 	import "${project.baseUri}/src/main/kmt/Helper/CollavizHelper.kmt"
 	import "${project.baseUri}/src/main/kmt/Constraint.kmt"
 	import "${project.baseUri}/src/main/kmt/JavaGenerator/Generator.kmt"
+	import "${project.baseUri}/src/main/kmt/JavaGenerator/ControllerGenerator.kmt"
+	import "${project.baseUri}/src/main/kmt/JavaGenerator/MainJavaGenerator.kmt"
+	import "${project.baseUri}/src/main/kmt/JavaGenerator/GeneratorComposite.kmt"
 
 }

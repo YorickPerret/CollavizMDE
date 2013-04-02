@@ -1,222 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <org_kermeta_language_structure:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org_kermeta_language_behavior="http://www.kermeta.org/kermeta/2_1_0//org/kermeta/language/behavior" xmlns:org_kermeta_language_structure="http://www.kermeta.org/kermeta/2_1_0//org/kermeta/language/structure">
   <packages kTag="//@packages.0/@kOwnedTags.0" name="mainPackage">
-    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;279;1438" object="//@packages.0"/>
+    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;283;1267" object="//@packages.0"/>
     <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.0/@kOwnedTags.0" name="MainGenerator">
-      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;301;1436" object="//@packages.0/@ownedTypeDefinition.0"/>
-      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@kOwnedTags.0" name="loadModel" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@containedType.0" isOrdered="true">
-        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;327;566" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0"/>
-        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Collaviz">
-          <usings fromQName="kermeta::standard::*" toName=""/>
-          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-          <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-          <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-          <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-          <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-          <usings fromQName="VisitorMondePackage::*" toName=""/>
-          <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-          <usings fromQName="ecore" toName="ecore"/>
-        </containedType>
-        <ownedParameter name="uri" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@ownedParameter.0/@containedType.0" isOrdered="true">
-          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
-            <usings fromQName="kermeta::standard::*" toName=""/>
-            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-            <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-            <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-            <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-            <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-            <usings fromQName="VisitorMondePackage::*" toName=""/>
-            <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-            <usings fromQName="ecore" toName="ecore"/>
-          </containedType>
-        </ownedParameter>
-        <body xsi:type="org_kermeta_language_behavior:Block" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@kOwnedTags.0">
-          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;375;566" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body"/>
-          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@kOwnedTags.0" identifier="repository">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;381;434" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0"/>
-            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization/@kOwnedTags.1" name="new">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;426;434" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;415;434" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization"/>
-              <usings fromQName="kermeta::standard::*" toName=""/>
-              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-              <usings fromQName="VisitorMondePackage::*" toName=""/>
-              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization/@target/@kOwnedTags.0" name="ResourceSet">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;415;426" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@initialization/@target"/>
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-              </target>
-            </initialization>
-            <type name="ResourceSet" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@type/@containedType.0" isOrdered="true">
-              <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ResourceSet">
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-              </containedType>
-            </type>
-          </statement>
-          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@kOwnedTags.0" identifier="resource">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;434;497" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1"/>
-            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@kOwnedTags.1" name="createResource" isCalledWithParenthesis="true">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;473;497" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;463;497" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization"/>
-              <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@parameters.0/@kOwnedTags.1" name="uri">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;489;492" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@parameters.0"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;489;492" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@parameters.0"/>
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-              </parameters>
-              <usings fromQName="kermeta::standard::*" toName=""/>
-              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-              <usings fromQName="VisitorMondePackage::*" toName=""/>
-              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@target/@kOwnedTags.0" name="repository">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;463;473" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@initialization/@target"/>
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-              </target>
-            </initialization>
-            <type name="Resource" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@type/@containedType.0" isOrdered="true">
-              <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Resource">
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-              </containedType>
-            </type>
-          </statement>
-          <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@kOwnedTags.1" name="load" isCalledWithParenthesis="true">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;505;520" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;497;520" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
-            <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@parameters.0/@kOwnedTags.1">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;511;515" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@parameters.0"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;511;515" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@parameters.0"/>
-            </parameters>
-            <usings fromQName="kermeta::standard::*" toName=""/>
-            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-            <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-            <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-            <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-            <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-            <usings fromQName="VisitorMondePackage::*" toName=""/>
-            <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-            <usings fromQName="ecore" toName="ecore"/>
-            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@target/@kOwnedTags.0" name="resource">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;497;505" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@target"/>
-              <usings fromQName="kermeta::standard::*" toName=""/>
-              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-              <usings fromQName="VisitorMondePackage::*" toName=""/>
-              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-            </target>
-          </statement>
-          <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@kOwnedTags.0" isCast="true">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;520;557" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3"/>
-            <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@target/@kOwnedTags.0">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;520;527" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@target"/>
-            </target>
-            <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@kOwnedTags.0" name="one">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;550;557" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value"/>
-              <usings fromQName="kermeta::standard::*" toName=""/>
-              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-              <usings fromQName="VisitorMondePackage::*" toName=""/>
-              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target/@kOwnedTags.0" name="getContents">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;538;550" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target"/>
-                <usings fromQName="kermeta::standard::*" toName=""/>
-                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                <usings fromQName="VisitorMondePackage::*" toName=""/>
-                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target/@target/@kOwnedTags.0" name="resource">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;530;538" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target/@target"/>
-                  <usings fromQName="kermeta::standard::*" toName=""/>
-                  <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                  <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-                  <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-                  <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-                  <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-                  <usings fromQName="VisitorMondePackage::*" toName=""/>
-                  <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-                  <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
-                </target>
-              </target>
-            </value>
-          </statement>
-        </body>
-      </ownedOperation>
-      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@kOwnedTags.1" name="mainOperation" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@containedType.0" isOrdered="true">
-        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;645;1434" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1"/>
-        <kOwnedTags name="main" value="" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1"/>
+      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;305;1265" object="//@packages.0/@ownedTypeDefinition.0"/>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@kOwnedTags.1" name="mainOperation" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;412;1263" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0"/>
+        <kOwnedTags name="main" value="" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0"/>
         <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Void">
           <usings fromQName="kermeta::standard::*" toName=""/>
           <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -227,9 +17,9 @@
           <usings fromQName="VisitorMondePackage::*" toName=""/>
           <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
           <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-          <usings fromQName="ecore" toName="ecore"/>
+          <usings fromQName="Helper::*" toName=""/>
         </containedType>
-        <ownedParameter name="uriModel" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@ownedParameter.0/@containedType.0" isOrdered="true">
+        <ownedParameter name="uriModel" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@ownedParameter.0/@containedType.0" isOrdered="true">
           <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -240,10 +30,10 @@
             <usings fromQName="VisitorMondePackage::*" toName=""/>
             <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
             <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-            <usings fromQName="ecore" toName="ecore"/>
+            <usings fromQName="Helper::*" toName=""/>
           </containedType>
         </ownedParameter>
-        <ownedParameter name="nameWorld" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@ownedParameter.1/@containedType.0" isOrdered="true">
+        <ownedParameter name="nameWorld" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@ownedParameter.1/@containedType.0" isOrdered="true">
           <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -254,17 +44,17 @@
             <usings fromQName="VisitorMondePackage::*" toName=""/>
             <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
             <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-            <usings fromQName="ecore" toName="ecore"/>
+            <usings fromQName="Helper::*" toName=""/>
           </containedType>
         </ownedParameter>
-        <body xsi:type="org_kermeta_language_behavior:Block" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@kOwnedTags.0">
-          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;718;1434" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body"/>
-          <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;755;790" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0"/>
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;750;790" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0"/>
-            <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@parameters.0/@kOwnedTags.1" value="loading model">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;764;779" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@parameters.0"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;764;779" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@parameters.0"/>
+        <body xsi:type="org_kermeta_language_behavior:Block" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@kOwnedTags.0">
+          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;485;1263" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body"/>
+          <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;522;557" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;517;557" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0"/>
+            <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@parameters.0/@kOwnedTags.1" value="loading model">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;531;546" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@parameters.0"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;531;546" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@parameters.0"/>
             </parameters>
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -275,9 +65,9 @@
             <usings fromQName="VisitorMondePackage::*" toName=""/>
             <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
             <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-            <usings fromQName="ecore" toName="ecore"/>
-            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@target/@kOwnedTags.0" name="stdio">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;750;755" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@target"/>
+            <usings fromQName="Helper::*" toName=""/>
+            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@target/@kOwnedTags.0" name="stdio">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;517;522" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@target"/>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
               <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -287,12 +77,12 @@
               <usings fromQName="VisitorMondePackage::*" toName=""/>
               <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
               <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
+              <usings fromQName="Helper::*" toName=""/>
             </target>
           </statement>
-          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@kOwnedTags.0" identifier="c">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;790;810" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1"/>
-            <type name="Collaviz" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@type/@containedType.0" isOrdered="true">
+          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@kOwnedTags.0" identifier="c">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;557;577" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1"/>
+            <type name="Collaviz" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@type/@containedType.0" isOrdered="true">
               <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Collaviz">
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -303,14 +93,15 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
+                <usings fromQName="Helper::*" toName=""/>
               </containedType>
             </type>
           </statement>
-          <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@kOwnedTags.0" isCast="true">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;810;838" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2"/>
-            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@target/@kOwnedTags.0" name="c">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;810;812" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@target"/>
+          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@kOwnedTags.0" identifier="helper">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;577;632" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
+            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization/@kOwnedTags.1" name="new">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;624;632" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;610;632" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization"/>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
               <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -320,13 +111,9 @@
               <usings fromQName="VisitorMondePackage::*" toName=""/>
               <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
               <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-            </target>
-            <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value/@kOwnedTags.0" name="loadModel" isCalledWithParenthesis="true">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;815;838" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value"/>
-              <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value/@parameters.0/@kOwnedTags.1" name="uriModel">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;825;833" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value/@parameters.0"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;825;833" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@value/@parameters.0"/>
+              <usings fromQName="Helper::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization/@target/@kOwnedTags.0" name="CollavizHelper">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;610;624" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@initialization/@target"/>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -336,7 +123,54 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
+                <usings fromQName="Helper::*" toName=""/>
+              </target>
+            </initialization>
+            <type name="CollavizHelper" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@type/@containedType.0" isOrdered="true">
+              <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="CollavizHelper">
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
+                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
+                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
+                <usings fromQName="VisitorMondePackage::*" toName=""/>
+                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
+                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                <usings fromQName="Helper::*" toName=""/>
+              </containedType>
+            </type>
+          </statement>
+          <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@kOwnedTags.0" isCast="true">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;632;667" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3"/>
+            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@target/@kOwnedTags.0" name="c">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;632;634" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@target"/>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
+              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
+              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
+              <usings fromQName="VisitorMondePackage::*" toName=""/>
+              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
+              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+              <usings fromQName="Helper::*" toName=""/>
+            </target>
+            <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@kOwnedTags.0" name="loadModel" isCalledWithParenthesis="true">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;643;667" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value"/>
+              <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@parameters.0/@kOwnedTags.1" name="uriModel">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;654;662" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@parameters.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;654;662" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@parameters.0"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
+                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
+                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
+                <usings fromQName="VisitorMondePackage::*" toName=""/>
+                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
+                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                <usings fromQName="Helper::*" toName=""/>
               </parameters>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -347,26 +181,9 @@
               <usings fromQName="VisitorMondePackage::*" toName=""/>
               <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
               <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-            </value>
-          </statement>
-          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@kOwnedTags.0" identifier="visitor">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;838;897" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3"/>
-            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization/@kOwnedTags.1" name="new">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;889;897" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;874;897" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization"/>
-              <usings fromQName="kermeta::standard::*" toName=""/>
-              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
-              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
-              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
-              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
-              <usings fromQName="VisitorMondePackage::*" toName=""/>
-              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
-              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization/@target/@kOwnedTags.0" name="VisitorCollaviz">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;874;889" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@initialization/@target"/>
+              <usings fromQName="Helper::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target/@kOwnedTags.0" name="helper">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;637;643" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.3/@value/@target"/>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -376,10 +193,40 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
+                <usings fromQName="Helper::*" toName=""/>
+              </target>
+            </value>
+          </statement>
+          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@kOwnedTags.0" identifier="visitor">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;667;726" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4"/>
+            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization/@kOwnedTags.1" name="new">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;718;726" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;703;726" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization"/>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
+              <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
+              <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
+              <usings fromQName="VisitorMondePackage::*" toName=""/>
+              <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
+              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+              <usings fromQName="Helper::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization/@target/@kOwnedTags.0" name="VisitorCollaviz">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;703;718" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@initialization/@target"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+                <usings fromQName="collaviz::Collaviz" toName="Collaviz"/>
+                <usings fromQName="collaviz::WorldObject" toName="WorldObject"/>
+                <usings fromQName="collaviz::SupportedObject" toName="SupportedObject"/>
+                <usings fromQName="VisitorMondePackage::*" toName=""/>
+                <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
+                <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                <usings fromQName="Helper::*" toName=""/>
               </target>
             </initialization>
-            <type name="VisitorInterface" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@type/@containedType.0" isOrdered="true">
+            <type name="VisitorInterface" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.4/@type/@containedType.0" isOrdered="true">
               <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="VisitorInterface">
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -390,20 +237,20 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
+                <usings fromQName="Helper::*" toName=""/>
               </containedType>
             </type>
           </statement>
-          <statement xsi:type="org_kermeta_language_behavior:Conditional" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@kOwnedTags.1">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;897;1429" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4"/>
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;897;1429" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4"/>
+          <statement xsi:type="org_kermeta_language_behavior:Conditional" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@kOwnedTags.1">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;726;1258" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;726;1258" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5"/>
             <thenBody xsi:type="org_kermeta_language_behavior:Block">
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;923;958" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;918;958" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0"/>
-                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@parameters.0/@kOwnedTags.1" value="load model success">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;932;952" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@parameters.0"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;932;952" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@parameters.0"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;752;787" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;747;787" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0"/>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@parameters.0/@kOwnedTags.1" value="load model success">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;761;781" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@parameters.0"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;761;781" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -414,9 +261,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@target/@kOwnedTags.0" name="stdio">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;918;923" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.0/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@target/@kOwnedTags.0" name="stdio">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;747;752" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.0/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -426,12 +273,12 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1/@kOwnedTags.1" name="checkAllInvariants" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;959;990" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;958;990" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1/@kOwnedTags.1" name="checkAllInvariants" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;788;819" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;787;819" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1"/>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -441,9 +288,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1/@target/@kOwnedTags.0" name="c">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;958;959" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.1/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1/@target/@kOwnedTags.0" name="c">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;787;788" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.1/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -453,16 +300,16 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@kOwnedTags.0" identifier="generateWorld">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;990;1029" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2"/>
-                <initialization xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@initialization/@kOwnedTags.1" value="">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1022;1029" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@initialization"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1022;1029" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@initialization"/>
+              <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@kOwnedTags.0" identifier="generateWorld">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;819;858" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2"/>
+                <initialization xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@initialization/@kOwnedTags.1" value="">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;851;858" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@initialization"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;851;858" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@initialization"/>
                 </initialization>
-                <type name="String" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.2/@type/@containedType.0" isOrdered="true">
+                <type name="String" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.2/@type/@containedType.0" isOrdered="true">
                   <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -473,14 +320,14 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </containedType>
                 </type>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@kOwnedTags.0" isCast="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1029;1071" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@target/@kOwnedTags.0" name="generateWorld">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1029;1043" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@target"/>
+              <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@kOwnedTags.0" isCast="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;858;900" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3"/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@target/@kOwnedTags.0" name="generateWorld">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;858;872" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -490,13 +337,13 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
-                <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@kOwnedTags.0" name="accept" isCalledWithParenthesis="true">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1047;1071" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value"/>
-                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.0/@kOwnedTags.1" name="visitor">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1055;1062" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.0"/>
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1055;1062" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.0"/>
+                <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@kOwnedTags.0" name="accept" isCalledWithParenthesis="true">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;876;900" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value"/>
+                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.0/@kOwnedTags.1" name="visitor">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;884;891" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.0"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;884;891" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.0"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -506,11 +353,11 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </parameters>
-                  <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.1/@kOwnedTags.1" value="">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1063;1065" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.1"/>
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1063;1065" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@parameters.1"/>
+                  <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.1/@kOwnedTags.1" value="">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;892;894" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.1"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;892;894" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@parameters.1"/>
                   </parameters>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -521,9 +368,9 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
-                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@target/@kOwnedTags.0" name="c">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1046;1047" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.3/@value/@target"/>
+                  <usings fromQName="Helper::*" toName=""/>
+                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@target/@kOwnedTags.0" name="c">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;875;876" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.3/@value/@target"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -533,16 +380,16 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </target>
                 </value>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1076;1105" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1071;1105" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4"/>
-                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@parameters.0/@kOwnedTags.1" value="saving world">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1085;1099" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@parameters.0"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1085;1099" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@parameters.0"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;905;934" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;900;934" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4"/>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@parameters.0/@kOwnedTags.1" value="saving world">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;914;928" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@parameters.0"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;914;928" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -553,9 +400,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@target/@kOwnedTags.0" name="stdio">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1071;1076" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.4/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@target/@kOwnedTags.0" name="stdio">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;900;905" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.4/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -565,12 +412,12 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.5/@kOwnedTags.0" identifier="resWorld">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1105;1131" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.5"/>
-                <type name="String" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.5/@type/@containedType.0" isOrdered="true">
+              <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.5/@kOwnedTags.0" identifier="resWorld">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;934;960" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.5"/>
+                <type name="String" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.5/@type/@containedType.0" isOrdered="true">
                   <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -581,14 +428,14 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </containedType>
                 </type>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@kOwnedTags.0" isCast="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1131;1216" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@target/@kOwnedTags.0" name="resWorld">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1131;1140" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@target"/>
+              <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@kOwnedTags.0" isCast="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;960;1045" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6"/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@target/@kOwnedTags.0" name="resWorld">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;960;969" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -598,11 +445,11 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
                 <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@value/@parameters.0/@kOwnedTags.0" name="nameWorld">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1197;1216" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@value/@parameters.0"/>
+                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@value/@parameters.0/@kOwnedTags.0" name="nameWorld">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1026;1045" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@value/@parameters.0"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -612,7 +459,7 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </parameters>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -623,18 +470,18 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
-                  <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@value/@target/@kOwnedTags.0" value="platform:/resource/CollavizKermeta2/src/main/world/">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1143;1196" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.6/@value/@target"/>
+                  <usings fromQName="Helper::*" toName=""/>
+                  <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@value/@target/@kOwnedTags.0" value="platform:/resource/CollavizKermeta2/src/main/world/">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;972;1025" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.6/@value/@target"/>
                   </target>
                 </value>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@kOwnedTags.1" name="writeTextFile" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1222;1289" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1216;1289" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7"/>
-                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0/@kOwnedTags.1" name="toURI" isCalledWithParenthesis="true">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1245;1253" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1237;1253" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@kOwnedTags.1" name="writeTextFile" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1051;1118" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1045;1118" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7"/>
+                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0/@kOwnedTags.1" name="toURI" isCalledWithParenthesis="true">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1074;1082" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1066;1082" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -644,9 +491,9 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
-                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0/@target/@kOwnedTags.0" name="resWorld">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1237;1245" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.0/@target"/>
+                  <usings fromQName="Helper::*" toName=""/>
+                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0/@target/@kOwnedTags.0" name="resWorld">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1066;1074" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.0/@target"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -656,12 +503,12 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </target>
                 </parameters>
-                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1/@kOwnedTags.1" name="toString" isCalledWithParenthesis="true">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1267;1278" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1254;1278" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1"/>
+                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1/@kOwnedTags.1" name="toString" isCalledWithParenthesis="true">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1096;1107" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1083;1107" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -671,9 +518,9 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
-                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1/@target/@kOwnedTags.0" name="generateWorld">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1254;1267" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@parameters.1/@target"/>
+                  <usings fromQName="Helper::*" toName=""/>
+                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1/@target/@kOwnedTags.0" name="generateWorld">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1083;1096" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@parameters.1/@target"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -683,7 +530,7 @@
                     <usings fromQName="VisitorMondePackage::*" toName=""/>
                     <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                     <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore" toName="ecore"/>
+                    <usings fromQName="Helper::*" toName=""/>
                   </target>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
@@ -695,9 +542,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@target/@kOwnedTags.0" name="FileIO">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1216;1222" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.7/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@target/@kOwnedTags.0" name="FileIO">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1045;1051" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.7/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -707,15 +554,15 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1294;1372" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1289;1372" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8"/>
-                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@parameters.0/@kOwnedTags.1" value="save world success">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1303;1323" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@parameters.0"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1303;1323" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@parameters.0"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1123;1201" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1118;1201" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8"/>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@parameters.0/@kOwnedTags.1" value="save world success">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1132;1152" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@parameters.0"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1132;1152" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -726,9 +573,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@target/@kOwnedTags.0" name="stdio">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1289;1294" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@thenBody/@statement.8/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@target/@kOwnedTags.0" name="stdio">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1118;1123" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@thenBody/@statement.8/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -738,17 +585,17 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
             </thenBody>
             <elseBody xsi:type="org_kermeta_language_behavior:Block">
-              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1386;1419" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1381;1419" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0"/>
-                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@parameters.0/@kOwnedTags.1" value="load model failed">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1395;1414" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@parameters.0"/>
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1395;1414" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@parameters.0"/>
+              <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@kOwnedTags.1" name="writeln" isCalledWithParenthesis="true">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1215;1248" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1210;1248" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0"/>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@parameters.0/@kOwnedTags.1" value="load model failed">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1224;1243" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@parameters.0"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1224;1243" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -759,9 +606,9 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
-                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@target/@kOwnedTags.0" name="stdio">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1381;1386" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@elseBody/@statement.0/@target"/>
+                <usings fromQName="Helper::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@target/@kOwnedTags.0" name="stdio">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;1210;1215" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@elseBody/@statement.0/@target"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -771,14 +618,14 @@
                   <usings fromQName="VisitorMondePackage::*" toName=""/>
                   <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                   <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore" toName="ecore"/>
+                  <usings fromQName="Helper::*" toName=""/>
                 </target>
               </statement>
             </elseBody>
-            <condition xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition/@kOwnedTags.0" name="isNotEqual">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;900;909" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition"/>
-              <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition/@parameters.0/@kOwnedTags.0">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;904;909" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition/@parameters.0"/>
+            <condition xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition/@kOwnedTags.0" name="isNotEqual">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;729;738" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition"/>
+              <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition/@parameters.0/@kOwnedTags.0">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;733;738" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition/@parameters.0"/>
               </parameters>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -789,9 +636,9 @@
               <usings fromQName="VisitorMondePackage::*" toName=""/>
               <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
               <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-              <usings fromQName="ecore" toName="ecore"/>
-              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition/@target/@kOwnedTags.0" name="c">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;900;901" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.4/@condition/@target"/>
+              <usings fromQName="Helper::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition/@target/@kOwnedTags.0" name="c">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/MainGenerator.kmt;729;730" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.5/@condition/@target"/>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="kermeta::emfpersistence::*" toName=""/>
@@ -801,7 +648,7 @@
                 <usings fromQName="VisitorMondePackage::*" toName=""/>
                 <usings fromQName="Generator::WorldGenerator" toName="WorldGenerator"/>
                 <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                <usings fromQName="ecore" toName="ecore"/>
+                <usings fromQName="Helper::*" toName=""/>
               </target>
             </condition>
           </statement>

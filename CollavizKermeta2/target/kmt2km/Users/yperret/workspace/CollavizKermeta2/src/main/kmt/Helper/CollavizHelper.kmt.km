@@ -1,116 +1,128 @@
 <?xml version="1.0" encoding="ASCII"?>
 <org_kermeta_language_structure:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org_kermeta_language_behavior="http://www.kermeta.org/kermeta/2_1_0//org/kermeta/language/behavior" xmlns:org_kermeta_language_structure="http://www.kermeta.org/kermeta/2_1_0//org/kermeta/language/structure">
   <packages kTag="//@packages.0/@kOwnedTags.0" name="Helper">
-    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;80;481" object="//@packages.0"/>
+    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;113;774" object="//@packages.0"/>
     <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.0/@kOwnedTags.0" name="CollavizHelper">
-      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;97;479" object="//@packages.0/@ownedTypeDefinition.0"/>
+      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;130;772" object="//@packages.0/@ownedTypeDefinition.0"/>
       <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@kOwnedTags.0" name="searchRootElement" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@containedType.0" isOrdered="true">
-        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;201;477" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0"/>
+        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;234;531" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0"/>
         <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="WorldObject">
           <usings fromQName="kermeta::standard::*" toName=""/>
           <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
           <usings fromQName="collaviz::*" toName=""/>
+          <usings fromQName="kermeta::emfpersistence::*" toName=""/>
         </containedType>
         <ownedParameter name="o" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@ownedParameter.0/@containedType.0" isOrdered="true">
           <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="WorldObject">
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
             <usings fromQName="collaviz::*" toName=""/>
+            <usings fromQName="kermeta::emfpersistence::*" toName=""/>
           </containedType>
         </ownedParameter>
         <body xsi:type="org_kermeta_language_behavior:Block" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@kOwnedTags.0">
-          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;263;477" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body"/>
+          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;296;531" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body"/>
           <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@kOwnedTags.0" identifier="so">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;269;298" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;302;331" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0"/>
             <type name="SupportedObject" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.0/@type/@containedType.0" isOrdered="true">
               <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="SupportedObject">
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
               </containedType>
             </type>
           </statement>
           <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@kOwnedTags.0" isCast="true">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;298;309" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;331;342" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1"/>
             <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@target/@kOwnedTags.0" name="so">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;298;301" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@target"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;331;334" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@target"/>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
               <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
             </target>
             <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@value/@kOwnedTags.0" name="o">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;304;309" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@value"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;337;342" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.1/@value"/>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
               <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
             </value>
           </statement>
           <statement xsi:type="org_kermeta_language_behavior:Conditional" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@kOwnedTags.1">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;309;472" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;309;472" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;342;505" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;342;505" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2"/>
             <thenBody xsi:type="org_kermeta_language_behavior:Block">
               <statement xsi:type="org_kermeta_language_behavior:Conditional" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@kOwnedTags.1">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;332;442" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0"/>
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;332;442" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;365;475" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;365;475" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0"/>
                 <thenBody xsi:type="org_kermeta_language_behavior:Block">
                   <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@kOwnedTags.0" isCast="true">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;364;408" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;397;441" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0"/>
                     <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@target/@kOwnedTags.0">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;364;371" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@target"/>
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;397;404" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@target"/>
                     </target>
                     <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@kOwnedTags.0" name="searchRootElement" isCalledWithParenthesis="true">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;374;408" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value"/>
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;407;441" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value"/>
                       <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0/@kOwnedTags.1" name="support">
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;394;402" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0"/>
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;392;402" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0"/>
+                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;427;435" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0"/>
+                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;425;435" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0"/>
                         <usings fromQName="kermeta::standard::*" toName=""/>
                         <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                         <usings fromQName="collaviz::*" toName=""/>
+                        <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                         <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0/@target/@kOwnedTags.0" name="so">
-                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;392;394" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0/@target"/>
+                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;425;427" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@thenBody/@statement.0/@value/@parameters.0/@target"/>
                           <usings fromQName="kermeta::standard::*" toName=""/>
                           <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                           <usings fromQName="collaviz::*" toName=""/>
+                          <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                         </target>
                       </parameters>
                       <usings fromQName="kermeta::standard::*" toName=""/>
                       <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                       <usings fromQName="collaviz::*" toName=""/>
+                      <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                     </value>
                   </statement>
                 </thenBody>
                 <elseBody xsi:type="org_kermeta_language_behavior:Block">
                   <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@kOwnedTags.0" isCast="true">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;418;435" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;451;468" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0"/>
                     <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@target/@kOwnedTags.0">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;418;425" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@target"/>
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;451;458" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@target"/>
                     </target>
                     <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@value/@kOwnedTags.0" name="so">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;428;435" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@value"/>
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;461;468" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@elseBody/@statement.0/@value"/>
                       <usings fromQName="kermeta::standard::*" toName=""/>
                       <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                       <usings fromQName="collaviz::*" toName=""/>
+                      <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                     </value>
                   </statement>
                 </elseBody>
                 <condition xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@kOwnedTags.0" name="isNotEqual">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;335;354" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;368;387" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition"/>
                   <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@parameters.0/@kOwnedTags.0">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;349;354" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@parameters.0"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;382;387" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@parameters.0"/>
                   </parameters>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="collaviz::*" toName=""/>
+                  <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                   <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target/@kOwnedTags.0" name="support">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;337;346" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target"/>
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;370;379" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target"/>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                     <usings fromQName="collaviz::*" toName=""/>
+                    <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                     <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target/@target/@kOwnedTags.0" name="so">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;335;337" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target/@target"/>
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;368;370" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@thenBody/@statement.0/@condition/@target/@target"/>
                       <usings fromQName="kermeta::standard::*" toName=""/>
                       <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                       <usings fromQName="collaviz::*" toName=""/>
+                      <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                     </target>
                   </target>
                 </condition>
@@ -118,33 +130,162 @@
             </thenBody>
             <elseBody xsi:type="org_kermeta_language_behavior:Block">
               <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@kOwnedTags.0" isCast="true">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;451;466" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;484;499" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0"/>
                 <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@target/@kOwnedTags.0">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;451;458" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@target"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;484;491" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@target"/>
                 </target>
                 <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@value/@kOwnedTags.0" name="o">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;461;466" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@value"/>
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;494;499" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@elseBody/@statement.0/@value"/>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                   <usings fromQName="collaviz::*" toName=""/>
+                  <usings fromQName="kermeta::emfpersistence::*" toName=""/>
                 </value>
               </statement>
             </elseBody>
             <condition xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@kOwnedTags.0" name="isNotEqual">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;312;323" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;345;356" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition"/>
               <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@parameters.0/@kOwnedTags.0">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;318;323" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@parameters.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;351;356" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@parameters.0"/>
               </parameters>
               <usings fromQName="kermeta::standard::*" toName=""/>
               <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
               <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
               <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@target/@kOwnedTags.0" name="so">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;312;315" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@target"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;345;348" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.0/@body/@statement.2/@condition/@target"/>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                 <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
               </target>
             </condition>
+          </statement>
+        </body>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@kOwnedTags.0" name="loadModel" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;531;770" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Object">
+          <usings fromQName="kermeta::standard::*" toName=""/>
+          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+          <usings fromQName="collaviz::*" toName=""/>
+          <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+        </containedType>
+        <ownedParameter name="uri" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@ownedParameter.0/@containedType.0" isOrdered="true">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
+            <usings fromQName="kermeta::standard::*" toName=""/>
+            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+            <usings fromQName="collaviz::*" toName=""/>
+            <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+          </containedType>
+        </ownedParameter>
+        <body xsi:type="org_kermeta_language_behavior:Block" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@kOwnedTags.0">
+          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;577;770" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body"/>
+          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@kOwnedTags.0" identifier="repository">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;583;636" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0"/>
+            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization/@kOwnedTags.1" name="new">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;628;636" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;617;636" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization"/>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization/@target/@kOwnedTags.0" name="ResourceSet">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;617;628" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@initialization/@target"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              </target>
+            </initialization>
+            <type name="ResourceSet" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.0/@type/@containedType.0" isOrdered="true">
+              <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ResourceSet">
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              </containedType>
+            </type>
+          </statement>
+          <statement xsi:type="org_kermeta_language_behavior:VariableDecl" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@kOwnedTags.0" identifier="resource">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;636;699" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1"/>
+            <initialization xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@kOwnedTags.1" name="createResource" isCalledWithParenthesis="true">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;675;699" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;665;699" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization"/>
+              <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@parameters.0/@kOwnedTags.1" name="uri">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;691;694" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@parameters.0"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;691;694" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@parameters.0"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              </parameters>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@target/@kOwnedTags.0" name="repository">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;665;675" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@initialization/@target"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              </target>
+            </initialization>
+            <type name="Resource" type="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.1/@type/@containedType.0" isOrdered="true">
+              <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Resource">
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              </containedType>
+            </type>
+          </statement>
+          <statement xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@kOwnedTags.1" name="load" isCalledWithParenthesis="true">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;707;722" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;699;722" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2"/>
+            <parameters xsi:type="org_kermeta_language_behavior:VoidLiteral" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@parameters.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@parameters.0/@kOwnedTags.1">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;713;717" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@parameters.0"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;713;717" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@parameters.0"/>
+            </parameters>
+            <usings fromQName="kermeta::standard::*" toName=""/>
+            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+            <usings fromQName="collaviz::*" toName=""/>
+            <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@target/@kOwnedTags.0" name="resource">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;699;707" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.2/@target"/>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+            </target>
+          </statement>
+          <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@kOwnedTags.0" isCast="true">
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;722;759" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3"/>
+            <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@target/@kOwnedTags.0">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;722;729" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@target"/>
+            </target>
+            <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value/@kOwnedTags.0" name="one">
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;752;759" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value"/>
+              <usings fromQName="kermeta::standard::*" toName=""/>
+              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+              <usings fromQName="collaviz::*" toName=""/>
+              <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+              <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value/@target/@kOwnedTags.0" name="getContents">
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;740;752" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value/@target"/>
+                <usings fromQName="kermeta::standard::*" toName=""/>
+                <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                <usings fromQName="collaviz::*" toName=""/>
+                <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+                <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value/@target/@target/@kOwnedTags.0" name="resource">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt;732;740" object="//@packages.0/@ownedTypeDefinition.0/@ownedOperation.1/@body/@statement.3/@value/@target/@target"/>
+                  <usings fromQName="kermeta::standard::*" toName=""/>
+                  <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                  <usings fromQName="collaviz::*" toName=""/>
+                  <usings fromQName="kermeta::emfpersistence::*" toName=""/>
+                </target>
+              </target>
+            </value>
           </statement>
         </body>
       </ownedOperation>

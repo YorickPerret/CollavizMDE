@@ -6,23 +6,6 @@ import _root_.k2.standard.PrimitiveConversion._
 import _root_.ScalaImplicit.CollavizKermeta2.ImplicitConversion._
 trait MainGeneratorAspect  extends _root_.k2.standard.KermetaObjectAspect with `_root_`.CollavizKermeta2.mainPackage.MainGenerator{
 
-    def loadModel(uri : _root_.java.lang.String):_root_.collaviz.Collaviz = {
-var `~result` : _root_.collaviz.Collaviz = null.asInstanceOf[_root_.collaviz.Collaviz]; 
-  { 
-
-
-{
-var repository : _root_.org.eclipse.emf.ecore.resource.ResourceSet = _root_.k2.persistence.KerRichFactory.createResourceSet;
-var resource : _root_.org.eclipse.emf.ecore.resource.Resource = (repository).createResource(uri);
-(resource).load(null)
-try{
-`~result` = (((resource).kgetContents()).one()).asInstanceOf[_root_.collaviz.Collaviz];
-}catch { case e:ClassCastException => {}}
-}
-        }
- return `~result`
-}
-
     def mainOperation(uriModel : _root_.java.lang.String, nameWorld : _root_.java.lang.String):_root_.scala.Unit = {
 var `~result` : _root_.scala.Unit = null.asInstanceOf[_root_.scala.Unit]; 
   { 
@@ -31,8 +14,9 @@ var `~result` : _root_.scala.Unit = null.asInstanceOf[_root_.scala.Unit];
 {
 (_root_.k2.io.StdIO).writeln("loading model")
 var c : _root_.collaviz.Collaviz = null.asInstanceOf[_root_.collaviz.Collaviz];
+var helper : _root_.CollavizKermeta2.Helper.CollavizHelper = _root_.CollavizKermeta2.Helper.KerRichFactory.createCollavizHelper;
 try{
-c = ((this).loadModel(uriModel)).asInstanceOf[_root_.collaviz.Collaviz];
+c = ((helper).loadModel(uriModel)).asInstanceOf[_root_.collaviz.Collaviz];
 }catch { case e:ClassCastException => {}}
 
 var visitor : _root_.CollavizKermeta2.VisitorMondePackage.VisitorInterface = _root_.CollavizKermeta2.VisitorMondePackage.KerRichFactory.createVisitorCollaviz;

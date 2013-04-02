@@ -1,6 +1,7 @@
 using kermeta::standard::*
 using kermeta::io::StdIO => stdio
 using collaviz::*
+using kermeta::emfpersistence::*
 
 package Helper{
 	class CollavizHelper
@@ -19,5 +20,15 @@ package Helper{
 				result ?= o
 			end
 		end
+		
+		//load a model
+		operation loadModel(uri : String) : Object is do
+			var repository : ResourceSet init ResourceSet.new
+			var resource : Resource init repository.createResource(uri)
+			resource.load(void)
+			result ?= resource.getContents.one
+		end
+		
+		
 	}
 }

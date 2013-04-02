@@ -48,6 +48,23 @@ try{
         }
  return `~result`
 }
+
+    def loadModel(uri : _root_.java.lang.String):_root_.k2.standard.KermetaObject = {
+var `~result` : _root_.k2.standard.KermetaObject = null.asInstanceOf[_root_.k2.standard.KermetaObject]; 
+  { 
+
+
+{
+var repository : _root_.org.eclipse.emf.ecore.resource.ResourceSet = _root_.k2.persistence.KerRichFactory.createResourceSet;
+var resource : _root_.org.eclipse.emf.ecore.resource.Resource = (repository).createResource(uri);
+(resource).load(null)
+try{
+`~result` = (((resource).kgetContents()).one()).asInstanceOf[_root_.k2.standard.KermetaObject];
+}catch { case e:ClassCastException => {}}
+}
+        }
+ return `~result`
+}
   override def getMetaClass():_root_.org.kermeta.language.structure.Class={
     var cd : org.kermeta.language.structure.ClassDefinition =   _root_.k2.utils.ReflexivityLoader.getMetaClass("Helper.CollavizHelper"); 
     if (cd !=null){ 
