@@ -29,6 +29,15 @@ package Helper{
 			result ?= resource.getContents.one
 		end
 		
+		attribute authorizedClasses : set String[0..*]
 		
+		operation initAuthorizedClasses() : Void is do
+			authorizedClasses.add("Ball")
+			authorizedClasses.add("Juncture")
+		end
+		
+		operation isAuthorizedClasse(nameClasse : String) : Boolean is do
+			result ?= authorizedClasses.exists{n | n==nameClasse}
+		end
 	}
 }

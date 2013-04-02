@@ -4,8 +4,8 @@ file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/WorldGenerator.km
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Visitor.kmt
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/VisitorInterface.kmt
 jar:file:/C:/Users/yperret/eclipseKermeta2/eclipse/plugins/org.eclipse.emf.ecore_2.8.3.v20130125-0546.jar!/model/Ecore.ecore
+file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Helper/CollavizHelper.kmt
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/Constraint.kmt
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/Generator.kmt
-file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/MainJavaGenerator.kmt
 file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/GeneratorComposite.kmt

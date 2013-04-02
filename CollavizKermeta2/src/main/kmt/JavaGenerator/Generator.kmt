@@ -10,13 +10,15 @@ package JavaGenerator{
 	
 	abstract class GenericGenerator
 	{
-		operation generateBeginClass(eclass : EClass , esuperclass : EClass) : String is abstract
+		operation generateInterface(eclass : EClass) : String is abstract
+		operation generateBeginClasse(eclass : EClass , esuperclass : EClass) : String is abstract
+		operation generateConstructor(eclass : EClass , esuperclass : EClass) : String is abstract
 		operation generateOperation(o : EOperation) : String is abstract
 		operation generateParameterPut() : String is abstract
 		operation generateRegisterModificationCallback(a : EAttribute) : String is abstract
 		operation generateProcessUpdate() : String is abstract
 		operation generateProcessModify() : String is abstract
-		operation generateEndClass() : String is do
+		operation generateEndClasse() : String is do
 			result ?= "\n}"
 		end
 	}

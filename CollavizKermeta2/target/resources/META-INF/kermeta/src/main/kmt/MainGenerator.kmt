@@ -35,7 +35,6 @@ package mainPackage{
 				
 				stdio.writeln("save world success")
 				
-				//wg.generateXMLWorld(c,nameWorld)
 			else
 				stdio.writeln("load model failed")
 			end

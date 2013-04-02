@@ -6,7 +6,21 @@ import _root_.k2.standard.PrimitiveConversion._
 import _root_.ScalaImplicit.CollavizKermeta2.ImplicitConversion._
 trait GenericGeneratorAspect  extends _root_.k2.standard.KermetaObjectAspect with `_root_`.CollavizKermeta2.JavaGenerator.GenericGenerator{
 
-    def generateBeginClass(eclass : _root_.org.eclipse.emf.ecore.EClass, esuperclass : _root_.org.eclipse.emf.ecore.EClass):_root_.java.lang.String = {
+    def generateInterface(eclass : _root_.org.eclipse.emf.ecore.EClass):_root_.java.lang.String = {
+var `~result` : _root_.java.lang.String = null.asInstanceOf[_root_.java.lang.String]; 
+  { 
+        }
+ return `~result`
+}
+
+    def generateBeginClasse(eclass : _root_.org.eclipse.emf.ecore.EClass, esuperclass : _root_.org.eclipse.emf.ecore.EClass):_root_.java.lang.String = {
+var `~result` : _root_.java.lang.String = null.asInstanceOf[_root_.java.lang.String]; 
+  { 
+        }
+ return `~result`
+}
+
+    def generateConstructor(eclass : _root_.org.eclipse.emf.ecore.EClass, esuperclass : _root_.org.eclipse.emf.ecore.EClass):_root_.java.lang.String = {
 var `~result` : _root_.java.lang.String = null.asInstanceOf[_root_.java.lang.String]; 
   { 
         }
@@ -48,7 +62,7 @@ var `~result` : _root_.java.lang.String = null.asInstanceOf[_root_.java.lang.Str
  return `~result`
 }
 
-    def generateEndClass():_root_.java.lang.String = {
+    def generateEndClasse():_root_.java.lang.String = {
 var `~result` : _root_.java.lang.String = null.asInstanceOf[_root_.java.lang.String]; 
   { 
 
