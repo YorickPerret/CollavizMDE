@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org_kermeta_language_structure:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org_kermeta_language_structure="http://www.kermeta.org/kermeta/2_1_0//org/kermeta/language/structure" uri="http://www.eclipse.org/emf/2002/Ecore">
+  <packages kTag="//@packages.0/@kOwnedTags.0" name="ecore" uri="http://www.eclipse.org/emf/2002/Ecore">
+    <kOwnedTags name="ecore" value="true" object="//@packages.0"/>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@kOwnedTags.1" name="EAttribute" superType="//@packages.0/@ownedTypeDefinition.0/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.0"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.0"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.0/@kOwnedTags.0" name="iD" type="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.0/@ownedAttribute.1/@kOwnedTags.1" name="eAttributeType" type="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.1/@containedType.0" isOrdered="true" lower="1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.1"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.0/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EDataType"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.1/@kOwnedTags.1" name="EAnnotation" superType="//@packages.0/@ownedTypeDefinition.1/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.1"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EModelElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.0/@kOwnedTags.0" name="source" type="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.1/@kOwnedTags.0" name="details" type="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.1/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStringToStringMapEntry"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2/@kOwnedTags.1" name="eModelElement" type="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2/@ownedUnresolvedProperties.0">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EModelElement"/>
+        <ownedUnresolvedProperties propertyIdentifier="eAnnotations"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.3/@kOwnedTags.0" name="contents" type="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.3/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.4/@kOwnedTags.0" name="references" type="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.4/@containedType.0" isOrdered="true" upper="-1">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.1/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@kOwnedTags.1" name="EClass" superType="//@packages.0/@ownedTypeDefinition.2/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.2"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.0/@kOwnedTags.0" name="abstract" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.1/@kOwnedTags.0" name="interface" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.2/@kOwnedTags.1" name="eSuperTypes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.2/@containedType.0" isOrdered="true" upper="-1">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.2"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.3/@kOwnedTags.0" name="eOperations" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.3/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.3/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        <ownedUnresolvedProperties propertyIdentifier="eContainingClass"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.4/@kOwnedTags.1" name="eAllAttributes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.4/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.4"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAttribute"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.5/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.5/@kOwnedTags.1" name="eAllReferences" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.5/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.5"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EReference"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.6/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.6/@kOwnedTags.1" name="eReferences" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.6/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.6"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.6"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EReference"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.7/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.7/@kOwnedTags.1" name="eAttributes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.7/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.7"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.7"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAttribute"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.8/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.8/@kOwnedTags.1" name="eAllContainments" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.8/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.8"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.8"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EReference"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.9/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.9/@kOwnedTags.1" name="eAllOperations" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.9/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.9"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.9"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.10/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.10/@kOwnedTags.1" name="eAllStructuralFeatures" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.10/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.10"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.10"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.11/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.11/@kOwnedTags.1" name="eAllSuperTypes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.11/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.11"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.11"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.12/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.12/@kOwnedTags.1" name="eIDAttribute" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.12/@containedType.0" isOrdered="true" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.12"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.12"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAttribute"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.13/@kOwnedTags.0" name="eStructuralFeatures" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.13/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.13/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.13"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        <ownedUnresolvedProperties propertyIdentifier="eContainingClass"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.14/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.14/@kOwnedTags.1" name="eGenericSuperTypes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.14/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.14"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.14"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.15/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedAttribute.15/@kOwnedTags.1" name="eAllGenericSuperTypes" type="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.15/@containedType.0" isOrdered="true" upper="-1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.15"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedAttribute.15"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.0/@kOwnedTags.0" name="isSuperTypeOf" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+        <ownedParameter name="someClass" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.1/@kOwnedTags.0" name="getFeatureCount" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedOperation.2/@kOwnedTags.1" name="getEStructuralFeatureFromfeatureID" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.2/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.2"/>
+        <kOwnedTags name="ecore.name" value="getEStructuralFeature" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        <ownedParameter name="featureID" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.2/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.3/@kOwnedTags.0" name="getFeatureID" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.3/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.3/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.2/@ownedOperation.4/@kOwnedTags.1" name="getEStructuralFeatureFromfeatureName" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.4/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.4"/>
+        <kOwnedTags name="ecore.name" value="getEStructuralFeature" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        <ownedParameter name="featureName" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.4/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.5/@kOwnedTags.0" name="getOperationCount" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.5/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.6/@kOwnedTags.0" name="getEOperation" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.6/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.6"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        <ownedParameter name="operationID" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.6/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.7/@kOwnedTags.0" name="getOperationID" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.7/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.7"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+        <ownedParameter name="operation" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.7/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.8/@kOwnedTags.0" name="getOverride" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.8/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.8"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        <ownedParameter name="operation" type="//@packages.0/@ownedTypeDefinition.2/@ownedOperation.8/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.3/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@kOwnedTags.1" name="EClassifier" superType="//@packages.0/@ownedTypeDefinition.3/@containedType.0" isAbstract="true">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.3"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ENamedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@ownedAttribute.0/@kOwnedTags.1" name="instanceClassName" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.0"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1/@kOwnedTags.1" name="instanceClass" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.1/@containedType.0/@containedType.0" typeIdentifier="ecore::EJavaClass">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </containedType>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@ownedAttribute.2/@kOwnedTags.1" name="defaultValue" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.2/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.2"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.3/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@ownedAttribute.3/@kOwnedTags.1" name="instanceTypeName" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.3/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.3"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4/@kOwnedTags.1" name="ePackage" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EPackage"/>
+        <ownedUnresolvedProperties propertyIdentifier="eClassifiers"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.5/@kOwnedTags.0" name="eTypeParameters" type="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.5/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypeParameter"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.0/@kOwnedTags.0" name="isInstance" type="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+        <ownedParameter name="object" type="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.1/@kOwnedTags.0" name="getClassifierID" type="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.3/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.4/@kOwnedTags.0" name="EDataType" superType="//@packages.0/@ownedTypeDefinition.4/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.4"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.4/@ownedAttribute.0/@kOwnedTags.0" name="serializable" type="//@packages.0/@ownedTypeDefinition.4/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.4/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.5/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.5/@kOwnedTags.1" name="EEnum" superType="//@packages.0/@ownedTypeDefinition.5/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.5"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.5"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EDataType"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.5/@ownedAttribute.0/@kOwnedTags.0" name="eLiterals" type="//@packages.0/@ownedTypeDefinition.5/@ownedAttribute.0/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.5/@ownedAttribute.0/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.5/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnumLiteral"/>
+        <ownedUnresolvedProperties propertyIdentifier="eEnum"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.5/@ownedOperation.0/@kOwnedTags.1" name="getEEnumLiteralFromname" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.0"/>
+        <kOwnedTags name="ecore.name" value="getEEnumLiteral" object="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnumLiteral"/>
+        <ownedParameter name="name" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.5/@ownedOperation.1/@kOwnedTags.1" name="getEEnumLiteralFromvalue" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.1"/>
+        <kOwnedTags name="ecore.name" value="getEEnumLiteral" object="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnumLiteral"/>
+        <ownedParameter name="value" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.1/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.2/@kOwnedTags.0" name="getEEnumLiteralByLiteral" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.2/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnumLiteral"/>
+        <ownedParameter name="literal" type="//@packages.0/@ownedTypeDefinition.5/@ownedOperation.2/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.6/@kOwnedTags.0" name="EEnumLiteral" superType="//@packages.0/@ownedTypeDefinition.6/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.6"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ENamedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.0/@kOwnedTags.0" name="value" type="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.6/@ownedAttribute.1/@kOwnedTags.1" name="instance" type="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.1"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnumerator"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.2/@kOwnedTags.0" name="literal" type="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.2/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3/@kOwnedTags.1" name="eEnum" type="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.6/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EEnum"/>
+        <ownedUnresolvedProperties propertyIdentifier="eLiterals"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.7/@kOwnedTags.0" name="EFactory" superType="//@packages.0/@ownedTypeDefinition.7/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.7"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EModelElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0/@kOwnedTags.1" name="ePackage" type="//@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0/@containedType.0" isOrdered="true" lower="1" opposite="//@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0/@ownedUnresolvedProperties.0">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.7/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EPackage"/>
+        <ownedUnresolvedProperties propertyIdentifier="eFactoryInstance"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.0/@kOwnedTags.0" name="create" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        <ownedParameter name="eClass" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.1/@kOwnedTags.0" name="createFromString" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        <ownedParameter name="eDataType" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.1/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EDataType"/>
+        </ownedParameter>
+        <ownedParameter name="literalValue" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.1/@ownedParameter.1/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.2/@kOwnedTags.0" name="convertToString" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.2/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        <ownedParameter name="eDataType" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.2/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EDataType"/>
+        </ownedParameter>
+        <ownedParameter name="instanceValue" type="//@packages.0/@ownedTypeDefinition.7/@ownedOperation.2/@ownedParameter.1/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.8/@kOwnedTags.0" name="EModelElement" isAbstract="true">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.8"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.8/@ownedAttribute.0/@kOwnedTags.0" name="eAnnotations" type="//@packages.0/@ownedTypeDefinition.8/@ownedAttribute.0/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.8/@ownedAttribute.0/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.8/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAnnotation"/>
+        <ownedUnresolvedProperties propertyIdentifier="eModelElement"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.8/@ownedOperation.0/@kOwnedTags.0" name="getEAnnotation" type="//@packages.0/@ownedTypeDefinition.8/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.8/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAnnotation"/>
+        <ownedParameter name="source" type="//@packages.0/@ownedTypeDefinition.8/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.9/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.9/@kOwnedTags.1" name="ENamedElement" superType="//@packages.0/@ownedTypeDefinition.9/@containedType.0" isAbstract="true">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.9"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.9"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EModelElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.9/@ownedAttribute.0/@kOwnedTags.0" name="name" type="//@packages.0/@ownedTypeDefinition.9/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.9/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.10/@kOwnedTags.0" name="EObject">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10"/>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.0/@kOwnedTags.0" name="eClass" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.1/@kOwnedTags.0" name="eIsProxy" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.2/@kOwnedTags.0" name="eResource" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.2/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EResource"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.3/@kOwnedTags.0" name="eContainer" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.3/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.4/@kOwnedTags.0" name="eContainingFeature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.4/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.5/@kOwnedTags.0" name="eContainmentFeature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.5/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EReference"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.6/@kOwnedTags.0" name="eContents" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.6/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.6"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.6/@containedType.0/@containedType.0 //@packages.0/@ownedTypeDefinition.10/@ownedOperation.6/@containedType.0/@containedType.1" typeIdentifier="ecore::EEList">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </containedType>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.7/@kOwnedTags.0" name="eAllContents" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.7/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.7"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.7/@containedType.0/@containedType.0 //@packages.0/@ownedTypeDefinition.10/@ownedOperation.7/@containedType.0/@containedType.1" typeIdentifier="ecore::ETreeIterator">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </containedType>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.8/@kOwnedTags.0" name="eCrossReferences" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.8/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.8"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.8/@containedType.0/@containedType.0 //@packages.0/@ownedTypeDefinition.10/@ownedOperation.8/@containedType.0/@containedType.1" typeIdentifier="ecore::EEList">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </containedType>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.9/@kOwnedTags.0" name="eGet" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.9/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.9"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.9/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.10/@kOwnedTags.0" name="eGet" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.10/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.10"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.10/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+        <ownedParameter name="resolve" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.10/@ownedParameter.1/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.11/@kOwnedTags.0" name="eSet" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.11/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.11"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Void"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.11/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+        <ownedParameter name="newValue" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.11/@ownedParameter.1/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.12/@kOwnedTags.0" name="eIsSet" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.12/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.12"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.12/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.13/@kOwnedTags.0" name="eUnset" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.13/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.13"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Void"/>
+        <ownedParameter name="feature" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.13/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14/@kOwnedTags.0" name="eInvoke" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        <ownedParameter name="operation" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        </ownedParameter>
+        <ownedParameter name="arguments" type="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14/@ownedParameter.1/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.10/@ownedOperation.14/@ownedParameter.1/@containedType.0/@containedType.0" typeIdentifier="ecore::EEList">
+            <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+          </containedType>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.11/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.11/@kOwnedTags.1" name="EOperation" superType="//@packages.0/@ownedTypeDefinition.11/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.11"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0/@kOwnedTags.1" name="eContainingClass" type="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+        <ownedUnresolvedProperties propertyIdentifier="eOperations"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.1/@kOwnedTags.0" name="eTypeParameters" type="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.1/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypeParameter"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.2/@kOwnedTags.0" name="eParameters" type="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.2/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.2/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EParameter"/>
+        <ownedUnresolvedProperties propertyIdentifier="eOperation"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.3/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.11/@ownedAttribute.3/@kOwnedTags.1" name="eExceptions" type="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.3/@containedType.0" isOrdered="true" upper="-1">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.3"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.11/@ownedAttribute.4/@kOwnedTags.1" name="eGenericExceptions" type="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.4/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.4"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.11/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.0/@kOwnedTags.0" name="getOperationID" type="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.1/@kOwnedTags.0" name="isOverrideOf" type="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+        <ownedParameter name="someOperation" type="//@packages.0/@ownedTypeDefinition.11/@ownedOperation.1/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.12/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.12/@kOwnedTags.1" name="EPackage" superType="//@packages.0/@ownedTypeDefinition.12/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.12"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ENamedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.0/@kOwnedTags.0" name="nsURI" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.1/@kOwnedTags.0" name="nsPrefix" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2/@kOwnedTags.1" name="eFactoryInstance" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2/@containedType.0" isOrdered="true" lower="1" opposite="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2/@ownedUnresolvedProperties.0">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EFactory"/>
+        <ownedUnresolvedProperties propertyIdentifier="ePackage"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.3/@kOwnedTags.0" name="eClassifiers" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.3/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.3/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+        <ownedUnresolvedProperties propertyIdentifier="ePackage"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.4/@kOwnedTags.0" name="eSubpackages" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.4/@containedType.0" isOrdered="true" upper="-1" opposite="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.4/@ownedUnresolvedProperties.0" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EPackage"/>
+        <ownedUnresolvedProperties propertyIdentifier="eSuperPackage"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5/@kOwnedTags.1" name="eSuperPackage" type="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EPackage"/>
+        <ownedUnresolvedProperties propertyIdentifier="eSubpackages"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.12/@ownedOperation.0/@kOwnedTags.0" name="getEClassifier" type="//@packages.0/@ownedTypeDefinition.12/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.12/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+        <ownedParameter name="name" type="//@packages.0/@ownedTypeDefinition.12/@ownedOperation.0/@ownedParameter.0/@containedType.0">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.13/@kOwnedTags.0" name="EParameter" superType="//@packages.0/@ownedTypeDefinition.13/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.13"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0/@kOwnedTags.1" name="eOperation" type="//@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.13/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EOperation"/>
+        <ownedUnresolvedProperties propertyIdentifier="eParameters"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.14/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.14/@kOwnedTags.1" name="EReference" superType="//@packages.0/@ownedTypeDefinition.14/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.14"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EStructuralFeature"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.0/@kOwnedTags.0" name="containment" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.1/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.14/@ownedAttribute.1/@kOwnedTags.1" name="container" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.1/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.1"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.2/@kOwnedTags.0" name="resolveProxies" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.2/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.3/@kOwnedTags.0" name="eOpposite" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.3/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EReference"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.14/@ownedAttribute.4/@kOwnedTags.1" name="eReferenceType" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.4/@containedType.0" isOrdered="true" lower="1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.4"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.5/@kOwnedTags.0" name="eKeys" type="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.5/@containedType.0" isOrdered="true" upper="-1">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.14/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EAttribute"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.15/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.15/@kOwnedTags.1" name="EStructuralFeature" superType="//@packages.0/@ownedTypeDefinition.15/@containedType.0" isAbstract="true">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.15"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.0/@kOwnedTags.0" name="changeable" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.1/@kOwnedTags.0" name="volatile" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.2/@kOwnedTags.0" name="transient" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.2/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.3/@kOwnedTags.0" name="defaultValueLiteral" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.3/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.15/@ownedAttribute.4/@kOwnedTags.1" name="defaultValue" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.4/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.4"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.5/@kOwnedTags.0" name="unsettable" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.5/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.6/@kOwnedTags.0" name="derived" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.6/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.6"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7/@kOwnedTags.1" name="eContainingClass" type="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7/@containedType.0" isOrdered="true" opposite="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7/@ownedUnresolvedProperties.0" isReadOnly="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedAttribute.7"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClass"/>
+        <ownedUnresolvedProperties propertyIdentifier="eStructuralFeatures"/>
+      </ownedAttribute>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.0/@kOwnedTags.0" name="getFeatureID" type="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.0/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedOperation>
+      <ownedOperation kTag="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.1/@kOwnedTags.0" name="getContainerClass" type="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.1/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" generics="//@packages.0/@ownedTypeDefinition.15/@ownedOperation.1/@containedType.0/@containedType.0" typeIdentifier="ecore::EJavaClass">
+          <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+        </containedType>
+      </ownedOperation>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.16/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.16/@kOwnedTags.1" name="ETypedElement" superType="//@packages.0/@ownedTypeDefinition.16/@containedType.0" isAbstract="true">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.16"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ENamedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.0/@kOwnedTags.0" name="ordered" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.1/@kOwnedTags.0" name="unique" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.2/@kOwnedTags.0" name="lowerBound" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.2/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.3/@kOwnedTags.0" name="upperBound" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.3/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Integer"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.4/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.16/@ownedAttribute.4/@kOwnedTags.1" name="many" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.4/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.4"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.5/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.16/@ownedAttribute.5/@kOwnedTags.1" name="required" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.5/@containedType.0" isOrdered="true" isReadOnly="true" isComposite="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.5"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.6/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.16/@ownedAttribute.6/@kOwnedTags.1" name="eType" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.6/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.6"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.6"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.7/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.16/@ownedAttribute.7/@kOwnedTags.1" name="eGenericType" type="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.7/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.7"/>
+        <kOwnedTags name="http://www.eclipse.org/emf/2002/GenModel" object="//@packages.0/@ownedTypeDefinition.16/@ownedAttribute.7"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.17/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.17/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.17/@kOwnedTags.2 //@packages.0/@ownedTypeDefinition.17/@kOwnedTags.3" name="EBigDecimal">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.17"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.math.BigDecimal" object="//@packages.0/@ownedTypeDefinition.17"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.17"/>
+      <kOwnedTags name="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" object="//@packages.0/@ownedTypeDefinition.17"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.18/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.18/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.18/@kOwnedTags.2 //@packages.0/@ownedTypeDefinition.18/@kOwnedTags.3" name="EBigInteger">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.18"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.math.BigInteger" object="//@packages.0/@ownedTypeDefinition.18"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.18"/>
+      <kOwnedTags name="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" object="//@packages.0/@ownedTypeDefinition.18"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.19/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.19/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.19/@kOwnedTags.2 //@packages.0/@ownedTypeDefinition.19/@kOwnedTags.3" name="EByte">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.19"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="byte" object="//@packages.0/@ownedTypeDefinition.19"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.19"/>
+      <kOwnedTags name="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" object="//@packages.0/@ownedTypeDefinition.19"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.20/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.20/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.20/@kOwnedTags.2 //@packages.0/@ownedTypeDefinition.20/@kOwnedTags.3" name="EByteArray">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.20"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="byte[]" object="//@packages.0/@ownedTypeDefinition.20"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.20"/>
+      <kOwnedTags name="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" object="//@packages.0/@ownedTypeDefinition.20"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.21/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.21/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.21/@kOwnedTags.2 //@packages.0/@ownedTypeDefinition.21/@kOwnedTags.3" name="ECharacterObject">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.21"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.lang.Character" object="//@packages.0/@ownedTypeDefinition.21"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.21"/>
+      <kOwnedTags name="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" object="//@packages.0/@ownedTypeDefinition.21"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.22/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.22/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.22/@kOwnedTags.2" name="EDiagnosticChain">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.22"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.common.util.DiagnosticChain" object="//@packages.0/@ownedTypeDefinition.22"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.22"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.23/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.23/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.23/@kOwnedTags.2" name="EEList" typeParameter="//@packages.0/@ownedTypeDefinition.23/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.23"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.common.util.EList" object="//@packages.0/@ownedTypeDefinition.23"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.23"/>
+      <containedType xsi:type="org_kermeta_language_structure:ObjectTypeVariable" name="E" supertype="//@packages.0/@ownedTypeDefinition.23/@containedType.0/@containedType.0">
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </containedType>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.24/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.24/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.24/@kOwnedTags.2" name="EEnumerator">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.24"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.common.util.Enumerator" object="//@packages.0/@ownedTypeDefinition.24"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.24"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.25/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.25/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.25/@kOwnedTags.2" name="EFeatureMap">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.25"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.ecore.util.FeatureMap" object="//@packages.0/@ownedTypeDefinition.25"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.25"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.26/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.26/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.26/@kOwnedTags.2" name="EFeatureMapEntry">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.26"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.ecore.util.FeatureMap$Entry" object="//@packages.0/@ownedTypeDefinition.26"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.26"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.27/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.27/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.27/@kOwnedTags.2" name="EJavaClass" typeParameter="//@packages.0/@ownedTypeDefinition.27/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.27"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.lang.Class" object="//@packages.0/@ownedTypeDefinition.27"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.27"/>
+      <containedType xsi:type="org_kermeta_language_structure:ObjectTypeVariable" name="T" supertype="//@packages.0/@ownedTypeDefinition.27/@containedType.0/@containedType.0">
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </containedType>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.28/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.28/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.28/@kOwnedTags.2" name="EMap" typeParameter="//@packages.0/@ownedTypeDefinition.28/@containedType.0 //@packages.0/@ownedTypeDefinition.28/@containedType.1">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.28"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.util.Map" object="//@packages.0/@ownedTypeDefinition.28"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.28"/>
+      <containedType xsi:type="org_kermeta_language_structure:ObjectTypeVariable" name="K" supertype="//@packages.0/@ownedTypeDefinition.28/@containedType.0/@containedType.0">
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </containedType>
+      <containedType xsi:type="org_kermeta_language_structure:ObjectTypeVariable" name="V" supertype="//@packages.0/@ownedTypeDefinition.28/@containedType.1/@containedType.0">
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </containedType>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.29/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.29/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.29/@kOwnedTags.2" name="EResource">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.29"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.ecore.resource.Resource" object="//@packages.0/@ownedTypeDefinition.29"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.29"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.30/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.30/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.30/@kOwnedTags.2" name="EResourceSet">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.30"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.ecore.resource.ResourceSet" object="//@packages.0/@ownedTypeDefinition.30"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.30"/>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.31/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.31/@kOwnedTags.1" name="EStringToStringMapEntry">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.31"/>
+      <kOwnedTags name="ecore.instanceClassName" value="java.util.Map$Entry" object="//@packages.0/@ownedTypeDefinition.31"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.0/@kOwnedTags.0" name="key" type="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.1/@kOwnedTags.0" name="value" type="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.1/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.31/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::String"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.32/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.32/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.32/@kOwnedTags.2" name="ETreeIterator" typeParameter="//@packages.0/@ownedTypeDefinition.32/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.32"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="org.eclipse.emf.common.util.TreeIterator" object="//@packages.0/@ownedTypeDefinition.32"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.32"/>
+      <containedType xsi:type="org_kermeta_language_structure:ObjectTypeVariable" name="E" supertype="//@packages.0/@ownedTypeDefinition.32/@containedType.0/@containedType.0">
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="kermeta::standard::Object"/>
+      </containedType>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.33/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.33/@kOwnedTags.1" name="EGenericType">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33"/>
+      <kOwnedTags name="http://www.eclipse.org/emf/2002/Ecore" object="//@packages.0/@ownedTypeDefinition.33"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.0/@kOwnedTags.0" name="eUpperBound" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.0/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.1/@kOwnedTags.0" name="eTypeArguments" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.1/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.1"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.2/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.33/@ownedAttribute.2/@kOwnedTags.1" name="eRawType" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.2/@containedType.0" isOrdered="true" lower="1" isReadOnly="true" isDerived="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.2"/>
+        <kOwnedTags name="ecore.isTransient" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.2"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.3/@kOwnedTags.0" name="eLowerBound" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.3/@containedType.0" isOrdered="true" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.3"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.4/@kOwnedTags.0" name="eTypeParameter" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.4/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.4"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ETypeParameter"/>
+      </ownedAttribute>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.5/@kOwnedTags.0" name="eClassifier" type="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.5/@containedType.0" isOrdered="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.33/@ownedAttribute.5"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EClassifier"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.34/@kOwnedTags.0" name="ETypeParameter" superType="//@packages.0/@ownedTypeDefinition.34/@containedType.0">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.34"/>
+      <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::ENamedElement"/>
+      <ownedAttribute kTag="//@packages.0/@ownedTypeDefinition.34/@ownedAttribute.0/@kOwnedTags.0" name="eBounds" type="//@packages.0/@ownedTypeDefinition.34/@ownedAttribute.0/@containedType.0" isOrdered="true" upper="-1" isComposite="true">
+        <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.34/@ownedAttribute.0"/>
+        <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="ecore::EGenericType"/>
+      </ownedAttribute>
+    </ownedTypeDefinition>
+    <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="//@packages.0/@ownedTypeDefinition.35/@kOwnedTags.0 //@packages.0/@ownedTypeDefinition.35/@kOwnedTags.1 //@packages.0/@ownedTypeDefinition.35/@kOwnedTags.2" name="EInvocationTargetException">
+      <kOwnedTags name="ecore" value="true" object="//@packages.0/@ownedTypeDefinition.35"/>
+      <kOwnedTags name="ecore.EDataType_instanceClassName" value="java.lang.reflect.InvocationTargetException" object="//@packages.0/@ownedTypeDefinition.35"/>
+      <kOwnedTags name="CompilerIgnore" value="true" object="//@packages.0/@ownedTypeDefinition.35"/>
+    </ownedTypeDefinition>
+  </packages>
+</org_kermeta_language_structure:Metamodel>

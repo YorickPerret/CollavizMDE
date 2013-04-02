@@ -1,0 +1,3 @@
+package CollavizKermeta2.VisitorMondePackage
+ class RichVisitorCollaviz extends CollavizKermeta2.VisitorMondePackage.VisitorCollaviz with CollavizKermeta2.VisitorMondePackage.VisitorCollavizAspect with _root_.k2.standard.KermetaObject with k2.standard.EObjectImplForPrimitive 
+

@@ -1,0 +1,168 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using collaviz::*
+using Generator::*
+using Helper::CollavizHelper
+
+package VisitorMondePackage{
+	abstract class VisitorInterface
+	{
+		operation visitCollaviz(c : Collaviz, indentation : String) : String is abstract
+		operation visitBall(b : Ball, indentation : String ) : String is abstract
+		operation visitJuncture(j : Juncture, indentation : String) : String is abstract
+		operation visitDirectionalLight(l : DirectionalLight,  indentation : String) : String is abstract
+		operation visitPointLight(l : PointLight,  indentation : String) : String is abstract
+	}
+	
+	
+	abstract class Visitable {
+		operation accept(v : VisitorInterface, indentation : String) : String is abstract
+	}
+	
+	class VisitorCollaviz inherits VisitorInterface {
+		method visitCollaviz(c : Collaviz, indentation : String) : String
+		is do
+			var generateWorld : StringBuffer init StringBuffer.new
+			var wg : WorldGenerator init WorldGenerator.new
+			var collavizHelper : CollavizHelper init CollavizHelper.new
+			//on initialise les variables visit
+			c.objects.each {o | 
+				o.visit ?= false
+			}
+			generateWorld.append(wg.generateIndex())
+			c.lights.each { l |
+				generateWorld.append(l.accept(self,"	"))
+			}	
+			c.objects.each{ o |
+				if o.visit == false then
+					//on recherche l'élément racine du support
+					var e : WorldObject 
+					e ?= collavizHelper.searchRootElement(o)
+					generateWorld.append(e.accept(self,"	"))
+				end
+			}
+			
+			generateWorld.append(wg.generateEnd())	
+			result ?= generateWorld.toString()
+		end
+	
+		method visitBall(b : Ball, indentation : String) : String
+		is do
+		
+			//BallObject ou SupportedObject
+			var stringBuffer : StringBuffer init StringBuffer.new
+			stringBuffer.append("\n"+indentation+"<virtualObject id=\""+b.name+"\" type=\"BallObject\">\n")
+			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
+			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
+			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
+			
+			//paramètre
+			
+			//Transform ou Offset
+			
+			stringBuffer.append(indentation+"	"+"<param name=\"Transform\" type=\"Transform\">"+
+			b.position.translation.x+" "+
+			b.position.translation.y+" "+
+			b.position.translation.z+" "+
+			b.position.rotation.x+" "+
+			b.position.rotation.y+" "+
+			b.position.rotation.z+" "+
+			b.position.scale.x+" "+
+			b.position.scale.y+" "+
+			b.position.scale.z+"</param>\n")
+			
+			stringBuffer.append(indentation+"	"+"<param name=\"Color\" type=\"Color\">"+
+			b.color.r+" "+b.color.g+" "+b.color.b+" "+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">ball</param>\n")	
+			
+			//support
+			b.supported.each{ o |
+				stringBuffer.append(o.accept(self,indentation+"	"))
+			}
+			
+
+			stringBuffer.append(indentation+"</virtualObject>\n")
+			b.visit ?= true
+			result ?= stringBuffer.toString()
+		end
+		
+		method visitJuncture(juncture : Juncture, indentation : String) : String
+		is do
+			var stringBuffer : StringBuffer init StringBuffer.new
+			stringBuffer.append("\n"+indentation+"<virtualObject id=\""+juncture.name+"\" type=\"JunctureObject\">\n")
+			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
+			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
+			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
+			
+			//paramètre
+			/*stringBuffer.append(indentation+indentation+"<param name=\"Transform\" type=\"Transform\">"+
+			juncture.position.translation.x+" "+
+			juncture.position.translation.y+" "+
+			juncture.position.translation.z+" "+
+			juncture.position.rotation.x+" "+
+			juncture.position.rotation.y+" "+
+			juncture.position.rotation.z+" "+
+			juncture.position.scale.x+" "+
+			juncture.position.rotation.y+" "+
+			juncture.position.rotation.z+"</param>\n")
+			*/
+			
+			
+			stringBuffer.append(indentation+"	"+"<param name=\"Color\" type=\"Color\">"+
+			juncture.color.r+" "+juncture.color.g+" "+juncture.color.b+" "+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"End1\" type=\"String\">"+juncture.beginBall.name+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"End2\" type=\"String\">"+juncture.endBall.name+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Radius\" type=\"double\">"+juncture.radius+"</param>\n")	
+			
+			//support
+			juncture.supported.each{ o |
+				stringBuffer.append(o.accept(self,indentation+"	"))
+			}
+
+			stringBuffer.append(indentation+"</virtualObject>\n\n")	
+			juncture.visit ?= true
+			result ?= stringBuffer.toString()
+		end
+		
+		method visitDirectionalLight(l : DirectionalLight , indentation : String) : String
+		is do
+			var stringBuffer : StringBuffer init StringBuffer.new
+			stringBuffer.append("\n"+indentation+"<virtualObject id=\""+l.name+"\" type=\"DirectionalLight\">\n")
+			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
+			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
+			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Direction\" type=\"Vector3d\">"+l.Direction.x+" "+l.Direction.y+" "+l.Direction.z+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.LightColor.r+" "+l.LightColor.b+" "+l.LightColor.g+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.IsOn+"</param>\n")
+			
+			result ?= stringBuffer.toString()
+		end
+
+
+		method visitPointLight(l : PointLight , indentation : String) : String
+		is do
+			var stringBuffer : StringBuffer init StringBuffer.new
+			stringBuffer.append("\n"+indentation+"<virtualObject id=\""+l.name+"\" type=\"PointLight\">\n")
+			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
+			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
+			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.LightColor.r+" "+l.LightColor.b+" "+l.LightColor.g+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Attenuation\" type=\"Vector3d\">"+l.Attenuation.x+" "+l.Attenuation.y+" "+l.Attenuation.z+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Transform\" type=\"Transform\">"+
+			l.Transform.translation.x+" "+
+			l.Transform.translation.y+" "+
+			l.Transform.translation.z+" "+
+			l.Transform.rotation.x+" "+
+			l.Transform.rotation.y+" "+
+			l.Transform.rotation.z+" "+
+			l.Transform.scale.x+" "+
+			l.Transform.scale.y+" "+
+			l.Transform.scale.z+
+			"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.IsOn+"</param>\n")
+			result ?= stringBuffer.toString()
+		end
+	}
+}

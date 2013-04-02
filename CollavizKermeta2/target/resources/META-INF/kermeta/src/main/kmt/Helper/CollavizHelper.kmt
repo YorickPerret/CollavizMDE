@@ -1,0 +1,23 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using collaviz::*
+
+package Helper{
+	class CollavizHelper
+	{
+		//search the top of the tree support in order to visit him and its children
+		operation searchRootElement(o : WorldObject) : WorldObject is do
+			var so : SupportedObject 
+			so ?= o
+			if so != void then
+				if so.support != void then
+					result ?= searchRootElement(so.support)
+				else
+					result ?= so
+				end
+			else
+				result ?= o
+			end
+		end
+	}
+}

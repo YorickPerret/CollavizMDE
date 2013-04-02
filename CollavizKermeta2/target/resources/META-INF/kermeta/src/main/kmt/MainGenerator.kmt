@@ -1,0 +1,51 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using kermeta::emfpersistence::*
+using collaviz::Collaviz
+using collaviz::WorldObject
+using collaviz::SupportedObject
+using VisitorMondePackage::*
+using Generator::WorldGenerator
+using kermeta::io::FileIO
+using ecore
+
+package mainPackage{
+	class MainGenerator
+	{
+
+		operation loadModel(uri : String) : Collaviz is do
+			var repository : ResourceSet init ResourceSet.new
+			var resource : Resource init repository.createResource(uri)
+			resource.load(void)
+			result ?= resource.getContents.one
+		end
+		
+		@main "" // declares that operation as a possible entry point of the program
+		operation mainOperation(uriModel : String, nameWorld : String) : Void is do 
+			//chargement du model
+			stdio.writeln("loading model")						
+			var c : Collaviz
+			c ?= loadModel(uriModel)
+			var visitor : VisitorInterface init VisitorCollaviz.new
+			if c!= void then
+				stdio.writeln("load model success")
+				c.checkAllInvariants()
+				
+				var generateWorld : String init ""
+				generateWorld ?= c.accept(visitor,"")
+				stdio.writeln("saving world")
+				var resWorld : String
+				resWorld ?= "platform:/resource/CollavizKermeta2/src/main/world/"+nameWorld
+				
+				FileIO.writeTextFile(resWorld.toURI(),generateWorld.toString())
+				
+				stdio.writeln("save world success")
+				
+				//wg.generateXMLWorld(c,nameWorld)
+			else
+				stdio.writeln("load model failed")
+			end
+			
+		end
+	}
+}
