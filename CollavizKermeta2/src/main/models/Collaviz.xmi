@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<collaviz:Collaviz
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:collaviz="platform:/resource/Collaviz/model/Collaviz/collaviz.ecore">
+  <objects xsi:type="collaviz:Ball"
+      name="b1">
+    <position>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </position>
+    <color/>
+    <offset>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </offset>
+  </objects>
+  <objects xsi:type="collaviz:Ball"
+      name="b2">
+    <position>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </position>
+    <color/>
+    <offset>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </offset>
+  </objects>
+  <objects xsi:type="collaviz:Juncture"
+      name="j1"
+      support="//@objects.3"
+      beginBall="//@objects.0"
+      endBall="//@objects.1"
+      radius="0.5">
+    <position>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </position>
+    <color/>
+    <offset>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </offset>
+  </objects>
+  <objects xsi:type="collaviz:Ball"
+      name="b3"
+      supported="//@objects.2">
+    <position>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </position>
+    <color/>
+    <offset>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </offset>
+  </objects>
+  <lights xsi:type="collaviz:DirectionalLight"
+      geometry="none"
+      IsOn="true"
+      name="l1">
+    <LightColor/>
+    <Direction/>
+  </lights>
+</collaviz:Collaviz>

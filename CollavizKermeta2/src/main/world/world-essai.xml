@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		
+<worldDescription>
+	
+	<virtualObject id="grille" type="WorldObject">
+		<owners>All</owners>
+		<accessLevel>3</accessLevel>
+		<refProxy>true</refProxy>
+		<param name="Transform" type="Transform">0 0 0 0 0 0</param>
+		<param name="Geometry" type="String">grille.wrl</param>
+		<param name="IsPickable" type="boolean">false</param>
+	</virtualObject>
+	
+
+	<virtualObject id="l1" type="DirectionalLight">
+		<owners>All</owners>
+		<accessLevel>3</accessLevel>
+		<refProxy>true</refProxy>
+		<param name="Direction" type="Vector3d">0 0 0</param>
+		<param name="LightColor" type="Color">0.0 0.0 0.0</param>
+		<param name="Geometry" type="String">none</param>
+		<param name="IsOn" type="boolean">true</param>
+
+	<virtualObject id="b1" type="BallObject">
+		<owners>All</owners>
+		<accessLevel>3</accessLevel>
+		<refProxy>true</refProxy>
+		<param name="Transform" type="Transform">0 0 0 0 0 0 0 0 0</param>
+		<param name="Color" type="Color">0.0 0.0 0.0 </param>
+		<param name="Geometry" type="String">ball</param>
+	</virtualObject>
+
+	<virtualObject id="b2" type="BallObject">
+		<owners>All</owners>
+		<accessLevel>3</accessLevel>
+		<refProxy>true</refProxy>
+		<param name="Transform" type="Transform">0 0 0 0 0 0 0 0 0</param>
+		<param name="Color" type="Color">0.0 0.0 0.0 </param>
+		<param name="Geometry" type="String">ball</param>
+	</virtualObject>
+
+	<virtualObject id="b3" type="BallObject">
+		<owners>All</owners>
+		<accessLevel>3</accessLevel>
+		<refProxy>true</refProxy>
+		<param name="Transform" type="Transform">0 0 0 0 0 0 0 0 0</param>
+		<param name="Color" type="Color">0.0 0.0 0.0 </param>
+		<param name="Geometry" type="String">ball</param>
+
+		<virtualObject id="j1" type="JunctureObject">
+			<owners>All</owners>
+			<accessLevel>3</accessLevel>
+			<refProxy>true</refProxy>
+			<param name="Color" type="Color">0.0 0.0 0.0 </param>
+			<param name="End1" type="String">b1</param>
+			<param name="End2" type="String">b2</param>
+			<param name="Radius" type="double">0.5</param>
+		</virtualObject>
+
+	</virtualObject>
+
+</worldDescription>

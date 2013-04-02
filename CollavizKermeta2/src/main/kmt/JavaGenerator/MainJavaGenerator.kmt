@@ -1,0 +1,29 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using JavaGenerator::*
+using ecore::*
+using Helper::*
+
+package JavaGenerator{
+	class MainJavaGenerator
+	{
+
+		@main "" // declares that operation as a possible entry point of the program
+		operation main(mm : String) : Void is do 
+			var generatorComposite : GeneratorComposite init GeneratorComposite.new
+			var controllerGenerator : ControllerGenerator init ControllerGenerator.new
+			generatorComposite.addGenerator(controllerGenerator)
+			var helper : CollavizHelper init CollavizHelper.new
+			var p : EPackage
+			stdio.writeln("******** loading model ********")
+			p?=helper.loadModel(mm)
+			if p!= void then
+				stdio.writeln("******** load succes ********")
+				generatorComposite.generate(p)
+			else
+				stdio.writeln("******** load failed ********")
+			end
+			
+		end
+	}
+}

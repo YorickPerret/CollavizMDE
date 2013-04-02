@@ -15061,7 +15061,7 @@
       <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/Generator.kmt;77;882" object="/1/@packages.6"/>
       <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/MainJavaGenerator.kmt;116;841" object="/1/@packages.6"/>
       <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/GeneratorComposite.kmt;110;518" object="/1/@packages.6"/>
-      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;119;2384" object="/1/@packages.6"/>
+      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;119;2386" object="/1/@packages.6"/>
       <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="/1/@packages.6/@ownedTypeDefinition.0/@kOwnedTags.0" name="Generator" superType="/1/@packages.6/@ownedTypeDefinition.0/@containedType.0" isAbstract="true">
         <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/Generator.kmt;101;189" object="/1/@packages.6/@ownedTypeDefinition.0"/>
         <containedType xsi:type="org_kermeta_language_structure:Class" typeDefinition="/0/@packages.1/@nestedPackage.0/@ownedTypeDefinition.2"/>
@@ -15552,7 +15552,7 @@
         </ownedOperation>
       </ownedTypeDefinition>
       <ownedTypeDefinition xsi:type="org_kermeta_language_structure:ClassDefinition" kTag="/1/@packages.6/@ownedTypeDefinition.4/@kOwnedTags.0" name="ControllerGenerator" superType="/1/@packages.6/@ownedTypeDefinition.4/@containedType.0 /1/@packages.6/@ownedTypeDefinition.4/@containedType.1">
-        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;143;2382" object="/1/@packages.6/@ownedTypeDefinition.4"/>
+        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;143;2384" object="/1/@packages.6/@ownedTypeDefinition.4"/>
         <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="Generator">
           <usings fromQName="kermeta::standard::*" toName=""/>
           <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16400,7 +16400,7 @@
           </body>
         </ownedOperation>
         <ownedOperation kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@kOwnedTags.0" name="generateBeginClasseClient" type="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@containedType.0" isOrdered="true">
-          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;1932;2152" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2"/>
+          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;1932;2153" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2"/>
           <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16427,28 +16427,15 @@
             </containedType>
           </ownedParameter>
           <body xsi:type="org_kermeta_language_behavior:Block" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@kOwnedTags.0">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2020;2152" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2020;2153" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body"/>
             <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@kOwnedTags.0" isCast="true">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2026;2136" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2026;2144" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0"/>
               <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@target/@kOwnedTags.0">
                 <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2026;2032" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@target"/>
               </target>
               <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0/@kOwnedTags.0" name="name">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2131;2136" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0"/>
-                  <usings fromQName="kermeta::standard::*" toName=""/>
-                  <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                  <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore::*" toName=""/>
-                  <usings fromQName="Helper::*" toName=""/>
-                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0/@target/@kOwnedTags.0" name="eclass">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2125;2131" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0/@target"/>
-                    <usings fromQName="kermeta::standard::*" toName=""/>
-                    <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                    <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore::*" toName=""/>
-                    <usings fromQName="Helper::*" toName=""/>
-                  </target>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0/@kOwnedTags.0" value=" {">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2137;2144" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16456,8 +16443,21 @@
                 <usings fromQName="ecore::*" toName=""/>
                 <usings fromQName="Helper::*" toName=""/>
                 <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                  <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0/@kOwnedTags.0" value=" implements IC_">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2107;2124" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0"/>
+                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0/@kOwnedTags.0" name="name">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2131;2136" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0"/>
+                    <usings fromQName="kermeta::standard::*" toName=""/>
+                    <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                    <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                    <usings fromQName="ecore::*" toName=""/>
+                    <usings fromQName="Helper::*" toName=""/>
+                    <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2125;2131" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@parameters.0/@target"/>
+                      <usings fromQName="kermeta::standard::*" toName=""/>
+                      <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                      <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                      <usings fromQName="ecore::*" toName=""/>
+                      <usings fromQName="Helper::*" toName=""/>
+                    </target>
                   </parameters>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16465,21 +16465,8 @@
                   <usings fromQName="ecore::*" toName=""/>
                   <usings fromQName="Helper::*" toName=""/>
                   <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                    <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2101;2106" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0"/>
-                      <usings fromQName="kermeta::standard::*" toName=""/>
-                      <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                      <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                      <usings fromQName="ecore::*" toName=""/>
-                      <usings fromQName="Helper::*" toName=""/>
-                      <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="esuperclass">
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2090;2101" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0/@target"/>
-                        <usings fromQName="kermeta::standard::*" toName=""/>
-                        <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                        <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                        <usings fromQName="ecore::*" toName=""/>
-                        <usings fromQName="Helper::*" toName=""/>
-                      </target>
+                    <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0/@kOwnedTags.0" value=" implements IC_">
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2107;2124" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@parameters.0"/>
                     </parameters>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16487,8 +16474,21 @@
                     <usings fromQName="ecore::*" toName=""/>
                     <usings fromQName="Helper::*" toName=""/>
                     <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                      <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@kOwnedTags.0" value=" extends CClient_">
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2070;2089" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0"/>
+                      <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
+                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2101;2106" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0"/>
+                        <usings fromQName="kermeta::standard::*" toName=""/>
+                        <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                        <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                        <usings fromQName="ecore::*" toName=""/>
+                        <usings fromQName="Helper::*" toName=""/>
+                        <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="esuperclass">
+                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2090;2101" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@target"/>
+                          <usings fromQName="kermeta::standard::*" toName=""/>
+                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                          <usings fromQName="ecore::*" toName=""/>
+                          <usings fromQName="Helper::*" toName=""/>
+                        </target>
                       </parameters>
                       <usings fromQName="kermeta::standard::*" toName=""/>
                       <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16496,29 +16496,39 @@
                       <usings fromQName="ecore::*" toName=""/>
                       <usings fromQName="Helper::*" toName=""/>
                       <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                        <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
-                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2064;2069" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0"/>
-                          <usings fromQName="kermeta::standard::*" toName=""/>
-                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                          <usings fromQName="ecore::*" toName=""/>
-                          <usings fromQName="Helper::*" toName=""/>
-                          <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
-                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2058;2064" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@target"/>
-                            <usings fromQName="kermeta::standard::*" toName=""/>
-                            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                            <usings fromQName="ecore::*" toName=""/>
-                            <usings fromQName="Helper::*" toName=""/>
-                          </target>
+                        <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" value=" extends CClient_">
+                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2070;2089" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0"/>
                         </parameters>
                         <usings fromQName="kermeta::standard::*" toName=""/>
                         <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                         <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
                         <usings fromQName="ecore::*" toName=""/>
                         <usings fromQName="Helper::*" toName=""/>
-                        <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@kOwnedTags.0" value="public class CClient_">
-                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2034;2057" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target"/>
+                        <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
+                          <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
+                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2064;2069" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0"/>
+                            <usings fromQName="kermeta::standard::*" toName=""/>
+                            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                            <usings fromQName="ecore::*" toName=""/>
+                            <usings fromQName="Helper::*" toName=""/>
+                            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
+                              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2058;2064" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@target"/>
+                              <usings fromQName="kermeta::standard::*" toName=""/>
+                              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                              <usings fromQName="ecore::*" toName=""/>
+                              <usings fromQName="Helper::*" toName=""/>
+                            </target>
+                          </parameters>
+                          <usings fromQName="kermeta::standard::*" toName=""/>
+                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                          <usings fromQName="ecore::*" toName=""/>
+                          <usings fromQName="Helper::*" toName=""/>
+                          <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@target/@kOwnedTags.0" value="public class CClient_">
+                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2034;2057" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.0/@value/@target/@target/@target/@target/@target/@target"/>
+                          </target>
                         </target>
                       </target>
                     </target>
@@ -16526,14 +16536,10 @@
                 </target>
               </value>
             </statement>
-            <statement xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.1/@kOwnedTags.0 /1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.1/@kOwnedTags.1" value=" {">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2136;2143" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.1"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2136;2143" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.2/@body/@statement.1"/>
-            </statement>
           </body>
         </ownedOperation>
         <ownedOperation kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@kOwnedTags.0" name="generateBeginClasseServer" type="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@containedType.0" isOrdered="true">
-          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2152;2380" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3"/>
+          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2153;2382" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3"/>
           <containedType xsi:type="org_kermeta_language_structure:UnresolvedType" typeIdentifier="String">
             <usings fromQName="kermeta::standard::*" toName=""/>
             <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16560,28 +16566,15 @@
             </containedType>
           </ownedParameter>
           <body xsi:type="org_kermeta_language_behavior:Block" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@kOwnedTags.0">
-            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2240;2380" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body"/>
+            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2241;2382" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body"/>
             <statement xsi:type="org_kermeta_language_behavior:Assignment" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@kOwnedTags.0" isCast="true">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2246;2356" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0"/>
+              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2247;2365" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0"/>
               <target xsi:type="org_kermeta_language_behavior:CallResult" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@target/@kOwnedTags.0">
-                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2246;2252" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@target"/>
+                <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2247;2253" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@target"/>
               </target>
               <value xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0/@kOwnedTags.0" name="name">
-                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2351;2356" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0"/>
-                  <usings fromQName="kermeta::standard::*" toName=""/>
-                  <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                  <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                  <usings fromQName="ecore::*" toName=""/>
-                  <usings fromQName="Helper::*" toName=""/>
-                  <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0/@target/@kOwnedTags.0" name="eclass">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2345;2351" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0/@target"/>
-                    <usings fromQName="kermeta::standard::*" toName=""/>
-                    <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                    <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                    <usings fromQName="ecore::*" toName=""/>
-                    <usings fromQName="Helper::*" toName=""/>
-                  </target>
+                <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0/@kOwnedTags.0" value=" {">
+                  <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2358;2365" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@parameters.0"/>
                 </parameters>
                 <usings fromQName="kermeta::standard::*" toName=""/>
                 <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16589,8 +16582,21 @@
                 <usings fromQName="ecore::*" toName=""/>
                 <usings fromQName="Helper::*" toName=""/>
                 <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                  <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0/@kOwnedTags.0" value=" implements IC_">
-                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2327;2344" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0"/>
+                  <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0/@kOwnedTags.0" name="name">
+                    <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2352;2357" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0"/>
+                    <usings fromQName="kermeta::standard::*" toName=""/>
+                    <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                    <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                    <usings fromQName="ecore::*" toName=""/>
+                    <usings fromQName="Helper::*" toName=""/>
+                    <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2346;2352" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@parameters.0/@target"/>
+                      <usings fromQName="kermeta::standard::*" toName=""/>
+                      <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                      <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                      <usings fromQName="ecore::*" toName=""/>
+                      <usings fromQName="Helper::*" toName=""/>
+                    </target>
                   </parameters>
                   <usings fromQName="kermeta::standard::*" toName=""/>
                   <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16598,21 +16604,8 @@
                   <usings fromQName="ecore::*" toName=""/>
                   <usings fromQName="Helper::*" toName=""/>
                   <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                    <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
-                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2321;2326" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0"/>
-                      <usings fromQName="kermeta::standard::*" toName=""/>
-                      <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                      <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                      <usings fromQName="ecore::*" toName=""/>
-                      <usings fromQName="Helper::*" toName=""/>
-                      <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="esuperclass">
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2310;2321" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0/@target"/>
-                        <usings fromQName="kermeta::standard::*" toName=""/>
-                        <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                        <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                        <usings fromQName="ecore::*" toName=""/>
-                        <usings fromQName="Helper::*" toName=""/>
-                      </target>
+                    <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0/@kOwnedTags.0" value=" implements IC_">
+                      <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2328;2345" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@parameters.0"/>
                     </parameters>
                     <usings fromQName="kermeta::standard::*" toName=""/>
                     <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16620,8 +16613,21 @@
                     <usings fromQName="ecore::*" toName=""/>
                     <usings fromQName="Helper::*" toName=""/>
                     <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                      <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@kOwnedTags.0" value=" extends CServer_">
-                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2290;2309" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0"/>
+                      <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
+                        <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2322;2327" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0"/>
+                        <usings fromQName="kermeta::standard::*" toName=""/>
+                        <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                        <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                        <usings fromQName="ecore::*" toName=""/>
+                        <usings fromQName="Helper::*" toName=""/>
+                        <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="esuperclass">
+                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2311;2322" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@parameters.0/@target"/>
+                          <usings fromQName="kermeta::standard::*" toName=""/>
+                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                          <usings fromQName="ecore::*" toName=""/>
+                          <usings fromQName="Helper::*" toName=""/>
+                        </target>
                       </parameters>
                       <usings fromQName="kermeta::standard::*" toName=""/>
                       <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
@@ -16629,39 +16635,45 @@
                       <usings fromQName="ecore::*" toName=""/>
                       <usings fromQName="Helper::*" toName=""/>
                       <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
-                        <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
-                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2284;2289" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0"/>
-                          <usings fromQName="kermeta::standard::*" toName=""/>
-                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                          <usings fromQName="ecore::*" toName=""/>
-                          <usings fromQName="Helper::*" toName=""/>
-                          <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
-                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2278;2284" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@target"/>
-                            <usings fromQName="kermeta::standard::*" toName=""/>
-                            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
-                            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
-                            <usings fromQName="ecore::*" toName=""/>
-                            <usings fromQName="Helper::*" toName=""/>
-                          </target>
+                        <parameters xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" value=" extends CServer_">
+                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2291;2310" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@parameters.0"/>
                         </parameters>
                         <usings fromQName="kermeta::standard::*" toName=""/>
                         <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
                         <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
                         <usings fromQName="ecore::*" toName=""/>
                         <usings fromQName="Helper::*" toName=""/>
-                        <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@kOwnedTags.0" value="public class CServer_">
-                          <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2254;2277" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target"/>
+                        <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" name="plus">
+                          <parameters xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@kOwnedTags.0" name="name">
+                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2285;2290" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0"/>
+                            <usings fromQName="kermeta::standard::*" toName=""/>
+                            <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                            <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                            <usings fromQName="ecore::*" toName=""/>
+                            <usings fromQName="Helper::*" toName=""/>
+                            <target xsi:type="org_kermeta_language_behavior:UnresolvedCall" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@target/@kOwnedTags.0" name="eclass">
+                              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2279;2285" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@parameters.0/@target"/>
+                              <usings fromQName="kermeta::standard::*" toName=""/>
+                              <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                              <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                              <usings fromQName="ecore::*" toName=""/>
+                              <usings fromQName="Helper::*" toName=""/>
+                            </target>
+                          </parameters>
+                          <usings fromQName="kermeta::standard::*" toName=""/>
+                          <usings fromQName="kermeta::io::StdIO" toName="stdio"/>
+                          <usings fromQName="kermeta::io::FileIO" toName="FileIO"/>
+                          <usings fromQName="ecore::*" toName=""/>
+                          <usings fromQName="Helper::*" toName=""/>
+                          <target xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@target/@kOwnedTags.0" value="public class CServer_">
+                            <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2255;2278" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.0/@value/@target/@target/@target/@target/@target/@target"/>
+                          </target>
                         </target>
                       </target>
                     </target>
                   </target>
                 </target>
               </value>
-            </statement>
-            <statement xsi:type="org_kermeta_language_behavior:StringLiteral" kTag="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.1/@kOwnedTags.0 /1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.1/@kOwnedTags.1" value=" {">
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2356;2363" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.1"/>
-              <kOwnedTags name="traceability_text_reference" value="file:/C:/Users/yperret/workspace/CollavizKermeta2/src/main/kmt/JavaGenerator/ControllerGenerator.kmt;2356;2363" object="/1/@packages.6/@ownedTypeDefinition.4/@ownedOperation.3/@body/@statement.1"/>
             </statement>
           </body>
         </ownedOperation>
