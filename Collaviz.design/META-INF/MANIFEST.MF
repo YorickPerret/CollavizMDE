@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Name: Collaviz.design
+Bundle-SymbolicName: Collaviz.design;singleton=true
+Bundle-Version: 1.0.0
+Bundle-Activator: defaultpackage.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ fr.obeo.dsl.viewpoint,
+ fr.obeo.dsl.common.acceleo.mtl,
+ org.eclipse.emf.common
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: collaviz,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common

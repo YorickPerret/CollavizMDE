@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Collaviz"/>
+	<classpathentry kind="con" path="org.eclipse.acceleo.ide.ui.ACCELEO_RUNTIME/RUNTIME"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/yperret/eclipse-obeo-designer-update-site/eclipse/plugins/org.eclipse.uml2_4.0.2.v20130114-0902.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
