@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Collaviz/src" modelPluginID="Collaviz" modelName="Collaviz"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>collaviz.ecore</foreignModel>
+  <genPackages prefix="Collaviz" disposableProviderFactory="true" ecorePackage="collaviz.ecore#/">
+    <genClasses image="false" ecoreClass="collaviz.ecore#//WorldObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//WorldObject/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//WorldObject/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//WorldObject/color"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//WorldObject/supported"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Juncture">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Juncture/beginBall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Juncture/endBall"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Juncture/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Ball">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Ball/junctures"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Quat4d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Quat4d/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Quat4d/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Quat4d/z"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Quat4d/w"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Vector3d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Vector3d/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Vector3d/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Vector3d/z"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Transform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Transform/translation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Transform/rotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Transform/scale"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="collaviz.ecore#//SupportedObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//SupportedObject/offset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//SupportedObject/support"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Collaviz">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Collaviz/objects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Collaviz/lights"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Color/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Color/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Color/b"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="collaviz.ecore#//Light">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//Light/LightColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Light/geometry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Light/IsOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Light/name"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//DirectionalLight">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//DirectionalLight/Direction"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//PointLight">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//PointLight/Attenuation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference collaviz.ecore#//PointLight/Transform"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//PointLight/IsPickable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//PointLight/IsCullable"/>
+    </genClasses>
+    <genClasses ecoreClass="collaviz.ecore#//DeformableObject"/>
+  </genPackages>
+</genmodel:GenModel>
