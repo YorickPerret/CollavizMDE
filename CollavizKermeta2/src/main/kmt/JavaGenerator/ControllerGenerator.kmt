@@ -15,29 +15,14 @@ package JavaGenerator{
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
 				if helper.isAuthorizedClasse(c.name) then
-					var bufferClassClient : StringBuffer init StringBuffer.new
-					var bufferClassServer : StringBuffer init StringBuffer.new
 					var clazz : EClass
 					clazz?=c
 					if clazz != void then
-						//generating classes
-						stdio.writeln("******** Generating classe "+clazz.name+" ********")
-						var superType : EClass init clazz.eSuperTypes.one
-						bufferClassClient.append(generateBeginClasseClient(clazz,superType))
-						bufferClassServer.append(generateBeginClasseServer(clazz,superType))
-						bufferClassClient.append(generateEndClasse())
-						bufferClassServer.append(generateEndClasse())
-						stdio.writeln("generating classe done")
+						//controllers
+						generateControllersClasses(clazz)
 						
-						//save file
-						stdio.writeln("Saving controllers")
-						
-						var resCClient : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CClient_"+clazz.name+".java"
-						FileIO.writeTextFile(resCClient.toURI(),bufferClassClient.toString())
-						var resCServer : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CServer_"+clazz.name+".java"
-						FileIO.writeTextFile(resCServer.toURI(),bufferClassServer.toString())
-						
-						stdio.writeln("******** Save succes ********\n")
+						//interfaces
+						generateInterfaceClasses(clazz)
 						
 					end
 				end
@@ -45,19 +30,91 @@ package JavaGenerator{
 			stdio.writeln("Generating controllers finish")
 		end
 		
+		operation generateControllersClasses(clazz : EClass) : Void is do
+			//generating classes
+			var bufferClassClient : StringBuffer init StringBuffer.new
+			var bufferClassServer : StringBuffer init StringBuffer.new
+			
+			stdio.writeln("******** Generating classe "+clazz.name+" ********")
+			var superType : EClass init clazz.eSuperTypes.one
+			bufferClassClient.append(generateBeginClasseClient(clazz,superType))
+			bufferClassServer.append(generateBeginClasseServer(clazz,superType))
+			
+			/* /!\ add operations /!\  */	
+			bufferClassClient.append(generateConstructorClient(clazz))
+			bufferClassServer.append(generateConstructorServer(clazz))				
+			
+			var tmp : String init generateEndClasse()
+			bufferClassClient.append(tmp)
+			bufferClassServer.append(tmp)
+			stdio.writeln("generating classe done")
+			
+			//save files
+			stdio.writeln("Saving controller")
+			
+			var resCClient : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CClient_"+clazz.name+".java"
+			FileIO.writeTextFile(resCClient.toURI(),bufferClassClient.toString())
+			var resCServer : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CServer_"+clazz.name+".java"
+			FileIO.writeTextFile(resCServer.toURI(),bufferClassServer.toString())
+			
+			stdio.writeln("******** Save succes ********\n")
+		end
+		
+		operation generateInterfaceClasses(clazz : EClass) : Void is do
+		
+			var bufferInterface : String
+		
+			//generating interfaces
+			stdio.writeln("******** Generating Interface "+clazz.name+" ********")
+			bufferInterface ?= generateInterface(clazz)
+			stdio.writeln("generating interface done")
+			
+			//save file
+			stdio.writeln("Saving interface controllers")
+			var resCInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/IC_"+clazz.name+".java"
+			FileIO.writeTextFile(resCInterface.toURI(),bufferInterface)
+			stdio.writeln("******** Save succes ********\n")
+		end
+		
 		method generateBeginClasse(eclass : EClass , esuperclass : EClass) : String is do
 			result?=""
 		end
 		
 		operation generateBeginClasseClient(eclass : EClass , esuperclass : EClass) : String is do
-			result?="public class CClient_"+eclass.name+" extends CClient_"+esuperclass.name+" implements IC_"+eclass.name+" {"
+			result?="public class CClient_"+eclass.name+" extends CClient_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
 		end
 		
 		operation generateBeginClasseServer(eclass : EClass , esuperclass : EClass) : String is do
-			result?="public class CServer_"+eclass.name+" extends CServer_"+esuperclass.name+" implements IC_"+eclass.name+" {"
+			result?="public class CServer_"+eclass.name+" extends CServer_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
 		end
 		
+		method generateInterface(eclass : EClass) : String is do
+			var bufferInterface : StringBuffer init StringBuffer.new
+			bufferInterface.append("public interface IC_"+eclass.name+" extends IA_"+eclass.name+"{\n")
+			
+			bufferInterface.append("\n}")
+			result?=bufferInterface.toString()
+		end
 		
+		method generateConstructor(eclass : EClass) : String is do
+			result?=""
+		end
+		
+		operation generateConstructorClient(eclass : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public CClient_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CClient_ObjectManager objectManager) {\n")
+			buffer.append("		super (abstraction, referentProxyArchi, accessLevel, objectManager) ;\n")
+			buffer.append("	}\n")
+			result?=buffer.toString()
+		end
+		
+		operation generateConstructorServer(eclass : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public CServer_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CClient_ObjectManager objectManager) {\n")
+			buffer.append("		super (abstraction, referentProxyArchi, accessLevel, objectManager) ;\n")
+			buffer.append("	}\n")
+			result?=buffer.toString()
+		end
 		
 		
 	}

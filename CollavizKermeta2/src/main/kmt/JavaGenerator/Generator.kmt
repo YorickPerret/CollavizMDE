@@ -12,7 +12,7 @@ package JavaGenerator{
 	{
 		operation generateInterface(eclass : EClass) : String is abstract
 		operation generateBeginClasse(eclass : EClass , esuperclass : EClass) : String is abstract
-		operation generateConstructor(eclass : EClass , esuperclass : EClass) : String is abstract
+		operation generateConstructor(eclass : EClass) : String is abstract
 		operation generateOperation(o : EOperation) : String is abstract
 		operation generateParameterPut() : String is abstract
 		operation generateRegisterModificationCallback(a : EAttribute) : String is abstract
