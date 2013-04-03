@@ -12,6 +12,9 @@
         eType="#//SupportedObject" eOpposite="#//SupportedObject/support"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Juncture" eSuperTypes="#//DeformableObject">
+    <eOperations name="setRad">
+      <eParameters name="radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beginBall" lowerBound="1"
         eType="#//Ball"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="endBall" lowerBound="1"

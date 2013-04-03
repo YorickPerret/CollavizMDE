@@ -32,6 +32,10 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="__BfZ4ZVQEeKB-d1KQAoq_Q"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="__BfZ4pVQEeKB-d1KQAoq_Q" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_JCx-UJw9EeK82bydQ0qo2w" type="2002">
+        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Juncture/setRad"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JCx-UZw9EeK82bydQ0qo2w"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="__BfZ45VQEeKB-d1KQAoq_Q"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="__BfZ5JVQEeKB-d1KQAoq_Q"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="__BfZ5ZVQEeKB-d1KQAoq_Q"/>

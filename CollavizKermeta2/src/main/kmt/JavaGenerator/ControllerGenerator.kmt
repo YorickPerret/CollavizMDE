@@ -42,7 +42,15 @@ package JavaGenerator{
 			
 			/* /!\ add operations /!\  */	
 			bufferClassClient.append(generateConstructorClient(clazz))
-			bufferClassServer.append(generateConstructorServer(clazz))				
+			bufferClassServer.append(generateConstructorServer(clazz))	
+			
+			//essai sur les operations
+			clazz.eOperations.each { o |
+				stdio.writeln("operation : "+o.name)
+				o.eParameters.each{ p |
+					stdio.writeln("	param : "+p.eType.name+" "+p.name)
+				}
+			}			
 			
 			var tmp : String init generateEndClasse()
 			bufferClassClient.append(tmp)

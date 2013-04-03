@@ -1,6 +1,7 @@
 resource library_standard ="platform:/plugin/org.kermeta.language.library.standard" alternative "mvn:org.kermeta.language/language.library.standard/2.0.99-SNAPSHOT"
 resource uml_model ="platform:/plugin/org.eclipse.uml2.uml"
 resource ecore_model ="platform:/plugin/org.eclipse.emf.ecore"
+
 importProject library_standard
 project CollavizKermeta2 {
 	mainClass "CollavizKermeta2^mainPackage::MainGenerator"

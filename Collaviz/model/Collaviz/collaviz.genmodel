@@ -14,6 +14,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Juncture/beginBall"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Juncture/endBall"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute collaviz.ecore#//Juncture/radius"/>
+      <genOperations ecoreOperation="collaviz.ecore#//Juncture/setRad">
+        <genParameters ecoreParameter="collaviz.ecore#//Juncture/setRad/radius"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="collaviz.ecore#//Ball">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference collaviz.ecore#//Ball/junctures"/>
