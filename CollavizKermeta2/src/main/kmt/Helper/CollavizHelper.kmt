@@ -39,5 +39,6 @@ package Helper{
 		operation isAuthorizedClasse(nameClasse : String) : Boolean is do
 			result ?= authorizedClasses.exists{n | n==nameClasse}
 		end
+		
 	}
 }

@@ -5,6 +5,7 @@ using VisitorMondePackage::VisitorInterface
 
 package collaviz{
 	
+	/*design pattern visitor*/
 	aspect class Collaviz inherits Visitable
 	{
 		method accept(v : VisitorInterface, indentation : String) : String

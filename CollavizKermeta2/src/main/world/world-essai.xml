@@ -12,21 +12,12 @@
 	</virtualObject>
 	
 
-	<virtualObject id="l1" type="DirectionalLight">
-		<owners>All</owners>
-		<accessLevel>3</accessLevel>
-		<refProxy>true</refProxy>
-		<param name="Direction" type="Vector3d">0 0 0</param>
-		<param name="LightColor" type="Color">0.0 0.0 0.0</param>
-		<param name="Geometry" type="String">none</param>
-		<param name="IsOn" type="boolean">true</param>
-
 	<virtualObject id="b1" type="BallObject">
 		<owners>All</owners>
 		<accessLevel>3</accessLevel>
 		<refProxy>true</refProxy>
 		<param name="Transform" type="Transform">0 0 0 0 0 0 0 0 0</param>
-		<param name="Color" type="Color">0.0 0.0 0.0 </param>
+		<param name="Color" type="Color">0.5 0.5 0.5 </param>
 		<param name="Geometry" type="String">ball</param>
 	</virtualObject>
 

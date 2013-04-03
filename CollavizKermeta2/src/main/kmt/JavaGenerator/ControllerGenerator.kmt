@@ -37,6 +37,8 @@ package JavaGenerator{
 			
 			stdio.writeln("******** Generating classe "+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
+			bufferClassClient.append(generateImportClient(clazz))
+			bufferClassServer.append(generateImportServer(clazz))
 			bufferClassClient.append(generateBeginClasseClient(clazz,superType))
 			bufferClassServer.append(generateBeginClasseServer(clazz,superType))
 			
@@ -46,10 +48,8 @@ package JavaGenerator{
 			
 			//essai sur les operations
 			clazz.eOperations.each { o |
-				stdio.writeln("operation : "+o.name)
-				o.eParameters.each{ p |
-					stdio.writeln("	param : "+p.eType.name+" "+p.name)
-				}
+				bufferClassClient.append(generateOperation(o))
+				bufferClassServer.append(generateOperation(o))
 			}			
 			
 			var tmp : String init generateEndClasse()
@@ -62,12 +62,29 @@ package JavaGenerator{
 			
 			var resCClient : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CClient_"+clazz.name+".java"
 			FileIO.writeTextFile(resCClient.toURI(),bufferClassClient.toString())
-			var resCServer : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CServer_"+clazz.name+".java"
+			var resCServer : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CService_"+clazz.name+".java"
 			FileIO.writeTextFile(resCServer.toURI(),bufferClassServer.toString())
 			
 			stdio.writeln("******** Save succes ********\n")
 		end
 		
+		operation generateImportClient(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("package org.collaviz.iivc.control.client;\n")
+			buffer.append("import org.collaviz.collaboration.objects.abstraction.IA_SharedObject ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.control.client.CClient_ObjectManager ;\n")
+			buffer.append("import org.collaviz.iivc.control.IC_"+clazz.name+" ;\n\n")
+			result?=buffer.toString()
+		end
+		
+		operation generateImportServer(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("package org.collaviz.iivc.control.service;\n")
+			buffer.append("import org.collaviz.collaboration.objects.abstraction.IA_SharedObject ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.control.client.CService_ObjectManager ;\n")
+			buffer.append("import org.collaviz.iivc.control.IC_"+clazz.name+" ;\n\n")
+			result?=buffer.toString()
+		end		
 		operation generateInterfaceClasses(clazz : EClass) : Void is do
 		
 			var bufferInterface : String
@@ -93,7 +110,7 @@ package JavaGenerator{
 		end
 		
 		operation generateBeginClasseServer(eclass : EClass , esuperclass : EClass) : String is do
-			result?="public class CServer_"+eclass.name+" extends CServer_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
+			result?="public class CService_"+eclass.name+" extends CService_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
 		end
 		
 		method generateInterface(eclass : EClass) : String is do
@@ -112,16 +129,42 @@ package JavaGenerator{
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("	public CClient_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CClient_ObjectManager objectManager) {\n")
 			buffer.append("		super (abstraction, referentProxyArchi, accessLevel, objectManager) ;\n")
-			buffer.append("	}\n")
+			buffer.append("	}\n\n")
 			result?=buffer.toString()
 		end
 		
 		operation generateConstructorServer(eclass : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("	public CServer_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CClient_ObjectManager objectManager) {\n")
+			buffer.append("	public CService_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CService_ObjectManager objectManager) {\n")
 			buffer.append("		super (abstraction, referentProxyArchi, accessLevel, objectManager) ;\n")
-			buffer.append("	}\n")
+			buffer.append("	}\n\n")
 			result?=buffer.toString()
+		end
+		
+		method generateOperation(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	@Override\n")
+			buffer.append("	public "+o.eType.name+" "+ o.name+" (")
+			//parameters
+			o.eParameters.each{ p |
+				if p.upperBound != 1 then
+					buffer.append(p.eType.name+"[] "+p.name)
+				else
+					buffer.append(p.eType.name+" "+p.name)
+				end
+			}
+			buffer.append(")\n")
+			buffer.append("		callModificationMethod (\""+o.name+"\"")
+			//parameters for callModificationMethod
+			o.eParameters.each{ p |
+				buffer.append(","+p.name)
+			}
+			
+			buffer.append(")\n")
+			buffer.append("	}\n")
+			   
+   
+			result?=buffer.toString()			
 		end
 		
 		
