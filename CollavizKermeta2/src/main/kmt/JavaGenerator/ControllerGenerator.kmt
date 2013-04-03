@@ -81,7 +81,7 @@ package JavaGenerator{
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("package org.collaviz.iivc.control.service;\n")
 			buffer.append("import org.collaviz.collaboration.objects.abstraction.IA_SharedObject ;\n")
-			buffer.append("import org.collaviz.collaboration.objects.control.client.CService_ObjectManager ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.control.service.CService_ObjectManager ;\n")
 			buffer.append("import org.collaviz.iivc.control.IC_"+clazz.name+" ;\n\n")
 			result?=buffer.toString()
 		end		
@@ -113,9 +113,11 @@ package JavaGenerator{
 			result?="public class CService_"+eclass.name+" extends CService_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
 		end
 		
-		method generateInterface(eclass : EClass) : String is do
-			var bufferInterface : StringBuffer init StringBuffer.new
-			bufferInterface.append("public interface IC_"+eclass.name+" extends IA_"+eclass.name+"{\n")
+		method generateInterface(clazz : EClass) : String is do
+			var bufferInterface : StringBuffer init StringBuffer.new			
+			bufferInterface.append("package org.collaviz.iivc.control\n\n")
+			bufferInterface.append("import org.collaviz.iivc.abstraction.IA_"+clazz.name+"\n\n")
+			bufferInterface.append("public interface IC_"+clazz.name+" extends IA_"+clazz.name+"{\n")
 			
 			bufferInterface.append("\n}")
 			result?=bufferInterface.toString()
