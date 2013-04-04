@@ -14,6 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Juncture" eSuperTypes="#//DeformableObject">
     <eOperations name="setRad" eType="#//void">
       <eParameters name="radius" eType="#//float"/>
+      <eParameters name="radius2" eType="#//float"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beginBall" lowerBound="1"
         eType="#//Ball"/>
