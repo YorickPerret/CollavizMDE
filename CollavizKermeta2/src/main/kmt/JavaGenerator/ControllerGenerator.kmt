@@ -10,7 +10,6 @@ package JavaGenerator{
 
 		method generate(p : EPackage) : Void is do 
 			// TODO: implement 'myOperation' operation
-			stdio.writeln("\n\n******** Generating controllers ********\n\n")
 			var helper : CollavizHelper init CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
@@ -21,87 +20,84 @@ package JavaGenerator{
 						//controllers
 						generateControllersClasses(clazz)
 						
-						//interfaces
-						generateInterfaceClasses(clazz)
-						
 					end
 				end
 			}			
-			stdio.writeln("Generating controllers finish")
 		end
 		
 		operation generateControllersClasses(clazz : EClass) : Void is do
 			//generating classes
 			var bufferClassClient : StringBuffer init StringBuffer.new
-			var bufferClassServer : StringBuffer init StringBuffer.new
+			var bufferClassService : StringBuffer init StringBuffer.new
 			
-			stdio.writeln("******** Generating classe "+clazz.name+" ********")
+			stdio.writeln("\n******** Generating classes controllers CClient_"+clazz.name+" and CService_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
+			bufferClassClient.append(generatePackageClient())
+			bufferClassService.append(generatePackageService())
 			bufferClassClient.append(generateImportClient(clazz))
-			bufferClassServer.append(generateImportServer(clazz))
+			bufferClassService.append(generateImportService(clazz))
 			bufferClassClient.append(generateBeginClasseClient(clazz,superType))
-			bufferClassServer.append(generateBeginClasseServer(clazz,superType))
+			bufferClassService.append(generateBeginClasseService(clazz,superType))
 			
 			/* /!\ add operations /!\  */	
 			bufferClassClient.append(generateConstructorClient(clazz))
-			bufferClassServer.append(generateConstructorServer(clazz))	
+			bufferClassService.append(generateConstructorService(clazz))	
 			
 			//essai sur les operations
 			clazz.eOperations.each { o |
 				bufferClassClient.append(generateOperation(o))
-				bufferClassServer.append(generateOperation(o))
+				bufferClassService.append(generateOperation(o))
 			}			
 			
 			var tmp : String init generateEndClasse()
 			bufferClassClient.append(tmp)
-			bufferClassServer.append(tmp)
+			bufferClassService.append(tmp)
 			stdio.writeln("generating classe done")
 			
 			//save files
-			stdio.writeln("Saving controller")
+			stdio.writeln("******** Saving classes controllers CClient_"+clazz.name+" and CService_"+clazz.name+" ********")
 			
 			var resCClient : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CClient_"+clazz.name+".java"
 			FileIO.writeTextFile(resCClient.toURI(),bufferClassClient.toString())
-			var resCServer : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CService_"+clazz.name+".java"
-			FileIO.writeTextFile(resCServer.toURI(),bufferClassServer.toString())
+			var resCService : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CService_"+clazz.name+".java"
+			FileIO.writeTextFile(resCService.toURI(),bufferClassService.toString())
 			
-			stdio.writeln("******** Save succes ********\n")
+			stdio.writeln("******** Save success ********")
 		end
 		
+
+		
+		method generatePackage(clazz : EClass) : String is do
+			result?=""
+		end	
+		operation generatePackageClient() : String is do
+			result?="package org.collaviz.iivc.control.client;\n"
+		end	
+		operation generatePackageService() : String is do
+			result?="package org.collaviz.iivc.control.service;\n"
+		end			
+		
+		method generateImport(clazz : EClass) : String is do
+			result?=""
+		end
 		operation generateImportClient(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("package org.collaviz.iivc.control.client;\n")
 			buffer.append("import org.collaviz.collaboration.objects.abstraction.IA_SharedObject ;\n")
 			buffer.append("import org.collaviz.collaboration.objects.control.client.CClient_ObjectManager ;\n")
 			buffer.append("import org.collaviz.iivc.control.IC_"+clazz.name+" ;\n\n")
 			result?=buffer.toString()
 		end
 		
-		operation generateImportServer(clazz : EClass) : String is do
+		operation generateImportService(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("package org.collaviz.iivc.control.service;\n")
 			buffer.append("import org.collaviz.collaboration.objects.abstraction.IA_SharedObject ;\n")
 			buffer.append("import org.collaviz.collaboration.objects.control.service.CService_ObjectManager ;\n")
 			buffer.append("import org.collaviz.iivc.control.IC_"+clazz.name+" ;\n\n")
 			result?=buffer.toString()
 		end		
-		operation generateInterfaceClasses(clazz : EClass) : Void is do
+
 		
-			var bufferInterface : String
-		
-			//generating interfaces
-			stdio.writeln("******** Generating Interface "+clazz.name+" ********")
-			bufferInterface ?= generateInterface(clazz)
-			stdio.writeln("generating interface done")
-			
-			//save file
-			stdio.writeln("Saving interface controllers")
-			var resCInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/IC_"+clazz.name+".java"
-			FileIO.writeTextFile(resCInterface.toURI(),bufferInterface)
-			stdio.writeln("******** Save succes ********\n")
-		end
-		
-		method generateBeginClasse(eclass : EClass , esuperclass : EClass) : String is do
+		method generateBeginClasse(eclass : EClass) : String is do
 			result?=""
 		end
 		
@@ -109,18 +105,8 @@ package JavaGenerator{
 			result?="public class CClient_"+eclass.name+" extends CClient_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
 		end
 		
-		operation generateBeginClasseServer(eclass : EClass , esuperclass : EClass) : String is do
+		operation generateBeginClasseService(eclass : EClass , esuperclass : EClass) : String is do
 			result?="public class CService_"+eclass.name+" extends CService_"+esuperclass.name+" implements IC_"+eclass.name+" {\n\n"
-		end
-		
-		method generateInterface(clazz : EClass) : String is do
-			var bufferInterface : StringBuffer init StringBuffer.new			
-			bufferInterface.append("package org.collaviz.iivc.control\n\n")
-			bufferInterface.append("import org.collaviz.iivc.abstraction.IA_"+clazz.name+"\n\n")
-			bufferInterface.append("public interface IC_"+clazz.name+" extends IA_"+clazz.name+"{\n")
-			
-			bufferInterface.append("\n}")
-			result?=bufferInterface.toString()
 		end
 		
 		method generateConstructor(eclass : EClass) : String is do
@@ -135,7 +121,7 @@ package JavaGenerator{
 			result?=buffer.toString()
 		end
 		
-		operation generateConstructorServer(eclass : EClass) : String is do
+		operation generateConstructorService(eclass : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("	public CService_"+eclass.name+"(IA_SharedObject abstraction, boolean referentProxyArchi, int accessLevel, CService_ObjectManager objectManager) {\n")
 			buffer.append("		super (abstraction, referentProxyArchi, accessLevel, objectManager) ;\n")
@@ -155,7 +141,7 @@ package JavaGenerator{
 					buffer.append(p.eType.name+" "+p.name)
 				end
 			}
-			buffer.append(")\n")
+			buffer.append("){\n")
 			buffer.append("		callModificationMethod (\""+o.name+"\"")
 			//parameters for callModificationMethod
 			o.eParameters.each{ p |
@@ -167,6 +153,10 @@ package JavaGenerator{
 			   
    
 			result?=buffer.toString()			
+		end
+		
+		method generateAttribute(a : EAttribute) : String is do
+			result?=""
 		end
 		
 		

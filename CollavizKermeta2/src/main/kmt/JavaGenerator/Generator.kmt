@@ -10,9 +10,9 @@ package JavaGenerator{
 	
 	abstract class GenericGenerator
 	{
+		operation generatePackage(eclass : EClass) : String is abstract
 		operation generateImport(eclass : EClass) : String is abstract
-		operation generateInterface(eclass : EClass) : String is abstract
-		operation generateBeginClasse(eclass : EClass , esuperclass : EClass) : String is abstract
+		operation generateBeginClasse(eclass : EClass) : String is abstract
 		operation generateConstructor(eclass : EClass) : String is abstract
 		operation generateOperation(o : EOperation) : String is abstract
 		operation generateAttribute(a : EAttribute) : String is abstract

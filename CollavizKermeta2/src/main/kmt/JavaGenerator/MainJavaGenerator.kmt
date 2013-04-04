@@ -12,13 +12,17 @@ package JavaGenerator{
 		operation main(mm : String) : Void is do 
 			var generatorComposite : GeneratorComposite init GeneratorComposite.new
 			var controllerGenerator : ControllerGenerator init ControllerGenerator.new
+			var interfaceControllerGenerator : InterfaceControllerGenerator init InterfaceControllerGenerator.new
+			var interfaceAbstractionGenerator : InterfaceAbstractionGenerator init InterfaceAbstractionGenerator.new
 			generatorComposite.addGenerator(controllerGenerator)
+			generatorComposite.addGenerator(interfaceControllerGenerator)
+			generatorComposite.addGenerator(interfaceAbstractionGenerator)
 			var helper : CollavizHelper init CollavizHelper.new
 			var p : EPackage
 			stdio.writeln("******** loading model ********")
 			p?=helper.loadModel(mm)
 			if p!= void then
-				stdio.writeln("******** load succes ********")
+				stdio.writeln("******** load success ********")
 				generatorComposite.generate(p)
 			else
 				stdio.writeln("******** load failed ********")

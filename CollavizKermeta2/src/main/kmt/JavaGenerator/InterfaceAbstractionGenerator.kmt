@@ -1,0 +1,92 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using ecore::*
+using Helper::*
+using kermeta::io::*
+
+package JavaGenerator{
+	class InterfaceAbstractionGenerator inherits Generator, GenericGenerator
+	{
+		method generate(p : EPackage) : Void is do 
+			// TODO: implement 'myOperation' operation
+			var helper : CollavizHelper init CollavizHelper.new
+			helper.initAuthorizedClasses()
+			p.eClassifiers.each {c |
+				if helper.isAuthorizedClasse(c.name) then
+					var clazz : EClass
+					clazz?=c
+					if clazz != void then						
+						//interfaces
+						generateInterfaceClasses(clazz)
+						
+					end
+				end
+			}			
+		end	
+		
+		operation generateInterfaceClasses(clazz : EClass) : Void is do
+		
+			var bufferInterface : String
+		
+			//generating interfaces
+			stdio.writeln("\n******** Generating Interface IA_"+clazz.name+" ********")
+			bufferInterface ?= generateInterface(clazz)
+			stdio.writeln("generating interface done")
+			
+			//save file
+			stdio.writeln("******** Saving Interface IA_"+clazz.name+" ********")
+			var resAInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Abstraction/IA_"+clazz.name+".java"
+			FileIO.writeTextFile(resAInterface.toURI(),bufferInterface)
+			stdio.writeln("******** Save success ********")
+		end
+		
+		operation generateInterface(clazz : EClass) : String is do
+			var bufferInterface : StringBuffer init StringBuffer.new	
+			bufferInterface.append(generatePackage(clazz))
+			bufferInterface.append(generateImport(clazz))
+			bufferInterface.append(generateBeginClasse(clazz))
+			//operations
+			clazz.eOperations.each{o |
+				bufferInterface.append(generateOperation(o))
+			}
+			
+			bufferInterface.append(generateEndClasse())
+			result?=bufferInterface.toString()
+		end
+		
+		method generatePackage(eclass : EClass) : String is do
+			result?="package org.collaviz.iivc.abstraction\n\n"
+		end
+
+		
+		method generateImport(clazz : EClass) : String is do
+			result?="\n\n"
+		end
+		
+		method generateBeginClasse(clazz : EClass) : String is do
+			result?="public interface IA_"+clazz.name+" {\n"
+		end
+		
+		method generateOperation(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public "+o.eType.name+" "+o.name+" (")
+			//parameters
+			o.eParameters.each{ p |
+				if p.upperBound != 1 then
+					buffer.append(p.eType.name+"[] "+p.name)
+				else
+					buffer.append(p.eType.name+" "+p.name)
+				end
+			}
+			buffer.append(");\n")			
+			result?=buffer.toString()
+		end
+		
+		method generateConstructor(eclass : EClass) : String is do
+			result?=""
+		end
+		method generateAttribute(a : EAttribute) : String is do
+			result?=""
+		end
+	}
+}
