@@ -100,7 +100,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="__BfaIZVQEeKB-d1KQAoq_Q"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="__BfaIpVQEeKB-d1KQAoq_Q" type="2001">
-        <element xmi:type="ecore:EAttribute" href="collaviz.ecore#//Vector3d/d"/>
+        <element xmi:type="ecore:EAttribute" href="collaviz.ecore#//Vector3d/y"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="__BfaI5VQEeKB-d1KQAoq_Q"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="__BfaJJVQEeKB-d1KQAoq_Q" type="2001">

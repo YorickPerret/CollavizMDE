@@ -13,7 +13,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Juncture" eSuperTypes="#//DeformableObject">
     <eOperations name="setRad" eType="#//void">
-      <eParameters name="radius" eType="#//double"/>
+      <eParameters name="radius" upperBound="-1" eType="#//double"/>
+      <eParameters name="essai" eType="#//boolean"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beginBall" lowerBound="1"
         eType="#//Ball"/>
@@ -21,7 +22,8 @@
         eType="#//Ball"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
         eType="#//double" defaultValueLiteral="0.1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="junctures" upperBound="-1"
@@ -35,7 +37,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vector3d">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="d" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="#//double"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transform">
@@ -91,5 +93,5 @@
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="void" instanceClassName="java.lang.Void"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="double"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="java.lang.Double"/>
 </ecore:EPackage>
