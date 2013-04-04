@@ -92,7 +92,7 @@ package JavaGenerator{
 		method generateConstructor(eclass : EClass) : String is do
 			result?=""
 		end
-		method generateAttribute(a : EAttribute) : String is do
+		method generateAttribute(a : EStructuralFeature) : String is do
 			result?=""
 		end
 	}

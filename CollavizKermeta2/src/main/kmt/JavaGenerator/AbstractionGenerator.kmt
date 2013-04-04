@@ -31,6 +31,12 @@ package JavaGenerator{
 			buffer.append(generateImport(clazz))
 			buffer.append(generateBeginClasse(clazz))
 			
+			clazz.eStructuralFeatures.each { a |
+				buffer.append(generateAttribute(a))
+			}
+			
+			buffer.append("\n")
+			
 			/* /!\ add operations /!\  */	
 			buffer.append(generateConstructor(clazz))
 			
@@ -70,21 +76,82 @@ package JavaGenerator{
 			result?="public class A_"+eclass.name+" extends A_"+esuperclass.name+" implements IA_"+eclass.name+" {\n\n"
 		end
 		
-		method generateConstructor(eclass : EClass) : String is do
-			result?=""
+		
+
+	
+		
+		method generateConstructor(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public A_"+clazz.name+" (String objectType, String objectName, IC_ObjectManager objectManager) {\n")
+			buffer.append("		super (objectType, objectName, objectManager) ;\n\n")
+			
+			//parameters
+			clazz.eStructuralFeatures.each { a |
+				buffer.append(generateParameterPut(a))
+			}
+			buffer.append("\n")
+			//registerModificationCallBack
+			clazz.eOperations.each { o |
+				buffer.append(generateRegisterOperation(o))
+			}
+			
+			buffer.append("\n	}\n\n")
+			
+			result?=buffer.toString()
 		end
-/*		
-		    public void setLength(double length) {
-        this.length = (length <= 0.1 ? 0.1 : length);
-        modifications.put("Length", this.length);
-    }
-*/		
+		
+		operation generateParameterPut(a : EStructuralFeature) : String is do
+			result?="		parameters.put(\""+a.name.toUpperCase()+"\",???);\n"
+		end
+		
+		operation generateRegisterOperation(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("		registerModificationCallback (\""+o.name+"\", new ICallbackHandler () {\n")
+			buffer.append("			@Override\n")
+			buffer.append("			public void callback (Object [] args) {\n")
+			//parameters
+			var nbTmp : Integer init 0
+			
+			o.eParameters.each {p |
+				if p.upperBound != 1 then
+					buffer.append("				final "+p.eType.name+"[] _"+p.name+" = ("+p.eType.name+"[])args["+nbTmp+"];\n")
+				else
+					buffer.append("				final "+p.eType.name+" _"+p.name+" = ("+p.eType.name+")args["+nbTmp+"];\n")
+				end
+				nbTmp:=nbTmp+1
+			}        
+			buffer.append("				"+o.name+"(")
+			var virgule : Boolean init false
+			o.eParameters.each {p |
+				if virgule==true then
+					buffer.append(",")
+				else
+					virgule:=true
+				end
+				buffer.append("_"+p.name)
+				nbTmp:=nbTmp+1
+			}
+			buffer.append(");\n")
+			buffer.append("			}\n")
+			buffer.append("		});\n")
+		
+			result ?= buffer.toString()
+		end
+	
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-	/*		buffer.append("	@Override\n")
+			buffer.append("	@Override\n")
 			buffer.append("	public "+o.eType.name+" "+ o.name+" (")
 			//parameters
+			var virgule : Boolean init false
 			o.eParameters.each{ p |
+				if virgule==true then
+					//others parameters
+					buffer.append(",")
+				else
+					//first parameter
+					virgule:=true
+				end
 				if p.upperBound != 1 then
 					buffer.append(p.eType.name+"[] "+p.name)
 				else
@@ -92,17 +159,27 @@ package JavaGenerator{
 				end
 			}
 			buffer.append("){\n")
-			buffer.append("		callModificationMethod (\""+o.name+"\"")
-			//parameters for callModificationMethod
-			o.eParameters.each{ p |
-				buffer.append(","+p.name)
-			}
 			
-			buffer.append(")\n")
+			buffer.append("		//you have to add modifications.put(\"ParameterName\", val);\n		//for each paramater you want to update\n ")
+			
 			buffer.append("	}\n")
 			   
-   */
+   
 			result?=buffer.toString()		
+		end
+		
+		method generateAttribute(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			
+			// /!\ verifier pour les EReferences /!\
+			
+			buffer.append("	protected (verifier les contrôleurs)"+a.eType.name+" "+a.name) 
+			if a.defaultValueLiteral != void then
+				buffer.append(" = "+a.defaultValueLiteral+";\n")
+			else
+				buffer.append(" = null ;\n")
+			end
+			result?=buffer.toString()
 		end
 		
 	}

@@ -14,9 +14,11 @@ package JavaGenerator{
 			var controllerGenerator : ControllerGenerator init ControllerGenerator.new
 			var interfaceControllerGenerator : InterfaceControllerGenerator init InterfaceControllerGenerator.new
 			var interfaceAbstractionGenerator : InterfaceAbstractionGenerator init InterfaceAbstractionGenerator.new
+			var abstractionGenerator : AbstractionGenerator init AbstractionGenerator.new
 			generatorComposite.addGenerator(controllerGenerator)
 			generatorComposite.addGenerator(interfaceControllerGenerator)
 			generatorComposite.addGenerator(interfaceAbstractionGenerator)
+			generatorComposite.addGenerator(abstractionGenerator)
 			var helper : CollavizHelper init CollavizHelper.new
 			var p : EPackage
 			stdio.writeln("******** loading model ********")

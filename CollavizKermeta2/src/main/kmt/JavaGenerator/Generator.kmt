@@ -15,7 +15,7 @@ package JavaGenerator{
 		operation generateBeginClasse(eclass : EClass) : String is abstract
 		operation generateConstructor(eclass : EClass) : String is abstract
 		operation generateOperation(o : EOperation) : String is abstract
-		operation generateAttribute(a : EAttribute) : String is abstract
+		operation generateAttribute(a : EStructuralFeature) : String is abstract
 		operation generateEndClasse() : String is do
 			result ?= "\n}"
 		end

@@ -161,7 +161,7 @@ package JavaGenerator{
 			result?=buffer.toString()			
 		end
 		
-		method generateAttribute(a : EAttribute) : String is do
+		method generateAttribute(a : EStructuralFeature) : String is do
 			result?=""
 		end
 		
