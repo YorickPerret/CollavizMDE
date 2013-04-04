@@ -1,0 +1,109 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using kermeta::io::FileIO
+using ecore::*
+using Helper::*
+
+package JavaGenerator{
+	class AbstractionGenerator inherits Generator, GenericGenerator
+	{
+		method generate(p : EPackage) : Void is do 
+			var helper : CollavizHelper init CollavizHelper.new
+			helper.initAuthorizedClasses()
+			p.eClassifiers.each {c |
+				if helper.isAuthorizedClasse(c.name) then
+					var clazz : EClass
+					clazz?=c
+					if clazz != void then
+						//abstractions
+						generateAbstractionsClasses(clazz)						
+					end
+				end
+			}			
+		end
+		operation generateAbstractionsClasses(clazz : EClass) : Void is do
+			//generating classes
+			var buffer : StringBuffer init StringBuffer.new
+			
+			stdio.writeln("\n******** Generating classe abstraction A_"+clazz.name+" ********")
+			var superType : EClass init clazz.eSuperTypes.one
+			buffer.append(generatePackage())
+			buffer.append(generateImport(clazz))
+			buffer.append(generateBeginClasse(clazz))
+			
+			/* /!\ add operations /!\  */	
+			buffer.append(generateConstructor(clazz))
+			
+			clazz.eOperations.each { o |
+				buffer.append(generateOperation(o))
+			}			
+			
+			var tmp : String init generateEndClasse()
+			buffer.append(tmp)
+			stdio.writeln("generating classe done")
+			
+			//save files
+			stdio.writeln("******** Saving classe abstraction A_"+clazz.name+" ********")
+			
+			var resAbstraction : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Abstraction/A_"+clazz.name+".java"
+			FileIO.writeTextFile(resAbstraction.toURI(),buffer.toString())
+
+			
+			stdio.writeln("******** Save success ********")
+		end
+		
+		method generatePackage() : String is do
+			result?="package org.collaviz.iivc.abstraction;\n"
+		end	
+		
+		method generateImport(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("import org.collaviz.collaboration.objects.control.IC_ObjectManager ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.utils.ICallbackHandler ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.utils.Transform ;\n\n")
+			result?=buffer.toString()
+		end
+		
+		method generateBeginClasse(eclass : EClass) : String is do
+			var esuperclass : EClass
+			esuperclass ?= eclass.eSuperTypes.one
+			result?="public class A_"+eclass.name+" extends A_"+esuperclass.name+" implements IA_"+eclass.name+" {\n\n"
+		end
+		
+		method generateConstructor(eclass : EClass) : String is do
+			result?=""
+		end
+/*		
+		    public void setLength(double length) {
+        this.length = (length <= 0.1 ? 0.1 : length);
+        modifications.put("Length", this.length);
+    }
+*/		
+		method generateOperation(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+	/*		buffer.append("	@Override\n")
+			buffer.append("	public "+o.eType.name+" "+ o.name+" (")
+			//parameters
+			o.eParameters.each{ p |
+				if p.upperBound != 1 then
+					buffer.append(p.eType.name+"[] "+p.name)
+				else
+					buffer.append(p.eType.name+" "+p.name)
+				end
+			}
+			buffer.append("){\n")
+			buffer.append("		callModificationMethod (\""+o.name+"\"")
+			//parameters for callModificationMethod
+			o.eParameters.each{ p |
+				buffer.append(","+p.name)
+			}
+			
+			buffer.append(")\n")
+			buffer.append("	}\n")
+			   
+   */
+			result?=buffer.toString()		
+		end
+		
+	}
+}

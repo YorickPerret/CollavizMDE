@@ -8,7 +8,6 @@ package JavaGenerator{
 	class InterfaceAbstractionGenerator inherits Generator, GenericGenerator
 	{
 		method generate(p : EPackage) : Void is do 
-			// TODO: implement 'myOperation' operation
 			var helper : CollavizHelper init CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
@@ -71,7 +70,15 @@ package JavaGenerator{
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("	public "+o.eType.name+" "+o.name+" (")
 			//parameters
+			var virgule : Boolean init false
 			o.eParameters.each{ p |
+				if virgule==true then
+					//others parameters
+					buffer.append(",")
+				else
+					//first parameter
+					virgule:=true
+				end
 				if p.upperBound != 1 then
 					buffer.append(p.eType.name+"[] "+p.name)
 				else

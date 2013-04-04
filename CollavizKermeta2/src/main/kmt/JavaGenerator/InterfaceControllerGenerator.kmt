@@ -8,7 +8,6 @@ package JavaGenerator{
 	class InterfaceControllerGenerator inherits Generator, GenericGenerator
 	{
 		method generate(p : EPackage) : Void is do 
-			// TODO: implement 'myOperation' operation
 			var helper : CollavizHelper init CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
@@ -66,19 +65,8 @@ package JavaGenerator{
 			result?="public interface IC_"+clazz.name+" extends IA_"+clazz.name+"{\n"
 		end
 		
-		method generateOperation(o : EOperation) : String is do
-			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("	public "+o.eType.name+" "+o.name+" (")
-			//parameters
-			o.eParameters.each{ p |
-				if p.upperBound != 1 then
-					buffer.append(p.eType.name+"[] "+p.name)
-				else
-					buffer.append(p.eType.name+" "+p.name)
-				end
-			}
-			buffer.append(");\n")			
-			result?=buffer.toString()
+		method generateOperation(o : EOperation) : String is do		
+			result?=""
 		end
 		
 		method generateConstructor(eclass : EClass) : String is do
