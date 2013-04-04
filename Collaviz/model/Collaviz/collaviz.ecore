@@ -13,30 +13,30 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Juncture" eSuperTypes="#//DeformableObject">
     <eOperations name="setRad" eType="#//void">
-      <eParameters name="radius" eType="#//float"/>
-      <eParameters name="radius2" eType="#//float"/>
+      <eParameters name="radius" eType="#//double"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beginBall" lowerBound="1"
         eType="#//Ball"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="endBall" lowerBound="1"
         eType="#//Ball"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
-        eType="#//float"/>
+        eType="#//double" defaultValueLiteral="0.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="junctures" upperBound="-1"
         eType="#//Juncture"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quat4d">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="#//int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="#//int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="#//int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vector3d">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="#//int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="#//int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="d" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transform">
     <eStructuralFeatures xsi:type="ecore:EReference" name="translation" lowerBound="1"
@@ -59,16 +59,16 @@
         upperBound="-1" eType="#//Light" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Color">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="#//float"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g" eType="#//float"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" eType="#//float"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g" eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Light" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="LightColor" lowerBound="1"
         eType="#//Color" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="geometry" lowerBound="1"
         eType="#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsOn" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsOn" lowerBound="1" eType="#//boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DirectionalLight" eSuperTypes="#//Light">
@@ -91,4 +91,5 @@
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="void" instanceClassName="java.lang.Void"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="double"/>
 </ecore:EPackage>
