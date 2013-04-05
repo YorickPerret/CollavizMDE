@@ -26,7 +26,18 @@
         eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essaiAttr" eType="#//boolean"/>
+    <eOperations name="essaiOpEref" upperBound="-1" eType="#//Transform">
+      <eParameters name="p1" upperBound="-1" eType="#//Quat4d"/>
+      <eParameters name="p2" upperBound="-1" eType="#//Ball"/>
+    </eOperations>
+    <eOperations name="essaiOpEref2" upperBound="-1" eType="#//Ball">
+      <eParameters name="p1" eType="#//Quat4d"/>
+      <eParameters name="p2" eType="#//Ball"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essaiAttr" upperBound="-1"
+        eType="#//double"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabQuat4d" upperBound="-1"
+        eType="#//Quat4d"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quat4d">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double"/>
@@ -90,7 +101,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="float" instanceClassName="float"/>
   <eClassifiers xsi:type="ecore:EDataType" name="int" instanceClassName="int"/>
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="boolean"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="void" instanceClassName="java.lang.Void"/>
   <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="java.lang.Double"/>
 </ecore:EPackage>
