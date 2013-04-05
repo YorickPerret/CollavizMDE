@@ -42,7 +42,10 @@ package JavaGenerator{
 			
 			clazz.eOperations.each { o |
 				buffer.append(generateOperation(o))
-			}			
+			}
+			
+			buffer.append(generateProcessUpdate(clazz))
+			buffer.append(generateProcessModify(clazz))			
 			
 			var tmp : String init generateEndClasse()
 			buffer.append(tmp)
@@ -101,7 +104,7 @@ package JavaGenerator{
 		end
 		
 		operation generateParameterPut(a : EStructuralFeature) : String is do
-			result?="		parameters.put(\""+a.name.toUpperCase()+"\",???);\n"
+			result?="		parameters.put(\""+a.name.toUpperCase()+"\","+a.name+");\n"
 		end
 		
 		operation generateRegisterOperation(o : EOperation) : String is do
@@ -162,7 +165,7 @@ package JavaGenerator{
 			
 			buffer.append("		//you have to add modifications.put(\"ParameterName\", val);\n		//for each paramater you want to update\n ")
 			
-			buffer.append("	}\n")
+			buffer.append("	}\n\n")
 			   
    
 			result?=buffer.toString()		
@@ -171,9 +174,22 @@ package JavaGenerator{
 		method generateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			
-			// /!\ verifier pour les EReferences /!\
+			// /!\ verifier pour les EReferences pour les contrôleurs /!\
+			//ajouter dans helper : isWorldObject -> boolean
+			//début modif
+			var helper : CollavizHelper init CollavizHelper.new
+			var ref : EReference
+			ref ?=a
+			buffer.append("	protected ")
+			if ref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					buffer.append("IC_")
+				end
+			end
 			
-			buffer.append("	protected (verifier les contrôleurs)"+a.eType.name+" "+a.name) 
+			//fin modif
+			buffer.append(a.eType.name+" "+a.name) 
 			if a.defaultValueLiteral != void then
 				buffer.append(" = "+a.defaultValueLiteral+";\n")
 			else
@@ -182,5 +198,75 @@ package JavaGenerator{
 			result?=buffer.toString()
 		end
 		
+		operation generateProcessUpdate(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	@Override\n")
+			buffer.append("	protected void processUpdate (Map<String, Object> params) {\n")
+			buffer.append("		super.processUpdate (params) ;\n\n")
+			//parameters
+			clazz.eStructuralFeatures.each { a |
+				//eattribute or ereference
+				var eref : EReference
+				var eattr : EAttribute
+				buffer.append("		final ")
+				eref ?= a
+				if eref != void then
+					var helper : CollavizHelper init CollavizHelper.new
+					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
+					if isExtendsWorldObject==true then
+						buffer.append("IC_"+eref.eReferenceType.name+" _"+a.name+" = (IC_"+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
+					else
+						buffer.append(eref.eReferenceType.name+" _"+a.name+" = ("+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
+					end
+				else
+					eattr ?= a
+					if eattr != void then
+						buffer.append(eattr.eAttributeType.name+" _"+a.name+" = ("+eattr.eAttributeType.name+")params.get(\""+a.name.toUpperCase()+"\");\n")
+					end
+				end
+				buffer.append("		if(_"+a.name+"!=null){\n")	
+				buffer.append("			this."+a.name+"=_"+a.name+";\n")
+				buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+				buffer.append("		}\n\n")		
+			}
+			buffer.append("	}\n")
+			result?=buffer.toString()
+		end
+		
+		
+		operation generateProcessModify(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	@Override\n")
+			buffer.append("	protected void processModify (Map<String, Object> params) {\n")
+			buffer.append("		super.processModify (params) ;\n\n")
+			//parameters
+			clazz.eStructuralFeatures.each { a |
+				//eattribute or ereference
+				var eref : EReference
+				var eattr : EAttribute
+				buffer.append("		final ")
+				eref ?= a
+				if eref != void then
+					var helper : CollavizHelper init CollavizHelper.new
+					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
+					if isExtendsWorldObject==true then
+						buffer.append("IC_"+eref.eReferenceType.name+" _"+a.name+" = (IC_"+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
+					else
+						buffer.append(eref.eReferenceType.name+" _"+a.name+" = ("+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
+					end
+				else
+					eattr ?= a
+					if eattr != void then
+						buffer.append(eattr.eAttributeType.name+" _"+a.name+" = ("+eattr.eAttributeType.name+")params.get(\""+a.name.toUpperCase()+"\");\n")
+					end
+				end
+				buffer.append("		if(_"+a.name+"!=null){\n")	
+				buffer.append("			this."+a.name+"=_"+a.name+";\n")
+				buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+				buffer.append("		}\n\n")		
+			}
+			buffer.append("	}\n")
+			result?=buffer.toString()
+		end		
 	}
 }

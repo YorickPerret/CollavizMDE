@@ -2,6 +2,7 @@ using kermeta::standard::*
 using kermeta::io::StdIO => stdio
 using collaviz::*
 using kermeta::emfpersistence::*
+using ecore::*
 
 package Helper{
 	class CollavizHelper
@@ -39,6 +40,30 @@ package Helper{
 		operation isAuthorizedClasse(nameClasse : String) : Boolean is do
 			result ?= authorizedClasses.exists{n | n==nameClasse}
 		end
+		
+		operation isExtendsObject(clazz : EClass, searchObjectName : String) : Boolean is do
+			var resSearch : Boolean init false
+			if clazz.name == searchObjectName then
+				resSearch:=true
+			else
+				//test on superClass
+				var found : Boolean init false
+				from var it : Iterator<EClass> init clazz.eSuperTypes.iterator()
+         		until it.isOff or found==true
+         		loop
+             		var next : EClass
+             		next ?= it.next
+             		var res : Boolean
+             		res ?= isExtendsObject(next,searchObjectName)
+             		if res==true then
+             			found:=true
+             			resSearch:=true
+             		end
+         		end
+			end
+			result?=resSearch
+		end
+		
 		
 	}
 }
