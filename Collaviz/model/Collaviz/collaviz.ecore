@@ -26,8 +26,7 @@
         eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="junctures" upperBound="-1"
-        eType="#//Juncture"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essaiAttr" eType="#//boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quat4d">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double"/>
