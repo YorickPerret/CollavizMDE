@@ -109,6 +109,7 @@ package JavaGenerator{
 		
 		operation generateRegisterOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("		registerModificationCallback (\""+o.name+"\", new ICallbackHandler () {\n")
 			buffer.append("			@Override\n")
 			buffer.append("			public void callback (Object [] args) {\n")
@@ -116,11 +117,22 @@ package JavaGenerator{
 			var nbTmp : Integer init 0
 			
 			o.eParameters.each {p |
-				if p.upperBound != 1 then
-					buffer.append("				final "+p.eType.name+"[] _"+p.name+" = ("+p.eType.name+"[])args["+nbTmp+"];\n")
-				else
-					buffer.append("				final "+p.eType.name+" _"+p.name+" = ("+p.eType.name+")args["+nbTmp+"];\n")
+				//world object ?
+				var ref : EClass
+				var ic : String init ""
+				ref ?= p.eType
+				if ref!=void then
+					var isWorldObject : Boolean init helper.isExtendsObject(ref,"WorldObject")
+					stdio.writeln("============================================================= "+isWorldObject+" "+ref.name)
+					if isWorldObject == true then
+						ic :="IC_"
+					end
 				end
+				var array : String init ""
+				if p.upperBound != 1 then
+					array := "[]"					
+				end
+				buffer.append("				final "+ic+p.eType.name+array+" _"+p.name+" = ("+ic+p.eType.name+array+")args["+nbTmp+"];\n")
 				nbTmp:=nbTmp+1
 			}        
 			buffer.append("				"+o.name+"(")
@@ -141,25 +153,51 @@ package JavaGenerator{
 			result ?= buffer.toString()
 		end
 	
+
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var typeRetour : EClass
+			var ic : String init ""
+			typeRetour ?=o.eType
+			if typeRetour != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeRetour,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IC_"
+				end
+			end
+			var array : String init ""
+			if o.upperBound != 1 then
+				array := "[]"		
+			end
+			
 			buffer.append("	@Override\n")
-			buffer.append("	public "+o.eType.name+" "+ o.name+" (")
+			buffer.append("	public "+ic+o.eType.name+array+" "+ o.name+" (")
 			//parameters
 			var virgule : Boolean init false
 			o.eParameters.each{ p |
 				if virgule==true then
 					//others parameters
-					buffer.append(",")
+					buffer.append(", ")
 				else
 					//first parameter
 					virgule:=true
 				end
-				if p.upperBound != 1 then
-					buffer.append(p.eType.name+"[] "+p.name)
-				else
-					buffer.append(p.eType.name+" "+p.name)
+				
+				var typeParam : EClass
+				var icParam : String init ""
+				typeParam ?=p.eType
+				if typeParam != void then
+					var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
+					if isExtendsWorldObject==true then
+						icParam := "IC_"
+					end
 				end
+				var arrayParam : String init ""
+				if p.upperBound != 1 then
+					arrayParam := "[]"		
+				end
+				buffer.append(icParam+p.eType.name+arrayParam+" "+p.name)
 			}
 			buffer.append("){\n")
 			
@@ -173,33 +211,33 @@ package JavaGenerator{
 		
 		method generateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			
-			// /!\ verifier pour les EReferences pour les contrôleurs /!\
-			//ajouter dans helper : isWorldObject -> boolean
-			//début modif
 			var helper : CollavizHelper init CollavizHelper.new
 			var ref : EReference
+			var ic : String init ""
 			ref ?=a
-			buffer.append("	protected ")
 			if ref != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
 				if isExtendsWorldObject==true then
-					buffer.append("IC_")
+					ic := "IC_"
 				end
 			end
-			
-			//fin modif
-			buffer.append(a.eType.name+" "+a.name) 
-			if a.defaultValueLiteral != void then
-				buffer.append(" = "+a.defaultValueLiteral+";\n")
-			else
-				buffer.append(" = null ;\n")
+			var array : String init ""
+			if a.upperBound != 1 then
+				array := "[]"		
 			end
+			var val : String init ""
+			if a.defaultValueLiteral != void then
+				val := " = "+a.defaultValueLiteral+";\n"
+			else
+				val := " = null ;\n"
+			end
+			buffer.append("	protected "+ic+a.eType.name+array+" "+a.name+val)
 			result?=buffer.toString()
 		end
 		
 		operation generateProcessUpdate(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("	@Override\n")
 			buffer.append("	protected void processUpdate (Map<String, Object> params) {\n")
 			buffer.append("		super.processUpdate (params) ;\n\n")
@@ -208,22 +246,21 @@ package JavaGenerator{
 				//eattribute or ereference
 				var eref : EReference
 				var eattr : EAttribute
-				buffer.append("		final ")
+				var ic : String init ""
+				var type : String init a.eType.name
+				var array : String init ""
 				eref ?= a
 				if eref != void then
-					var helper : CollavizHelper init CollavizHelper.new
 					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
 					if isExtendsWorldObject==true then
-						buffer.append("IC_"+eref.eReferenceType.name+" _"+a.name+" = (IC_"+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
-					else
-						buffer.append(eref.eReferenceType.name+" _"+a.name+" = ("+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
-					end
-				else
-					eattr ?= a
-					if eattr != void then
-						buffer.append(eattr.eAttributeType.name+" _"+a.name+" = ("+eattr.eAttributeType.name+")params.get(\""+a.name.toUpperCase()+"\");\n")
+						ic := "IC_"
 					end
 				end
+				if a.upperBound!=1 then
+					array:="[]"
+				end
+
+				buffer.append("		final "+ic+type+array+" "+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
 				buffer.append("		if(_"+a.name+"!=null){\n")	
 				buffer.append("			this."+a.name+"=_"+a.name+";\n")
 				buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
@@ -232,10 +269,11 @@ package JavaGenerator{
 			buffer.append("	}\n")
 			result?=buffer.toString()
 		end
-		
+
 		
 		operation generateProcessModify(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("	@Override\n")
 			buffer.append("	protected void processModify (Map<String, Object> params) {\n")
 			buffer.append("		super.processModify (params) ;\n\n")
@@ -243,23 +281,21 @@ package JavaGenerator{
 			clazz.eStructuralFeatures.each { a |
 				//eattribute or ereference
 				var eref : EReference
-				var eattr : EAttribute
-				buffer.append("		final ")
+				var ic : String init ""
+				var type : String init a.eType.name
+				var array : String init ""
 				eref ?= a
 				if eref != void then
-					var helper : CollavizHelper init CollavizHelper.new
 					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
 					if isExtendsWorldObject==true then
-						buffer.append("IC_"+eref.eReferenceType.name+" _"+a.name+" = (IC_"+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
-					else
-						buffer.append(eref.eReferenceType.name+" _"+a.name+" = ("+eref.eReferenceType.name+")params.get (\""+a.name.toUpperCase()+"\");\n")
-					end
-				else
-					eattr ?= a
-					if eattr != void then
-						buffer.append(eattr.eAttributeType.name+" _"+a.name+" = ("+eattr.eAttributeType.name+")params.get(\""+a.name.toUpperCase()+"\");\n")
+						ic := "IC_"
 					end
 				end
+				if a.upperBound!=1 then
+					array:="[]"
+				end
+
+				buffer.append("		final "+ic+type+array+" "+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
 				buffer.append("		if(_"+a.name+"!=null){\n")	
 				buffer.append("			this."+a.name+"=_"+a.name+";\n")
 				buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
@@ -267,6 +303,6 @@ package JavaGenerator{
 			}
 			buffer.append("	}\n")
 			result?=buffer.toString()
-		end		
+		end	
 	}
 }

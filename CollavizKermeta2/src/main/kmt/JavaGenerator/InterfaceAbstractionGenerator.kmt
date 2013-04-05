@@ -66,29 +66,54 @@ package JavaGenerator{
 			result?="public interface IA_"+clazz.name+" {\n"
 		end
 		
+
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("	public "+o.eType.name+" "+o.name+" (")
+			var helper : CollavizHelper init CollavizHelper.new
+			var typeRetour : EClass
+			var ic : String init ""
+			typeRetour ?=o.eType
+			if typeRetour != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeRetour,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IC_"
+				end
+			end
+			var array : String init ""
+			if o.upperBound != 1 then
+				array := "[]"		
+			end
+			
+			buffer.append("	public "+ic+o.eType.name+array+" "+ o.name+" (")
 			//parameters
 			var virgule : Boolean init false
 			o.eParameters.each{ p |
 				if virgule==true then
 					//others parameters
-					buffer.append(",")
+					buffer.append(", ")
 				else
 					//first parameter
 					virgule:=true
 				end
-				if p.upperBound != 1 then
-					buffer.append(p.eType.name+"[] "+p.name)
-				else
-					buffer.append(p.eType.name+" "+p.name)
+				
+				var typeParam : EClass
+				var icParam : String init ""
+				typeParam ?=p.eType
+				if typeParam != void then
+					var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
+					if isExtendsWorldObject==true then
+						icParam := "IC_"
+					end
 				end
+				var arrayParam : String init ""
+				if p.upperBound != 1 then
+					arrayParam := "[]"		
+				end
+				buffer.append(icParam+p.eType.name+arrayParam+" "+p.name)
 			}
-			buffer.append(");\n")			
-			result?=buffer.toString()
-		end
-		
+			buffer.append(");\n")   
+			result?=buffer.toString()		
+		end	
 		method generateConstructor(eclass : EClass) : String is do
 			result?=""
 		end
