@@ -28,6 +28,7 @@ package JavaGenerator{
 		operation generatePresentationsClasses(clazz : EClass) : Void is do
 			//generating classes
 			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
 			
 			stdio.writeln("\n******** Generating classe presentation PJava3D_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
@@ -56,7 +57,7 @@ package JavaGenerator{
 			//save files
 			stdio.writeln("******** Saving classe presentation PJava3D_"+clazz.name+" ********")
 			
-			var resP : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Presentation/PJava3D_"+clazz.name+".java"
+			var resP : String init helper.getPathToSaveJavaCode()+"/Presentation/PJava3D_"+clazz.name+".java"
 			FileIO.writeTextFile(resP.toURI(),buffer.toString())
 
 			
@@ -99,7 +100,6 @@ package JavaGenerator{
 		end
 		
 		
-		
 		operation generateUpdateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			var helper : CollavizHelper init CollavizHelper.new
@@ -112,7 +112,7 @@ package JavaGenerator{
 			if eref != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			if a.upperBound!=1 then
@@ -154,7 +154,7 @@ package JavaGenerator{
 			if ref != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -187,7 +187,7 @@ package JavaGenerator{
 			if ref != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -207,6 +207,7 @@ package JavaGenerator{
 		operation generateOperationUpdate(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("	public void update"+a.name.toUpperCase()+"(){\n")
+			buffer.append("\n")
 			buffer.append("	}\n")
 			result?=buffer.toString()
 		end

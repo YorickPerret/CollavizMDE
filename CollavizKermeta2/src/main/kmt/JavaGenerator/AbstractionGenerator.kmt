@@ -24,7 +24,7 @@ package JavaGenerator{
 		operation generateAbstractionsClasses(clazz : EClass) : Void is do
 			//generating classes
 			var buffer : StringBuffer init StringBuffer.new
-			
+			var helper : CollavizHelper init CollavizHelper.new
 			stdio.writeln("\n******** Generating classe abstraction A_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
 			buffer.append(generatePackage(clazz))
@@ -53,7 +53,7 @@ package JavaGenerator{
 			//save files
 			stdio.writeln("******** Saving classe abstraction A_"+clazz.name+" ********")
 			
-			var resAbstraction : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Abstraction/A_"+clazz.name+".java"
+			var resAbstraction : String init helper.getPathToSaveJavaCode()+"/Abstraction/A_"+clazz.name+".java"
 			FileIO.writeTextFile(resAbstraction.toURI(),buffer.toString())
 
 			
@@ -123,7 +123,7 @@ package JavaGenerator{
 				if ref!=void then
 					var isWorldObject : Boolean init helper.isExtendsObject(ref,"WorldObject")
 					if isWorldObject == true then
-						ic :="IC_"
+						ic :="IA_"
 					end
 				end
 				var array : String init ""
@@ -161,7 +161,7 @@ package JavaGenerator{
 			if typeRetour != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeRetour,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -202,7 +202,7 @@ package JavaGenerator{
 			if typeParam != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
 				if isExtendsWorldObject==true then
-					icParam := "IC_"
+					icParam := "IA_"
 				end
 			end
 			var arrayParam : String init ""
@@ -222,7 +222,7 @@ package JavaGenerator{
 			if ref != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -257,7 +257,7 @@ package JavaGenerator{
 				if eref != void then
 					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
 					if isExtendsWorldObject==true then
-						ic := "IC_"
+						ic := "IA_"
 					end
 				end
 				if a.upperBound!=1 then
@@ -266,7 +266,7 @@ package JavaGenerator{
 
 				buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
 				buffer.append("		if(_"+a.name+"!=null){\n")	
-				buffer.append("			this."+a.name+"=_"+a.name+";\n")
+				buffer.append(generateAssignment(a))
 				buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
 				buffer.append("		}\n\n")		
 			}
@@ -274,6 +274,17 @@ package JavaGenerator{
 			result?=buffer.toString()
 		end
 
+		operation generateAssignment(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			if a.upperBound != 1 then
+				buffer.append("			for(int i = 0; i<_"+a.name+".length ; i++){\n")
+				buffer.append("				"+a.name+"[i] = _"+a.name+"[i];\n")
+				buffer.append("			}\n")
+			else
+				buffer.append("			this."+a.name+"=_"+a.name+";\n")
+			end
+			result?=buffer.toString()
+		end
 		
 		operation generateProcessModify(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
@@ -292,16 +303,16 @@ package JavaGenerator{
 				if eref != void then
 					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
 					if isExtendsWorldObject==true then
-						ic := "IC_"
+						ic := "IA_"
 					end
 				end
 				if a.upperBound!=1 then
 					array:="[]"
 				end
 
-				buffer.append("		final "+ic+type+array+" "+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+				buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
 				buffer.append("		if(_"+a.name+"!=null){\n")	
-				buffer.append("			this."+a.name+"=_"+a.name+";\n")
+				buffer.append(generateAssignment(a))
 				buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
 				buffer.append("		}\n\n")		
 			}

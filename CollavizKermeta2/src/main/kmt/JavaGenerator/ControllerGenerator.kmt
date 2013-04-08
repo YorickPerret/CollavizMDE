@@ -28,7 +28,7 @@ package JavaGenerator{
 			//generating classes
 			var bufferClassClient : StringBuffer init StringBuffer.new
 			var bufferClassService : StringBuffer init StringBuffer.new
-			
+			var helper : CollavizHelper init CollavizHelper.new
 			stdio.writeln("\n******** Generating classes controllers CClient_"+clazz.name+" and CService_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
 			bufferClassClient.append(generatePackageClient())
@@ -54,9 +54,9 @@ package JavaGenerator{
 			//save files
 			stdio.writeln("******** Saving classes controllers CClient_"+clazz.name+" and CService_"+clazz.name+" ********")
 			
-			var resCClient : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CClient_"+clazz.name+".java"
+			var resCClient : String init helper.getPathToSaveJavaCode()+"/Controller/CClient_"+clazz.name+".java"
 			FileIO.writeTextFile(resCClient.toURI(),bufferClassClient.toString())
-			var resCService : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Controller/CService_"+clazz.name+".java"
+			var resCService : String init helper.getPathToSaveJavaCode()+"/Controller/CService_"+clazz.name+".java"
 			FileIO.writeTextFile(resCService.toURI(),bufferClassService.toString())
 			
 			stdio.writeln("******** Save success ********")
@@ -136,7 +136,7 @@ package JavaGenerator{
 			if typeRetour != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeRetour,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -174,7 +174,7 @@ package JavaGenerator{
 			if typeParam != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
 				if isExtendsWorldObject==true then
-					icParam := "IC_"
+					icParam := "IA_"
 				end
 			end
 			var arrayParam : String init ""

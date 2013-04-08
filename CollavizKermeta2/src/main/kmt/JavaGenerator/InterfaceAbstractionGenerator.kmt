@@ -24,9 +24,8 @@ package JavaGenerator{
 		end	
 		
 		operation generateInterfaceClasses(clazz : EClass) : Void is do
-		
 			var bufferInterface : String
-		
+			var helper : CollavizHelper init CollavizHelper.new
 			//generating interfaces
 			stdio.writeln("\n******** Generating Interface IA_"+clazz.name+" ********")
 			bufferInterface ?= generateInterface(clazz)
@@ -34,7 +33,7 @@ package JavaGenerator{
 			
 			//save file
 			stdio.writeln("******** Saving Interface IA_"+clazz.name+" ********")
-			var resAInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Abstraction/IA_"+clazz.name+".java"
+			var resAInterface : String init helper.getPathToSaveJavaCode()+"/Abstraction/IA_"+clazz.name+".java"
 			FileIO.writeTextFile(resAInterface.toURI(),bufferInterface)
 			stdio.writeln("******** Save success ********")
 		end
@@ -76,7 +75,7 @@ package JavaGenerator{
 			if typeRetour != void then
 				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeRetour,"WorldObject")
 				if isExtendsWorldObject==true then
-					ic := "IC_"
+					ic := "IA_"
 				end
 			end
 			var array : String init ""
@@ -102,7 +101,7 @@ package JavaGenerator{
 				if typeParam != void then
 					var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
 					if isExtendsWorldObject==true then
-						icParam := "IC_"
+						icParam := "IA_"
 					end
 				end
 				var arrayParam : String init ""

@@ -25,7 +25,7 @@ package JavaGenerator{
 		operation generateInterfaceClasses(clazz : EClass) : Void is do
 		
 			var bufferInterface : String
-		
+			var helper : CollavizHelper init CollavizHelper.new
 			//generating interfaces
 			stdio.writeln("\n******** Generating Interface IPJava3D_"+clazz.name+" ********")
 			bufferInterface ?= generateInterface(clazz)
@@ -33,7 +33,7 @@ package JavaGenerator{
 			
 			//save file
 			stdio.writeln("******** Saving Interface IPJava3D_"+clazz.name+" ********")
-			var resCInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Presentation/IPJava3D_"+clazz.name+".java"
+			var resCInterface : String init helper.getPathToSaveJavaCode()+"/Presentation/IPJava3D_"+clazz.name+".java"
 			FileIO.writeTextFile(resCInterface.toURI(),bufferInterface)
 			stdio.writeln("******** Save success ********")
 		end

@@ -64,6 +64,9 @@ package Helper{
 			result?=resSearch
 		end
 		
+		operation getPathToSaveJavaCode() : String is do
+			result?="platform:/resource/CollavizKermeta2/JavaCode"
+		end
 		
 	}
 }

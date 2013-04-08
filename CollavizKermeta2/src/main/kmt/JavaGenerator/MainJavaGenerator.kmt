@@ -27,7 +27,7 @@ package JavaGenerator{
 			
 			var helper : CollavizHelper init CollavizHelper.new
 			var p : EPackage
-			stdio.writeln("******** loading model ********")
+			stdio.writeln("******** loading model "+mm+" ********")
 			p?=helper.loadModel(mm)
 			if p!= void then
 				stdio.writeln("******** load success ********")
