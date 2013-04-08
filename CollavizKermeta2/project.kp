@@ -21,5 +21,7 @@ project CollavizKermeta2 {
 	import "${project.baseUri}/src/main/kmt/JavaGenerator/InterfaceControllerGenerator.kmt"
 	import "${project.baseUri}/src/main/kmt/JavaGenerator/InterfaceAbstractionGenerator.kmt"
 	import "${project.baseUri}/src/main/kmt/JavaGenerator/AbstractionGenerator.kmt"
+	import "${project.baseUri}/src/main/kmt/JavaGenerator/PJava3DGenerator.kmt"
+	import "${project.baseUri}/src/main/kmt/JavaGenerator/InterfacePresentationJava3D.kmt"
 
 }

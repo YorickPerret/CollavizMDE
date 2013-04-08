@@ -37,8 +37,7 @@ package JavaGenerator{
 			bufferClassService.append(generateImportService(clazz))
 			bufferClassClient.append(generateBeginClasseClient(clazz,superType))
 			bufferClassService.append(generateBeginClasseService(clazz,superType))
-			
-			/* /!\ add operations /!\  */	
+				
 			bufferClassClient.append(generateConstructorClient(clazz))
 			bufferClassService.append(generateConstructorService(clazz))	
 			
@@ -126,65 +125,7 @@ package JavaGenerator{
 			buffer.append("	}\n\n")
 			result?=buffer.toString()
 		end
-	/*	
-		method generateOperation(o : EOperation) : String is do
-			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
-			buffer.append("	@Override\n")
-			buffer.append("	public ")
-			var returnType : EClass
-			returnType ?= o.eType
-			if returnType != void then
-				var returnTypeIsWorldObject : Boolean init helper.isExtendsObject(returnType,"WorldObject")
-				if returnTypeIsWorldObject then
-					buffer.append("IC_")
-				end
-			end
-			buffer.append(o.eType.name)
-			if o.upperBound!=1 then
-				buffer.append("[]")
-			end
-			buffer.append(" "+o.name+" (")
-			//parameters
-			var virgule : Boolean init false
-			o.eParameters.each{ p |
-				if virgule==true then
-					//others parameters
-					buffer.append(", ")
-				else
-					//first parameter
-					virgule:=true
-				end
-				//world object ?
-				var ref : EClass
-				ref ?= p.eType
-				if ref!=void then
-					var isWorldObject : Boolean init helper.isExtendsObject(ref,"WorldObject")
-					stdio.writeln("============================================================= "+isWorldObject+" "+ref.name)
-					if isWorldObject == true then
-						buffer.append("IC_")
-					end
-				end
-				if p.upperBound != 1 then
-					buffer.append(p.eType.name+"[] "+p.name)
-				else
-					buffer.append(p.eType.name+" "+p.name)
-				end
-			}
-			buffer.append("){\n")
-			buffer.append("		callModificationMethod (\""+o.name+"\"")
-			//parameters for callModificationMethod
-			o.eParameters.each{ p |
-				buffer.append(","+p.name)
-			}
-			
-			buffer.append(");\n")
-			buffer.append("	}\n\n")
-			   
-   
-			result?=buffer.toString()			
-		end
-		*/
+
 		
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new

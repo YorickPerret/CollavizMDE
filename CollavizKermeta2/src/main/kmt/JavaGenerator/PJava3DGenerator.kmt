@@ -1,0 +1,214 @@
+
+
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using kermeta::io::FileIO
+using ecore::*
+using Helper::*
+
+package JavaGenerator{
+	class PJava3DGenerator inherits Generator, GenericGenerator
+	{
+		method generate(p : EPackage) : Void is do 
+			var helper : CollavizHelper init CollavizHelper.new
+			helper.initAuthorizedClasses()
+			p.eClassifiers.each {c |
+				if helper.isAuthorizedClasse(c.name) then
+					var clazz : EClass
+					clazz?=c
+					if clazz != void then
+						//presentation
+						generatePresentationsClasses(clazz)
+						
+					end
+				end
+			}			
+		end
+		
+		operation generatePresentationsClasses(clazz : EClass) : Void is do
+			//generating classes
+			var buffer : StringBuffer init StringBuffer.new
+			
+			stdio.writeln("\n******** Generating classe presentation PJava3D_"+clazz.name+" ********")
+			var superType : EClass init clazz.eSuperTypes.one
+			buffer.append(generatePackage(clazz))
+			buffer.append(generateImport(clazz))
+			buffer.append(generateBeginClasse(clazz))
+			
+			clazz.eStructuralFeatures.each { a |
+				buffer.append(generateAttribute(a))
+			}
+			
+			buffer.append("\n")
+				
+			buffer.append(generateConstructor(clazz))
+			
+			buffer.append(generateUpdate(clazz))
+			
+			clazz.eStructuralFeatures.each{a |
+				buffer.append(generateOperationUpdate(a))
+			}
+				
+			var tmp : String init generateEndClasse()
+			buffer.append(tmp)
+			stdio.writeln("generating classe done")
+			
+			//save files
+			stdio.writeln("******** Saving classe presentation PJava3D_"+clazz.name+" ********")
+			
+			var resP : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Presentation/PJava3D_"+clazz.name+".java"
+			FileIO.writeTextFile(resP.toURI(),buffer.toString())
+
+			
+			stdio.writeln("******** Save success ********")
+		end
+		
+		method generatePackage(clazz : EClass) : String is do
+			result?="package org.collaviz.clientJava3D.pJava3D;\n\n"
+		end	
+		
+		method generateImport(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("import java.util.Map ;\n")
+			buffer.append("import javax.vecmath.Quat4d ;\n")
+			buffer.append("import javax.vecmath.Vector3d ;\n")
+			buffer.append("import org.collaviz.collaboration.objects.control.IC_SharedObject ;\n\n")
+			result?=buffer.toString()
+		end
+		
+		method generateBeginClasse(eclass : EClass) : String is do
+			var esuperclass : EClass
+			esuperclass ?= eclass.eSuperTypes.one
+			result?="public class PJava3D_"+eclass.name+" extends PJava3D_"+esuperclass.name+" implements IPJava3D_"+eclass.name+" {\n\n"
+		end
+		
+
+		
+		
+		operation generateUpdate(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	@Override\n")
+			buffer.append("	public void update(String userId, Map<String, Object> params, IC_SharedObject source) {\n")
+			buffer.append("		super.update (userId, params, source);\n\n")
+			//update attributes
+			clazz.eStructuralFeatures.each{a |
+				buffer.append(generateUpdateAttribute(a))
+			}
+			buffer.append("	}\n\n")
+			result?=buffer.toString()
+		end
+		
+		
+		
+		operation generateUpdateAttribute(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var eref : EReference
+			var eattr : EAttribute
+			var ic : String init ""
+			var type : String init a.eType.name
+			var array : String init ""
+			eref ?= a
+			if eref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IC_"
+				end
+			end
+			if a.upperBound!=1 then
+				array:="[]"
+			end
+			buffer.append("		"+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		if(_"+a.name+"!=null){\n")	
+			buffer.append("			this."+a.name+"=_"+a.name+";\n")
+			buffer.append("			update"+a.name.toUpperCase()+"();\n")
+			buffer.append("		}\n\n")	
+			result?=buffer.toString()
+		end
+		
+		method generateConstructor(clazz : EClass) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public PJava3D_"+clazz.name+" (IC_SharedObject ctr, Vector3d translation, Quat4d rotation, Vector3d scale, PJava3D_ObjectManager presObjManager, String geometry")
+			//others parameters
+			clazz.eStructuralFeatures.each{ a |
+				buffer.append(generateParameterConstructor(a))				
+			}
+			
+			buffer.append(") {\n")
+			buffer.append("		super (ctr, translation, rotation, scale, geometry, presObjManager);\n\n")			
+			//assignment for others parameters
+			clazz.eStructuralFeatures.each{ a |
+				buffer.append(generateAssignmentParameter(a))				
+			}			
+			buffer.append("\n	}\n\n")
+			
+			result?=buffer.toString()
+		end
+		
+		operation generateParameterConstructor(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var ref : EReference
+			var ic : String init ""
+			ref ?=a
+			if ref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IC_"
+				end
+			end
+			var array : String init ""
+			if a.upperBound != 1 then
+				array := "[]"		
+			end
+			buffer.append(", "+ic+a.eType.name+array+" _"+a.name)
+			result?=buffer.toString()
+		end
+		
+		operation generateAssignmentParameter(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("		this."+a.name+" = _"+a.name+";\n")
+			result?=buffer.toString()
+		end		
+
+	
+
+		method generateOperation(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			result?=buffer.toString()		
+		end
+		
+		method generateAttribute(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var ref : EReference
+			var ic : String init ""
+			ref ?=a
+			if ref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(ref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IC_"
+				end
+			end
+			var array : String init ""
+			if a.upperBound != 1 then
+				array := "[]"		
+			end
+			var val : String init ""
+			if a.defaultValueLiteral != void then
+				val := " = "+a.defaultValueLiteral+";\n"
+			else
+				val := " = null ;\n"
+			end
+			buffer.append("	protected "+ic+a.eType.name+array+" "+a.name+val)
+			result?=buffer.toString()
+		end
+		
+		operation generateOperationUpdate(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("	public void update"+a.name.toUpperCase()+"(){\n")
+			buffer.append("	}\n")
+			result?=buffer.toString()
+		end
+	}
+}

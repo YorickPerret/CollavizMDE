@@ -27,7 +27,7 @@ package JavaGenerator{
 			
 			stdio.writeln("\n******** Generating classe abstraction A_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
-			buffer.append(generatePackage())
+			buffer.append(generatePackage(clazz))
 			buffer.append(generateImport(clazz))
 			buffer.append(generateBeginClasse(clazz))
 			
@@ -36,8 +36,7 @@ package JavaGenerator{
 			}
 			
 			buffer.append("\n")
-			
-			/* /!\ add operations /!\  */	
+				
 			buffer.append(generateConstructor(clazz))
 			
 			clazz.eOperations.each { o |
@@ -61,7 +60,7 @@ package JavaGenerator{
 			stdio.writeln("******** Save success ********")
 		end
 		
-		method generatePackage() : String is do
+		method generatePackage(clazz : EClass) : String is do
 			result?="package org.collaviz.iivc.abstraction;\n"
 		end	
 		
@@ -123,7 +122,6 @@ package JavaGenerator{
 				ref ?= p.eType
 				if ref!=void then
 					var isWorldObject : Boolean init helper.isExtendsObject(ref,"WorldObject")
-					stdio.writeln("============================================================= "+isWorldObject+" "+ref.name)
 					if isWorldObject == true then
 						ic :="IC_"
 					end
@@ -260,7 +258,7 @@ package JavaGenerator{
 					array:="[]"
 				end
 
-				buffer.append("		final "+ic+type+array+" "+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+				buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
 				buffer.append("		if(_"+a.name+"!=null){\n")	
 				buffer.append("			this."+a.name+"=_"+a.name+";\n")
 				buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")

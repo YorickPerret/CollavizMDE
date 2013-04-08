@@ -1,0 +1,78 @@
+using kermeta::standard::*
+using kermeta::io::StdIO => stdio
+using kermeta::io::FileIO
+using ecore::*
+using Helper::*
+
+package JavaGenerator{
+	class InterfacePresentationJava3D inherits Generator, GenericGenerator
+	{
+		method generate(p : EPackage) : Void is do 
+			var helper : CollavizHelper init CollavizHelper.new
+			helper.initAuthorizedClasses()
+			p.eClassifiers.each {c |
+				if helper.isAuthorizedClasse(c.name) then
+					var clazz : EClass
+					clazz?=c
+					if clazz != void then						
+						//interfaces
+						generateInterfaceClasses(clazz)
+					end
+				end
+			}			
+		end		
+		
+		operation generateInterfaceClasses(clazz : EClass) : Void is do
+		
+			var bufferInterface : String
+		
+			//generating interfaces
+			stdio.writeln("\n******** Generating Interface IPJava3D_"+clazz.name+" ********")
+			bufferInterface ?= generateInterface(clazz)
+			stdio.writeln("generating interface done")
+			
+			//save file
+			stdio.writeln("******** Saving Interface IPJava3D_"+clazz.name+" ********")
+			var resCInterface : String init "platform:/resource/CollavizKermeta2/src/main/JavaCode/Presentation/IPJava3D_"+clazz.name+".java"
+			FileIO.writeTextFile(resCInterface.toURI(),bufferInterface)
+			stdio.writeln("******** Save success ********")
+		end
+		
+		operation generateInterface(clazz : EClass) : String is do
+			var bufferInterface : StringBuffer init StringBuffer.new	
+			bufferInterface.append(generatePackage(clazz))
+			bufferInterface.append(generateImport(clazz))
+			bufferInterface.append(generateBeginClasse(clazz))
+			//operations
+			clazz.eOperations.each{o |
+				bufferInterface.append(generateOperation(o))
+			}
+			
+			bufferInterface.append(generateEndClasse())
+			result?=bufferInterface.toString()
+		end
+		
+		method generatePackage(eclass : EClass) : String is do
+			result?="package org.collaviz.clientJava3D.pJava3D;\n\n"
+		end
+		
+		method generateImport(clazz : EClass) : String is do
+			result?="\n\n"
+		end
+		
+		method generateBeginClasse(clazz : EClass) : String is do
+			result?="public interface IPJava3D_"+clazz.name+"{\n"
+		end
+		
+		method generateOperation(o : EOperation) : String is do		
+			result?=""
+		end
+		
+		method generateConstructor(eclass : EClass) : String is do
+			result?=""
+		end
+		method generateAttribute(a : EStructuralFeature) : String is do
+			result?=""
+		end
+	}
+}

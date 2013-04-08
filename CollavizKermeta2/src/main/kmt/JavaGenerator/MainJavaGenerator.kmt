@@ -15,10 +15,16 @@ package JavaGenerator{
 			var interfaceControllerGenerator : InterfaceControllerGenerator init InterfaceControllerGenerator.new
 			var interfaceAbstractionGenerator : InterfaceAbstractionGenerator init InterfaceAbstractionGenerator.new
 			var abstractionGenerator : AbstractionGenerator init AbstractionGenerator.new
-			generatorComposite.addGenerator(controllerGenerator)
+			var interfacePresentationJava3dGenerator : InterfacePresentationJava3D init InterfacePresentationJava3D.new 
+			var presentationJava3DGenerator : PJava3DGenerator init PJava3DGenerator.new
+
 			generatorComposite.addGenerator(interfaceControllerGenerator)
+			generatorComposite.addGenerator(controllerGenerator)
 			generatorComposite.addGenerator(interfaceAbstractionGenerator)
 			generatorComposite.addGenerator(abstractionGenerator)
+			generatorComposite.addGenerator(interfacePresentationJava3dGenerator)
+			generatorComposite.addGenerator(presentationJava3DGenerator)
+			
 			var helper : CollavizHelper init CollavizHelper.new
 			var p : EPackage
 			stdio.writeln("******** loading model ********")
