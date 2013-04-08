@@ -26,11 +26,11 @@
         eType="#//double"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
-    <eOperations name="essaiOpEref" upperBound="-1" eType="#//Transform">
+    <eOperations name="essaiOpEref" eType="#//void">
       <eParameters name="p1" upperBound="-1" eType="#//Quat4d"/>
       <eParameters name="p2" upperBound="-1" eType="#//Ball"/>
     </eOperations>
-    <eOperations name="essaiOpEref2" upperBound="-1" eType="#//Ball">
+    <eOperations name="essaiOpEref2" eType="#//void">
       <eParameters name="p1" eType="#//Quat4d"/>
       <eParameters name="p2" eType="#//Ball"/>
     </eOperations>
@@ -104,4 +104,8 @@
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="void" instanceClassName="java.lang.Void"/>
   <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="java.lang.Double"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="byte" instanceClassName="byte"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="short" instanceClassName="short"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="long" instanceClassName="long"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="char" instanceClassName="char"/>
 </ecore:EPackage>
