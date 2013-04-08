@@ -156,36 +156,44 @@ package JavaGenerator{
 					//first parameter
 					virgule:=true
 				end
-				
-				var typeParam : EClass
-				var icParam : String init ""
-				typeParam ?=p.eType
-				if typeParam != void then
-					var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
-					if isExtendsWorldObject==true then
-						icParam := "IC_"
-					end
-				end
-				var arrayParam : String init ""
-				if p.upperBound != 1 then
-					arrayParam := "[]"		
-				end
-				buffer.append(icParam+p.eType.name+arrayParam+" "+p.name)
+				buffer.append(generateParameterOperation(p))
 			}
-			buffer.append("){\n")
-			
+			buffer.append("){\n")			
+			buffer.append(generateCallModificationMethod(o))
+			buffer.append("	}\n\n")			   
+   
+			result?=buffer.toString()		
+		end
+		
+		operation generateParameterOperation(p : EParameter) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var typeParam : EClass
+			var icParam : String init ""
+			typeParam ?=p.eType
+			if typeParam != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(typeParam,"WorldObject")
+				if isExtendsWorldObject==true then
+					icParam := "IC_"
+				end
+			end
+			var arrayParam : String init ""
+			if p.upperBound != 1 then
+				arrayParam := "[]"		
+			end
+			buffer.append(icParam+p.eType.name+arrayParam+" "+p.name)			
+			result?=buffer.toString()
+		end
+		
+		operation generateCallModificationMethod(o : EOperation) : String is do
+			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("		callModificationMethod (\""+o.name+"\"")
 			//parameters for callModificationMethod
 			o.eParameters.each{ p |
 				buffer.append(","+p.name)
-			}
-			
+			}			
 			buffer.append(");\n")
-			
-			buffer.append("	}\n\n")
-			   
-   
-			result?=buffer.toString()		
+			result?=buffer.toString()
 		end
 		
 		method generateAttribute(a : EStructuralFeature) : String is do
