@@ -639,18 +639,4 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cGg0Rp3NEeKH6IYuywDmpA" id="(0.49612403100775193,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cGg0R53NEeKH6IYuywDmpA" id="(0.6666666666666666,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_rhCJAJ3vEeKsJa6FvK7B6A" type="3002" source="_cER_rZ3NEeKH6IYuywDmpA" target="_cER_u53NEeKH6IYuywDmpA">
-    <children xmi:type="notation:Node" xmi:id="_rhL6AJ3vEeKsJa6FvK7B6A" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_rhL6AZ3vEeKsJa6FvK7B6A" x="-19" y="-30"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_rhL6Ap3vEeKsJa6FvK7B6A" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_rhL6A53vEeKsJa6FvK7B6A" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_rhCJAZ3vEeKsJa6FvK7B6A" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_rhCJAp3vEeKsJa6FvK7B6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="collaviz.ecore#//Ball/tabQuat4d"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rhCJA53vEeKsJa6FvK7B6A" points="[33, -29, -402, 358]$[436, -381, 1, 6]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rhL6BJ3vEeKsJa6FvK7B6A" id="(0.6165413533834586,0.7843137254901961)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rhL6BZ3vEeKsJa6FvK7B6A" id="(0.5,0.9215686274509803)"/>
-  </edges>
 </notation:Diagram>
