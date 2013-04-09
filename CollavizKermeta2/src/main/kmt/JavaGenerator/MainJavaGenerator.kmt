@@ -1,5 +1,6 @@
 using kermeta::standard::*
 using kermeta::io::StdIO => stdio
+using kermeta::io::FileIO => File
 using JavaGenerator::*
 using ecore::*
 using Helper::*
@@ -34,8 +35,7 @@ package JavaGenerator{
 				generatorComposite.generate(p)
 			else
 				stdio.writeln("******** load failed ********")
-			end
-			
+			end			
 		end
 	}
 }

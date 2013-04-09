@@ -3,6 +3,7 @@ using kermeta::io::StdIO => stdio
 using collaviz::*
 using kermeta::emfpersistence::*
 using ecore::*
+using kermeta::io::FileIO => File
 
 package Helper{
 	class CollavizHelper
@@ -33,8 +34,14 @@ package Helper{
 		attribute authorizedClasses : set String[0..*]
 		
 		operation initAuthorizedClasses() : Void is do
-			authorizedClasses.add("Ball")
-			authorizedClasses.add("Juncture")
+			var path : String init "platform:/resource/CollavizKermeta2/src/main/resources/authorizedClasses"
+			var res : String
+			res ?= File.readTextFile(path.toURI())
+			var tab : Sequence<String>
+			tab ?= res.split(" ")
+			tab.each { r |
+				authorizedClasses.add(r)
+			}
 		end
 		
 		operation isAuthorizedClasse(nameClasse : String) : Boolean is do

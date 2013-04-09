@@ -4,153 +4,41 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:collaviz="platform:/resource/Collaviz/model/Collaviz/collaviz.ecore">
+  <objects xsi:type="collaviz:Juncture"
+      name="j1"
+      beginBall="//@objects.1"
+      endBall="//@objects.2">
+    <position>
+      <translation/>
+      <rotation/>
+      <scale/>
+    </position>
+    <color/>
+  </objects>
   <objects xsi:type="collaviz:Ball"
       name="b1">
     <position>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
+      <translation/>
+      <rotation/>
+      <scale/>
     </position>
-    <color r="0.5"
-        g="0.5"
-        b="0.5"/>
-    <offset>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </offset>
+    <color/>
+    <essaiAttr>0.0</essaiAttr>
   </objects>
   <objects xsi:type="collaviz:Ball"
       name="b2">
     <position>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
+      <translation/>
+      <rotation/>
+      <scale/>
     </position>
-    <color r="0.0"
-        g="0.0"
-        b="0.0"/>
-    <offset>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </offset>
+    <color/>
+    <essaiAttr>0.0</essaiAttr>
+    <essaiAttr>0.5</essaiAttr>
   </objects>
-  <objects xsi:type="collaviz:Juncture"
-      name="j1"
-      support="//@objects.3"
-      beginBall="//@objects.0"
-      endBall="//@objects.1"
-      radius="0.5">
-    <position>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </position>
-    <color r="0.0"
-        g="0.0"
-        b="0.0"/>
-    <offset>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </offset>
-  </objects>
-  <objects xsi:type="collaviz:Ball"
-      name="b3"
-      supported="//@objects.2">
-    <position>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </position>
-    <color r="0.0"
-        g="0.0"
-        b="0.0"/>
-    <offset>
-      <translation
-          x="0"
-          y="0"
-          z="0"/>
-      <rotation
-          x="0"
-          y="0"
-          z="0"
-          w="0"/>
-      <scale
-          x="0"
-          y="0"
-          z="0"/>
-    </offset>
-  </objects>
+  <lights xsi:type="collaviz:DirectionalLight"
+      name="l1">
+    <LightColor/>
+    <Direction/>
+  </lights>
 </collaviz:Collaviz>
