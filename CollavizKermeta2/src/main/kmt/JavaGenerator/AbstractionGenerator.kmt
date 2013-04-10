@@ -32,7 +32,11 @@ package JavaGenerator{
 			buffer.append(generateBeginClasse(clazz))
 			
 			clazz.eStructuralFeatures.each { a |
+				if isObservableFeature(a) then
+					buffer.append(generateFeatureObservable(a))
+				end
 				buffer.append(generateAttribute(a))
+				
 			}
 			
 			buffer.append("\n")
@@ -43,8 +47,17 @@ package JavaGenerator{
 				buffer.append(generateOperation(o))
 			}
 			
+			
+			
 			buffer.append(generateProcessUpdate(clazz))
-			buffer.append(generateProcessModify(clazz))			
+			buffer.append(generateProcessModify(clazz))		
+			
+			if mustGenerateObservedPropertiesChanged(clazz) then
+				stdio.writeln(" mustGenerateObservedPropertiesChanged")
+				var listFeatures : Sequence<EStructuralFeature> init Sequence<EStructuralFeature>.new
+				listFeatures ?= getObservableFeatures(clazz)
+				buffer.append(generateObservedPropertiesChanged(listFeatures))
+			end	
 			
 			var tmp : String init generateEndClasse()
 			buffer.append(tmp)
@@ -59,6 +72,98 @@ package JavaGenerator{
 			
 			stdio.writeln("******** Save success ********")
 		end
+		
+		/*   @SuppressWarnings ("unchecked")
+   @Override
+   public void observedPropertiesChanged (String obsName, Map<String, Object> chang) {
+      super.observedPropertiesChanged(obsName, chang);
+      //System.out.println ("observedPropertiesChanged 1 : " + obsName) ;
+      boolean modified = false ;
+      if (end1Id != null && end1Id.equals(obsName)) {
+         final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get("Transform");
+         if (targetTransformMap != null) {
+            modified = true ;
+            end1Transform = new Transform(targetTransformMap);
+         }
+         final Boolean isVisibleEnd1= (Boolean) chang.get("IsVisible");
+         if (isVisibleEnd1 != null) {
+        	 boolean myIsVisible = isVisibleEnd1;
+        	 modifications.put("IsVisible", myIsVisible);
+        	 modified () ;
+         }
+      }
+      if (end2Id != null && end2Id.equals(obsName)) {
+         final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get("Transform");
+         if (targetTransformMap != null) {
+            modified = true ;
+            end2Transform = new Transform(targetTransformMap);
+         }
+         final Boolean isVisibleEnd2= (Boolean) chang.get("IsVisible");
+         if (isVisibleEnd2 != null) {
+        	 boolean myIsVisible = isVisibleEnd2;
+        	 modifications.put("IsVisible", myIsVisible);
+        	 modified ();
+         }
+      }
+      if (modified) {
+         computePosition () ;
+         modified () ;         
+      }
+   }*/
+   
+   		operation mustGenerateObservedPropertiesChanged(clazz : EClass) : Boolean is do
+   			result := clazz.eStructuralFeatures.exists{ f |
+            	f.eAnnotations.exists{ eannotation |
+	        		eannotation.details.exists { es |
+	        			es.key == "observability" and es.~value=="true"
+	        		}
+	        	}
+            }
+   		end
+   
+   		operation generateObservedPropertiesChanged(listFeatures : Sequence<EStructuralFeature>) : String is do
+   			var buffer : StringBuffer init StringBuffer.new
+   			if listFeatures!=void then
+	   			listFeatures.each { f |
+	   				stdio.writeln("feature found for ObservedPropertiesChanged "+f.name)
+	   			
+	   			}
+	   		else
+	 	   		stdio.writeln("vide")
+	   			
+   			end
+   			result?=buffer.toString()
+   		end
+   
+        operation getObservableFeatures(clazz : EClass) : Sequence<EStructuralFeature> is do
+           var list : Sequence<EStructuralFeature> init Sequence<EStructuralFeature>.new
+           list := clazz.eStructuralFeatures.select{ f |
+            	f.eAnnotations.exists{ eannotation |
+	        		eannotation.details.exists { es |
+	        			es.key == "observability" and es.~value=="true"
+	        		}
+	        	}
+            }
+            result?=list
+        end
+        
+        operation isObservableFeature(feature : EStructuralFeature) : Boolean is do
+        	var res : Boolean init false
+        	res := feature.eAnnotations.exists{ eannotation |
+        		eannotation.details.exists { es |
+        			es.key == "observability" and es.~value=="true"
+        		}
+        	}
+        	result?=res
+        end
+        
+        operation generateFeatureObservable(feature : EStructuralFeature) : String is do
+        	var buffer : StringBuffer init StringBuffer.new
+        	buffer.append("	//"+feature.name+"Id and "+feature.name+"Transform are used by observedPropertiesChanged()\n")
+        	buffer.append("	protected String "+feature.name+"Id;\n")
+        	buffer.append("	protected Transform "+feature.name+"Transform;\n")
+        	result?=buffer.toString()
+        end
 		
 		method generatePackage(clazz : EClass) : String is do
 			result?="package org.collaviz.iivc.abstraction;\n"
@@ -89,7 +194,11 @@ package JavaGenerator{
 			
 			//parameters
 			clazz.eStructuralFeatures.each { a |
-				buffer.append(generateParameterPut(a))
+				if isObservableFeature(a) then
+					buffer.append(generateParameterPutObservable(a))
+				else
+					buffer.append(generateParameterPut(a))
+				end
 			}
 			buffer.append("\n")
 			//registerModificationCallBack
@@ -104,6 +213,14 @@ package JavaGenerator{
 		
 		operation generateParameterPut(a : EStructuralFeature) : String is do
 			result?="		parameters.put(\""+a.name.toUpperCase()+"\","+a.name+");\n"
+		end
+		
+		
+		operation generateParameterPutObservable(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("		"+a.name+"Id = null;\n")
+			buffer.append("		parameters.put(\""+a.name.toUpperCase()+"\","+a.name+"Id);\n")
+			result?=buffer.toString()
 		end
 		
 		operation generateRegisterOperation(o : EOperation) : String is do
@@ -247,31 +364,54 @@ package JavaGenerator{
 			buffer.append("		super.processUpdate (params) ;\n\n")
 			//parameters
 			clazz.eStructuralFeatures.each { a |
-				//eattribute or ereference
-				var eref : EReference
-				var eattr : EAttribute
-				var ic : String init ""
-				var type : String init a.eType.name
-				var array : String init ""
-				eref ?= a
-				if eref != void then
-					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
-					if isExtendsWorldObject==true then
-						ic := "IA_"
-					end
+				if isObservableFeature(a) then
+					buffer.append(generateObservableProcessUpdate(a))
+				else
+					buffer.append(generateNormalProcessUpdate(a))
 				end
-				if a.upperBound!=1 then
-					array:="[]"
-				end
-
-				buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
-				buffer.append("		if(_"+a.name+"!=null){\n")	
-				buffer.append(generateAssignment(a))
-				buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
-				buffer.append("		}\n\n")		
 			}
 			buffer.append("	}\n")
 			result?=buffer.toString()
+		end
+		
+		
+
+		
+		operation generateObservableProcessUpdate(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("		final String _"+a.name+" = (String)params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		if(_"+a.name+"!=null){\n")	
+			buffer.append(generateAssignmentObservable(a))
+			buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+"Id);\n")
+			buffer.append("		}\n\n")	
+			result?= buffer.toString()
+		end
+		
+		operation generateNormalProcessUpdate(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var eref : EReference
+			var eattr : EAttribute
+			var ic : String init ""
+			var type : String init a.eType.name
+			var array : String init ""
+			eref ?= a
+			if eref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IA_"
+				end
+			end
+			if a.upperBound!=1 then
+				array:="[]"
+			end
+
+			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		if(_"+a.name+"!=null){\n")	
+			buffer.append(generateAssignment(a))
+			buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+			buffer.append("		}\n\n")	
+			result?= buffer.toString()
 		end
 
 		operation generateAssignment(a : EStructuralFeature) : String is do
@@ -286,6 +426,14 @@ package JavaGenerator{
 			result?=buffer.toString()
 		end
 		
+		operation generateAssignmentObservable(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("			this."+a.name+"Id=_"+a.name+";\n")
+			result?=buffer.toString()
+		end
+
+		
+
 		operation generateProcessModify(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			var helper : CollavizHelper init CollavizHelper.new
@@ -294,30 +442,52 @@ package JavaGenerator{
 			buffer.append("		super.processModify (params) ;\n\n")
 			//parameters
 			clazz.eStructuralFeatures.each { a |
-				//eattribute or ereference
-				var eref : EReference
-				var ic : String init ""
-				var type : String init a.eType.name
-				var array : String init ""
-				eref ?= a
-				if eref != void then
-					var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
-					if isExtendsWorldObject==true then
-						ic := "IA_"
-					end
+				if isObservableFeature(a) then
+					buffer.append(generateObservableProcessModify(a))
+				else
+					buffer.append(generateNormalProcessModify(a))
 				end
-				if a.upperBound!=1 then
-					array:="[]"
-				end
-
-				buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
-				buffer.append("		if(_"+a.name+"!=null){\n")	
-				buffer.append(generateAssignment(a))
-				buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
-				buffer.append("		}\n\n")		
 			}
 			buffer.append("	}\n")
 			result?=buffer.toString()
 		end	
+		
+		operation generateObservableProcessModify(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			buffer.append("		final String _"+a.name+" = (String)params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		if(_"+a.name+"!=null){\n")	
+			buffer.append(generateAssignmentObservable(a))
+			buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+"Id);\n")
+			buffer.append("			"+a.name+" = (IC_SupportedObject)objectManager.getObject("+a.name+"Id);\n")
+			buffer.append("			"+a.name+".registerObserver(id);\n")			
+			buffer.append("		}\n\n")	
+			result?=buffer.toString()
+		end
+		
+		operation generateNormalProcessModify(a : EStructuralFeature) : String is do
+			var buffer : StringBuffer init StringBuffer.new
+			var helper : CollavizHelper init CollavizHelper.new
+			var eref : EReference
+			var ic : String init ""
+			var type : String init a.eType.name
+			var array : String init ""
+			eref ?= a
+			if eref != void then
+				var isExtendsWorldObject : Boolean init helper.isExtendsObject(eref.eReferenceType,"WorldObject")
+				if isExtendsWorldObject==true then
+					ic := "IA_"
+				end
+			end
+			if a.upperBound!=1 then
+				array:="[]"
+			end
+
+			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		if(_"+a.name+"!=null){\n")	
+			buffer.append(generateAssignment(a))
+			buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+			buffer.append("		}\n\n")	
+			result?=buffer.toString()
+		end
 	}
 }

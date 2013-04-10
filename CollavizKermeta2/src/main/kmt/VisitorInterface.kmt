@@ -30,9 +30,6 @@ package VisitorMondePackage{
 				o.visit ?= false
 			}
 			generateWorld.append(wg.generateIndex())
-			c.lights.each { l |
-				generateWorld.append(l.accept(self,"	"))
-			}	
 			c.objects.each{ o |
 				if o.visit == false then
 					//on recherche l'élément racine du support
@@ -131,10 +128,10 @@ package VisitorMondePackage{
 			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
 			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
 			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"Direction\" type=\"Vector3d\">"+l.Direction.x+" "+l.Direction.y+" "+l.Direction.z+"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.LightColor.r+" "+l.LightColor.b+" "+l.LightColor.g+"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.IsOn+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Direction\" type=\"Vector3d\">"+l.direction.x+" "+l.direction.y+" "+l.direction.z+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.lightColor.r+" "+l.lightColor.b+" "+l.lightColor.g+"</param>\n")
+			//stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.on+"</param>\n")
 			
 			result ?= stringBuffer.toString()
 		end
@@ -147,21 +144,21 @@ package VisitorMondePackage{
 			stringBuffer.append(indentation+"	"+"<owners>All</owners>\n")
 			stringBuffer.append(indentation+"	"+"<accessLevel>3</accessLevel>\n")
 			stringBuffer.append(indentation+"	"+"<refProxy>true</refProxy>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.LightColor.r+" "+l.LightColor.b+" "+l.LightColor.g+"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"Attenuation\" type=\"Vector3d\">"+l.Attenuation.x+" "+l.Attenuation.y+" "+l.Attenuation.z+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"LightColor\" type=\"Color\">"+l.lightColor.r+" "+l.lightColor.b+" "+l.lightColor.g+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"Attenuation\" type=\"Vector3d\">"+l.attenuation.x+" "+l.attenuation.y+" "+l.attenuation.z+"</param>\n")
 			stringBuffer.append(indentation+"	"+"<param name=\"Transform\" type=\"Transform\">"+
-			l.Transform.translation.x+" "+
-			l.Transform.translation.y+" "+
-			l.Transform.translation.z+" "+
-			l.Transform.rotation.x+" "+
-			l.Transform.rotation.y+" "+
-			l.Transform.rotation.z+" "+
-			l.Transform.scale.x+" "+
-			l.Transform.scale.y+" "+
-			l.Transform.scale.z+
+			l.position.translation.x+" "+
+			l.position.translation.y+" "+
+			l.position.translation.z+" "+
+			l.position.rotation.x+" "+
+			l.position.rotation.y+" "+
+			l.position.rotation.z+" "+
+			l.position.scale.x+" "+
+			l.position.scale.y+" "+
+			l.position.scale.z+
 			"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
-			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.IsOn+"</param>\n")
+			//stringBuffer.append(indentation+"	"+"<param name=\"Geometry\" type=\"String\">"+l.geometry+"</param>\n")
+			stringBuffer.append(indentation+"	"+"<param name=\"IsOn\" type=\"boolean\">"+l.on+"</param>\n")
 			result ?= stringBuffer.toString()
 		end
 	}
