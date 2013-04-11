@@ -75,5 +75,21 @@ package Helper{
 			result?="platform:/resource/CollavizKermeta2/JavaCode"
 		end
 		
+		operation firtsLetterUpperCase(string : String) : String is do
+			var res : String
+			res:=string			
+			if (string != void)	then
+				var car : Character init Character.new
+				if car.isLetter(string.charAt(0)) then
+					stdio.writeln("isLetter")
+				end
+			//	stdio.writeln(car)
+		/*		if Character.isLetter(firstLetter) and Character.isLowerCase(firstLetter) then
+					res:=Character.toUpperCase(firstLetter)+string.substring(0)
+				end*/
+			end
+			result?=res
+		end
+		
 	}
 }

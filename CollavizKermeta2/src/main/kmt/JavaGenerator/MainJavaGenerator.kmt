@@ -35,7 +35,17 @@ package JavaGenerator{
 				generatorComposite.generate(p)
 			else
 				stdio.writeln("******** load failed ********")
-			end			
+			end	
+			//essai first letter upper case
+			var string : String init "essai"
+			var string2 : String init "_unAutreEssai"
+			var string3 : String init "EncoreUnAutreEssai"
+			
+			
+			stdio.writeln("res : "+helper.firtsLetterUpperCase(string))
+			stdio.writeln("res : "+helper.firtsLetterUpperCase(string2))
+			stdio.writeln("res : "+helper.firtsLetterUpperCase(string3))
+			
 		end
 	}
 }

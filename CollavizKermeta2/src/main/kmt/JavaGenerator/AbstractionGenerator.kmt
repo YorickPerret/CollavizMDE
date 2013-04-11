@@ -124,13 +124,55 @@ package JavaGenerator{
    		operation generateObservedPropertiesChanged(listFeatures : Sequence<EStructuralFeature>) : String is do
    			var buffer : StringBuffer init StringBuffer.new
    			if listFeatures!=void then
+   				buffer.append("	@Override\n")
+	   			buffer.append("	public void observedPropertiesChanged (String obsName, Map<String, Object> chang) {\n")
+	   			buffer.append("		super.observedPropertiesChanged(obsName, chang);\n")
+	   			buffer.append("		boolean modified = false ;\n")
+	   			
 	   			listFeatures.each { f |
 	   				stdio.writeln("feature found for ObservedPropertiesChanged "+f.name)
+	   				buffer.append("		if ("+f.name+"Id != null && "+f.name+"Id.equals(obsName)) {\n")
+	   				buffer.append("			final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get(\"Transform\");\n")
+	   				buffer.append("			if (targetTransformMap != null) {\n")
+	   				buffer.append("				modified = true ;\n")
+	   				buffer.append("				"+f.name+"Transform = new Transform(targetTransformMap);\n")
+	   				buffer.append("			}\n")
+	   				
+	   				buffer.append("			final Boolean isVisible"+f.name.toUpperCase()+" = (Boolean) chang.get(\"IsVisible\");\n")
+	   				buffer.append("			if (isVisible"+f.name.toUpperCase()+" != null) {\n")
+	   				buffer.append("				boolean myIsVisible = isVisible"+f.name.toUpperCase()+";\n")
+	   				buffer.append("				modifications.put(\"IsVisible\", myIsVisible);\n")
+	   				buffer.append("				modified();\n")
+	   				buffer.append("			}\n")
+	   				
+	   				buffer.append("		}\n")
+	   				   					   			
+	   			}	   		
 	   			
-	   			}
-	   		else
-	 	   		stdio.writeln("vide")
 	   			
+      			buffer.append("		if (modified) {\n")
+      			buffer.append("			computePosition () ;\n")
+      			buffer.append("			modified () ;\n")
+      			buffer.append("		}\n")
+      			
+      			buffer.append("	}\n\n")
+      			
+      			//computePosition()
+      			buffer.append("	private void computePosition () {\n")
+      			buffer.append("		if (")
+      			var AND : Boolean init false
+      			listFeatures.each { f |
+      				if AND==true then
+						buffer.append(" && ")
+					else
+						AND:=true
+					end
+      				buffer.append("("+f.name+"Transform != null)")
+      			}
+      			buffer.append("){\n")
+      			
+      			buffer.append("		}\n")      			
+      			buffer.append("	}\n\n")
    			end
    			result?=buffer.toString()
    		end
