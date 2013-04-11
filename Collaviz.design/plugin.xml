@@ -4,14 +4,14 @@
   <extension point="fr.obeo.dsl.viewpoint.componentization">
     <component class="defaultpackage.Activator"
                id="Collaviz.design"
-	       name="collaviz">
+	       name="Collaviz">
     </component>
   </extension>
   <extension
         point="fr.obeo.dsl.viewpoint.externalJavaAction">
      <javaActions
-           actionClass="action.SaveXMI"
-           id="SaveXMI">
+           actionClass="Action.Save"
+           id="SaveID">
      </javaActions>
   </extension>
 </plugin>

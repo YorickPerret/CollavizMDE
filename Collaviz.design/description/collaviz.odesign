@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="collaviz" version="6.5.0.201210011230">
-  <ownedViewpoints name="collaviz" modelFileExtension="collaviz">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="CollavizDiagram" showOnStartup="true" domainClass="collaviz.Collaviz" enablePopupBars="true">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="Collaviz" version="6.5.0.201210011230">
+  <ownedViewpoints name="Collaviz Viewpoint" modelFileExtension="collaviz">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Collaviz Diagram" showOnStartup="true" domainClass="collaviz.Collaviz" enablePopupBars="true">
       <metamodel href="../../Collaviz/model/Collaviz/collaviz.ecore#/"/>
-      <defaultLayer name="Collaviz layer">
-        <nodeMappings name="Ball" label="Ball" deletionDescription="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='Delete%20Object']" semanticCandidatesExpression="[objects/]" domainClass="collaviz.Ball">
-          <style xsi:type="style:EllipseNodeDescription" resizeKind="NSEW">
+      <defaultLayer name="DefaultLayer">
+        <nodeMappings name="Ball" pasteDescriptions="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='PasteDescription']" labelDirectEdit="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DirectEdit_Name']" semanticCandidatesExpression="[objects/]" domainClass="collaviz.Ball">
+          <style xsi:type="style:EllipseNodeDescription" horizontalDiameterComputationExpression="3" verticalDiameterComputationExpression="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Juncture" label="Juncture" deletionDescription="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='Delete%20Object']" semanticCandidatesExpression="[objects/]" domainClass="collaviz.Juncture">
+        <nodeMappings name="Juncture" pasteDescriptions="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='PasteDescription']" labelDirectEdit="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DirectEdit_Name']" semanticCandidatesExpression="[objects/]" domainClass="collaviz.Juncture">
           <style xsi:type="style:SquareDescription" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Begin Ball Juncture" deletionDescription="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='begin-ball-juncture']" sourceMapping="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Juncture']" targetMapping="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Ball']" targetFinderExpression="[beginBall/]" reconnections="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='Begin%20Ball%20Reconnect']">
+        <edgeMappings name="Juncture_BeginBall" deletionDescription="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Del_Juncture_BeginBall']" sourceMapping="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Juncture']" targetMapping="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Ball']" targetFinderExpression="[beginBall/]">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="End Ball Juncture" deletionDescription="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='end-ball-juncture']" sourceMapping="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Juncture']" targetMapping="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Ball']" targetFinderExpression="[endBall/]" reconnections="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@toolSections.0/@subSections[name='Usability%20Tools']/@ownedTools[name='End%20Ball%20Reconnect']">
+        <edgeMappings name="Juncture_EndBall" deletionDescription="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Del_Juncture_EndBall']" sourceMapping="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Juncture']" targetMapping="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Ball']" targetFinderExpression="[endBall/]">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             <centerLabelStyleDescription>
@@ -34,143 +34,132 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <toolSections name="Collaviz">
-          <subSections name="Palette tool">
-            <ownedTools xsi:type="tool:NodeCreationDescription" name="Ball" nodeMappings="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Ball']">
-              <variable name="container"/>
-              <viewVariable name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Ball" referenceName="objects">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Transform" referenceName="position">
+        <toolSections name="Creation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Ball" nodeMappings="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Ball']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Ball" referenceName="objects" variableName="newBall">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Transform" referenceName="position" variableName="newTransform">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="translation"/>
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Quat4d" referenceName="rotation"/>
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="scale"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Color" referenceName="color">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="r" valueExpression="0.5"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="g" valueExpression="0.5"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="b" valueExpression="0.5"/>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Color" referenceName="color" variableName="newColor"/>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Transform" referenceName="offset" variableName="newTransform">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="translation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Quat4d" referenceName="rotation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="scale"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Ball"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:NodeCreationDescription" name="Juncture" nodeMappings="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@nodeMappings[name='Juncture']">
-              <variable name="container"/>
-              <viewVariable name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Juncture" referenceName="objects">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Color" referenceName="color">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="r" valueExpression="0.5"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="g" valueExpression="0.5"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="b" valueExpression="0.5"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Ball'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Juncture" nodeMappings="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@nodeMappings[name='Juncture']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Juncture" referenceName="objects" variableName="newJuncture">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Transform" referenceName="position" variableName="newTransform">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="translation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Quat4d" referenceName="rotation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="scale"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Juncture"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:EdgeCreationDescription" name="begin-ball-juncture" edgeMappings="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@edgeMappings[name='Begin%20Ball%20Juncture']">
-              <sourceVariable name="source"/>
-              <targetVariable name="target"/>
-              <sourceViewVariable name="sourceView"/>
-              <targetViewVariable name="targetView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="[endBall.oclIsUndefined() or target&lt;>endBall/]">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="beginBall" valueExpression="[target/]"/>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Color" referenceName="color" variableName="newColor"/>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Transform" referenceName="offset" variableName="newTransform">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="translation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Quat4d" referenceName="rotation"/>
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="collaviz.Vector3d" referenceName="scale"/>
                   </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:EdgeCreationDescription" name="end-ball-juncture" edgeMappings="//@ownedViewpoints[name='collaviz']/@ownedRepresentations[name='CollavizDiagram']/@defaultLayer/@edgeMappings[name='End%20Ball%20Juncture']">
-              <sourceVariable name="source"/>
-              <targetVariable name="target"/>
-              <sourceViewVariable name="sourceView"/>
-              <targetViewVariable name="targetView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="[beginBall.oclIsUndefined() or target&lt;>beginBall/]">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="endBall" valueExpression="[target/]"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-          </subSections>
-          <subSections name="Usability Tools">
-            <ownedTools xsi:type="tool:DeleteElementDescription" name="begin-ball-juncture">
-              <element name="element"/>
-              <elementView name="elementView"/>
-              <containerView name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
-                  <subModelOperations xsi:type="tool:Unset" featureName="beginBall" elementExpression="[beginBall/]"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:DeleteElementDescription" name="end-ball-juncture">
-              <element name="element"/>
-              <elementView name="elementView"/>
-              <containerView name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
-                  <subModelOperations xsi:type="tool:Unset" featureName="endBall" elementExpression="[endBall/]"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Object">
-              <element name="element"/>
-              <elementView name="elementView"/>
-              <containerView name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.eContainer()/]">
-                  <subModelOperations xsi:type="tool:Unset" featureName="objects" elementExpression="[element/]"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Begin Ball Reconnect">
-              <source name="source"/>
-              <target name="target"/>
-              <sourceView name="sourceView"/>
-              <targetView name="targetView"/>
-              <element name="element"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
-                  <subModelOperations xsi:type="tool:Unset" featureName="beginBall" elementExpression="[beginBall/]"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Juncture'/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Juncture_BeginBall" edgeMappings="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@edgeMappings[name='Juncture_BeginBall']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool:If" conditionExpression="[endBall.oclIsUndefined() or (target&lt;>endBall)/]">
                   <subModelOperations xsi:type="tool:SetValue" featureName="beginBall" valueExpression="[target/]"/>
-                </firstModelOperations>
-              </initialOperation>
-              <edgeView name="edgeView"/>
-            </ownedTools>
-            <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="End Ball Reconnect">
-              <source name="source"/>
-              <target name="target"/>
-              <sourceView name="sourceView"/>
-              <targetView name="targetView"/>
-              <element name="element"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
-                  <subModelOperations xsi:type="tool:Unset" featureName="endBall" elementExpression="[endBall/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Juncture_EndBall" edgeMappings="//@ownedViewpoints[name='Collaviz%20Viewpoint']/@ownedRepresentations[name='Collaviz%20Diagram']/@defaultLayer/@edgeMappings[name='Juncture_EndBall']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool:If" conditionExpression="[beginBall.oclIsUndefined() or (target&lt;>beginBall)/]">
                   <subModelOperations xsi:type="tool:SetValue" featureName="endBall" valueExpression="[target/]"/>
-                </firstModelOperations>
-              </initialOperation>
-              <edgeView name="edgeView"/>
-            </ownedTools>
-          </subSections>
-          <subSections name="SaveMenu">
-            <ownedTools xsi:type="tool:OperationAction" name="SaveOperation" label="Save">
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Modification">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Del_Juncture_BeginBall">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:Unset" featureName="beginBall" elementExpression="[beginBall/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Del_Juncture_EndBall">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:Unset" featureName="endBall" elementExpression="[endBall/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DirectEdit_Name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="[arg0/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PasteDescription" name="PasteDescription" forceRefresh="true">
+            <container name="container"/>
+            <containerView name="containerView"/>
+            <copiedView name="copiedView"/>
+            <copiedElement name="copiedElement"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Copie_of_'/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="PopMenu">
+          <ownedTools xsi:type="tool:PopupMenu" name="Save">
+            <menuItemDescription xsi:type="tool:OperationAction" name="Save" precondition="[views->one(oclIsKindOf(DDiagram))/]">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[self/]">
-                  <subModelOperations xsi:type="tool:ExternalJavaAction" name="SaveToXMI" id="SaveXMI"/>
+                <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Save" id="SaveID">
+                  <parameters name="essai" value="[views/]"/>
                 </firstModelOperations>
               </initialOperation>
-            </ownedTools>
-          </subSections>
+            </menuItemDescription>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <userColorsPalettes>
-    <entries xsi:type="description:UserFixedColor"/>
-  </userColorsPalettes>
 </description:Group>
