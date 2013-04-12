@@ -73,44 +73,7 @@ package JavaGenerator{
 			
 			stdio.writeln("******** Save success ********")
 		end
-		
-		/*   @SuppressWarnings ("unchecked")
-   @Override
-   public void observedPropertiesChanged (String obsName, Map<String, Object> chang) {
-      super.observedPropertiesChanged(obsName, chang);
-      //System.out.println ("observedPropertiesChanged 1 : " + obsName) ;
-      boolean modified = false ;
-      if (end1Id != null && end1Id.equals(obsName)) {
-         final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get("Transform");
-         if (targetTransformMap != null) {
-            modified = true ;
-            end1Transform = new Transform(targetTransformMap);
-         }
-         final Boolean isVisibleEnd1= (Boolean) chang.get("IsVisible");
-         if (isVisibleEnd1 != null) {
-        	 boolean myIsVisible = isVisibleEnd1;
-        	 modifications.put("IsVisible", myIsVisible);
-        	 modified () ;
-         }
-      }
-      if (end2Id != null && end2Id.equals(obsName)) {
-         final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get("Transform");
-         if (targetTransformMap != null) {
-            modified = true ;
-            end2Transform = new Transform(targetTransformMap);
-         }
-         final Boolean isVisibleEnd2= (Boolean) chang.get("IsVisible");
-         if (isVisibleEnd2 != null) {
-        	 boolean myIsVisible = isVisibleEnd2;
-        	 modifications.put("IsVisible", myIsVisible);
-        	 modified ();
-         }
-      }
-      if (modified) {
-         computePosition () ;
-         modified () ;         
-      }
-   }*/
+
    
    		operation mustGenerateObservedPropertiesChanged(clazz : EClass) : Boolean is do
    			result := clazz.eStructuralFeatures.exists{ f |
@@ -131,7 +94,6 @@ package JavaGenerator{
 	   			buffer.append("		boolean modified = false ;\n")
 	   			
 	   			listFeatures.each { f |
-	   				stdio.writeln("feature found for ObservedPropertiesChanged "+f.name)
 	   				buffer.append("		if ("+f.name+"Id != null && "+f.name+"Id.equals(obsName)) {\n")
 	   				buffer.append("			final HashMap<String, Double> targetTransformMap = (HashMap<String, Double>) chang.get(\"Transform\");\n")
 	   				buffer.append("			if (targetTransformMap != null) {\n")

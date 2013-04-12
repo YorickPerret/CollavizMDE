@@ -40,7 +40,9 @@ package JavaGenerator{
 			buffer.append(generateBeginClasse(clazz))
 			
 			clazz.eStructuralFeatures.each { a |
-				buffer.append(generateAttribute(a))
+				if not(isNotVisualisable(a)) then
+					buffer.append(generateAttribute(a))	
+				end
 			}
 			
 			buffer.append("\n")
@@ -50,7 +52,9 @@ package JavaGenerator{
 			buffer.append(generateUpdate(clazz))
 			
 			clazz.eStructuralFeatures.each{a |
-				buffer.append(generateOperationUpdate(a))
+				if not(isNotVisualisable(a)) then	
+					buffer.append(generateOperationUpdate(a))
+				end	
 			}
 				
 			var tmp : String init generateEndClasse()
@@ -65,6 +69,14 @@ package JavaGenerator{
 
 			
 			stdio.writeln("******** Save success ********")
+		end
+
+		operation isNotVisualisable(f : EStructuralFeature) : Boolean is do
+   			result := f.eAnnotations.exists{ eannotation |
+	        				eannotation.details.exists { es |
+	        				es.key == "visualisable" and es.~value=="false"
+	        			}
+	        		}            
 		end
 		
 		method generatePackage(clazz : EClass) : String is do
@@ -96,7 +108,9 @@ package JavaGenerator{
 			buffer.append("		super.update (userId, params, source);\n\n")
 			//update attributes
 			clazz.eStructuralFeatures.each{a |
-				buffer.append(generateUpdateAttribute(a))
+				if not(isNotVisualisable(a)) then	
+					buffer.append(generateUpdateAttribute(a))
+				end	
 			}
 			buffer.append("	}\n\n")
 			result?=buffer.toString()
@@ -134,14 +148,18 @@ package JavaGenerator{
 			buffer.append("	public PJava3D_"+clazz.name+" (IC_SharedObject ctr, Vector3d translation, Quat4d rotation, Vector3d scale, PJava3D_ObjectManager presObjManager, String geometry")
 			//others parameters
 			clazz.eStructuralFeatures.each{ a |
-				buffer.append(generateParameterConstructor(a))				
+				if not(isNotVisualisable(a)) then	
+					buffer.append(generateParameterConstructor(a))	
+				end				
 			}
 			
 			buffer.append(") {\n")
 			buffer.append("		super (ctr, translation, rotation, scale, geometry, presObjManager);\n\n")			
 			//assignment for others parameters
 			clazz.eStructuralFeatures.each{ a |
-				buffer.append(generateAssignmentParameter(a))				
+				if not(isNotVisualisable(a)) then
+					buffer.append(generateAssignmentParameter(a))	
+				end			
 			}			
 			buffer.append("\n	}\n\n")
 			
