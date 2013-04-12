@@ -7,9 +7,10 @@ using Helper::*
 package JavaGenerator{
 	class ControllerGenerator inherits Generator, GenericGenerator
 	{
-
+		attribute helper : CollavizHelper
+		
 		method generate(p : EPackage) : Void is do 
-			var helper : CollavizHelper init CollavizHelper.new
+			helper := CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
 				if helper.isAuthorizedClasse(c.name) then
@@ -28,7 +29,7 @@ package JavaGenerator{
 			//generating classes
 			var bufferClassClient : StringBuffer init StringBuffer.new
 			var bufferClassService : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			 
 			stdio.writeln("\n******** Generating classes controllers CClient_"+clazz.name+" and CService_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
 			bufferClassClient.append(generatePackageClient())
@@ -129,7 +130,7 @@ package JavaGenerator{
 		
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			 
 			var typeRetour : EClass
 			var ic : String init ""
 			typeRetour ?=o.eType
@@ -167,7 +168,7 @@ package JavaGenerator{
 		
 		operation generateParameterOperation(p : EParameter) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			 
 			var typeParam : EClass
 			var icParam : String init ""
 			typeParam ?=p.eType

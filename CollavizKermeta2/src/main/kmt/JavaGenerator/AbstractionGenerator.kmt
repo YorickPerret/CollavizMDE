@@ -7,8 +7,10 @@ using Helper::*
 package JavaGenerator{
 	class AbstractionGenerator inherits Generator, GenericGenerator
 	{
+		attribute helper : CollavizHelper
+		
 		method generate(p : EPackage) : Void is do 
-			var helper : CollavizHelper init CollavizHelper.new
+			helper := CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
 				if helper.isAuthorizedClasse(c.name) then
@@ -24,7 +26,6 @@ package JavaGenerator{
 		operation generateAbstractionsClasses(clazz : EClass) : Void is do
 			//generating classes
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			stdio.writeln("\n******** Generating classe abstraction A_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
 			buffer.append(generatePackage(clazz))
@@ -138,9 +139,9 @@ package JavaGenerator{
 	   				buffer.append("				"+f.name+"Transform = new Transform(targetTransformMap);\n")
 	   				buffer.append("			}\n")
 	   				
-	   				buffer.append("			final Boolean isVisible"+f.name.toUpperCase()+" = (Boolean) chang.get(\"IsVisible\");\n")
-	   				buffer.append("			if (isVisible"+f.name.toUpperCase()+" != null) {\n")
-	   				buffer.append("				boolean myIsVisible = isVisible"+f.name.toUpperCase()+";\n")
+	   				buffer.append("			final Boolean isVisible"+helper.firstLetterUpperCase(f.name)+" = (Boolean) chang.get(\"IsVisible\");\n")
+	   				buffer.append("			if (isVisible"+helper.firstLetterUpperCase(f.name)+" != null) {\n")
+	   				buffer.append("				boolean myIsVisible = isVisible"+helper.firstLetterUpperCase(f.name)+";\n")
 	   				buffer.append("				modifications.put(\"IsVisible\", myIsVisible);\n")
 	   				buffer.append("				modified();\n")
 	   				buffer.append("			}\n")
@@ -254,20 +255,19 @@ package JavaGenerator{
 		end
 		
 		operation generateParameterPut(a : EStructuralFeature) : String is do
-			result?="		parameters.put(\""+a.name.toUpperCase()+"\","+a.name+");\n"
+			result?="		parameters.put(\""+helper.firstLetterUpperCase(a.name)+"\","+a.name+");\n"
 		end
 		
 		
 		operation generateParameterPutObservable(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
 			buffer.append("		"+a.name+"Id = null;\n")
-			buffer.append("		parameters.put(\""+a.name.toUpperCase()+"\","+a.name+"Id);\n")
+			buffer.append("		parameters.put(\""+helper.firstLetterUpperCase(a.name)+"\","+a.name+"Id);\n")
 			result?=buffer.toString()
 		end
 		
 		operation generateRegisterOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("		registerModificationCallback (\""+o.name+"\", new ICallbackHandler () {\n")
 			buffer.append("			@Override\n")
 			buffer.append("			public void callback (Object [] args) {\n")
@@ -313,7 +313,6 @@ package JavaGenerator{
 
 		method generateOperation(o : EOperation) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			var typeRetour : EClass
 			var ic : String init ""
 			typeRetour ?=o.eType
@@ -354,7 +353,6 @@ package JavaGenerator{
 		
 		operation generateParameterOperation(p : EParameter) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			var typeParam : EClass
 			var icParam : String init ""
 			typeParam ?=p.eType
@@ -374,7 +372,6 @@ package JavaGenerator{
 		
 		method generateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			var ref : EReference
 			var ic : String init ""
 			ref ?=a
@@ -400,7 +397,6 @@ package JavaGenerator{
 		
 		operation generateProcessUpdate(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("	@Override\n")
 			buffer.append("	protected void processUpdate (Map<String, Object> params) {\n")
 			buffer.append("		super.processUpdate (params) ;\n\n")
@@ -421,17 +417,16 @@ package JavaGenerator{
 		
 		operation generateObservableProcessUpdate(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("		final String _"+a.name+" = (String)params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		final String _"+a.name+" = (String)params.get(\""+helper.firstLetterUpperCase(a.name)+"\");\n")
 			buffer.append("		if(_"+a.name+"!=null){\n")	
 			buffer.append(generateAssignmentObservable(a))
-			buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+"Id);\n")
+			buffer.append("			parameters.put(\""+helper.firstLetterUpperCase(a.name)+"\",this."+a.name+"Id);\n")
 			buffer.append("		}\n\n")	
 			result?= buffer.toString()
 		end
 		
 		operation generateNormalProcessUpdate(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			var eref : EReference
 			var eattr : EAttribute
 			var ic : String init ""
@@ -448,10 +443,10 @@ package JavaGenerator{
 				array:="[]"
 			end
 
-			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+helper.firstLetterUpperCase(a.name)+"\");\n")
 			buffer.append("		if(_"+a.name+"!=null){\n")	
 			buffer.append(generateAssignment(a))
-			buffer.append("			parameters.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+			buffer.append("			parameters.put(\""+helper.firstLetterUpperCase(a.name)+"\",this."+a.name+");\n")
 			buffer.append("		}\n\n")	
 			result?= buffer.toString()
 		end
@@ -478,7 +473,6 @@ package JavaGenerator{
 
 		operation generateProcessModify(clazz : EClass) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			buffer.append("	@Override\n")
 			buffer.append("	protected void processModify (Map<String, Object> params) {\n")
 			buffer.append("		super.processModify (params) ;\n\n")
@@ -496,10 +490,10 @@ package JavaGenerator{
 		
 		operation generateObservableProcessModify(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("		final String _"+a.name+" = (String)params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		final String _"+a.name+" = (String)params.get(\""+helper.firstLetterUpperCase(a.name)+"\");\n")
 			buffer.append("		if(_"+a.name+"!=null){\n")	
 			buffer.append(generateAssignmentObservable(a))
-			buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+"Id);\n")
+			buffer.append("			modifications.put(\""+helper.firstLetterUpperCase(a.name)+"\",this."+a.name+"Id);\n")
 			buffer.append("			"+a.name+" = (IC_SupportedObject)objectManager.getObject("+a.name+"Id);\n")
 			buffer.append("			"+a.name+".registerObserver(id);\n")			
 			buffer.append("		}\n\n")	
@@ -508,7 +502,6 @@ package JavaGenerator{
 		
 		operation generateNormalProcessModify(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
 			var eref : EReference
 			var ic : String init ""
 			var type : String init a.eType.name
@@ -524,10 +517,10 @@ package JavaGenerator{
 				array:="[]"
 			end
 
-			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		final "+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+helper.firstLetterUpperCase(a.name)+"\");\n")
 			buffer.append("		if(_"+a.name+"!=null){\n")	
 			buffer.append(generateAssignment(a))
-			buffer.append("			modifications.put(\""+a.name.toUpperCase()+"\",this."+a.name+");\n")
+			buffer.append("			modifications.put(\""+helper.firstLetterUpperCase(a.name)+"\",this."+a.name+");\n")
 			buffer.append("		}\n\n")	
 			result?=buffer.toString()
 		end

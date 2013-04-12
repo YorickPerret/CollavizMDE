@@ -7,8 +7,11 @@ using kermeta::io::*
 package JavaGenerator{
 	class InterfaceControllerGenerator inherits Generator, GenericGenerator
 	{
+	
+		attribute helper : CollavizHelper
+	
 		method generate(p : EPackage) : Void is do 
-			var helper : CollavizHelper init CollavizHelper.new
+			helper := CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
 				if helper.isAuthorizedClasse(c.name) then
@@ -26,7 +29,7 @@ package JavaGenerator{
 		operation generateInterfaceClasses(clazz : EClass) : Void is do
 		
 			var bufferInterface : String
-			var helper : CollavizHelper init CollavizHelper.new
+			
 			//generating interfaces
 			stdio.writeln("\n******** Generating Interface IC_"+clazz.name+" ********")
 			bufferInterface ?= generateInterface(clazz)

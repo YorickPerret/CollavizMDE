@@ -9,8 +9,11 @@ using Helper::*
 package JavaGenerator{
 	class PJava3DGenerator inherits Generator, GenericGenerator
 	{
+	
+		attribute helper : CollavizHelper
+	
 		method generate(p : EPackage) : Void is do 
-			var helper : CollavizHelper init CollavizHelper.new
+			helper := CollavizHelper.new
 			helper.initAuthorizedClasses()
 			p.eClassifiers.each {c |
 				if helper.isAuthorizedClasse(c.name) then
@@ -28,7 +31,7 @@ package JavaGenerator{
 		operation generatePresentationsClasses(clazz : EClass) : Void is do
 			//generating classes
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			
 			
 			stdio.writeln("\n******** Generating classe presentation PJava3D_"+clazz.name+" ********")
 			var superType : EClass init clazz.eSuperTypes.one
@@ -102,7 +105,7 @@ package JavaGenerator{
 		
 		operation generateUpdateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			
 			var eref : EReference
 			var eattr : EAttribute
 			var ic : String init ""
@@ -118,10 +121,10 @@ package JavaGenerator{
 			if a.upperBound!=1 then
 				array:="[]"
 			end
-			buffer.append("		"+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+a.name.toUpperCase()+"\");\n")
+			buffer.append("		"+ic+type+array+" _"+a.name+" = ("+ic+type+array+")params.get(\""+helper.firstLetterUpperCase(a.name)+"\");\n")
 			buffer.append("		if(_"+a.name+"!=null){\n")	
 			buffer.append("			this."+a.name+"=_"+a.name+";\n")
-			buffer.append("			update"+a.name.toUpperCase()+"();\n")
+			buffer.append("			update"+helper.firstLetterUpperCase(a.name)+"();\n")
 			buffer.append("		}\n\n")	
 			result?=buffer.toString()
 		end
@@ -147,7 +150,7 @@ package JavaGenerator{
 		
 		operation generateParameterConstructor(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			
 			var ref : EReference
 			var ic : String init ""
 			ref ?=a
@@ -180,7 +183,7 @@ package JavaGenerator{
 		
 		method generateAttribute(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			var helper : CollavizHelper init CollavizHelper.new
+			
 			var ref : EReference
 			var ic : String init ""
 			ref ?=a
@@ -206,7 +209,7 @@ package JavaGenerator{
 		
 		operation generateOperationUpdate(a : EStructuralFeature) : String is do
 			var buffer : StringBuffer init StringBuffer.new
-			buffer.append("	public void update"+a.name.toUpperCase()+"(){\n")
+			buffer.append("	public void update"+helper.firstLetterUpperCase(a.name)+"(){\n")
 			buffer.append("\n")
 			buffer.append("	}\n")
 			result?=buffer.toString()
