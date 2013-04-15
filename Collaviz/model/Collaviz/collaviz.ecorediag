@@ -36,9 +36,9 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EAgwZaG5EeK2IOJtyfDljA"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_EAgwZqG5EeK2IOJtyfDljA" type="5002">
-      <children xmi:type="notation:Node" xmi:id="_EAgwbqG5EeK2IOJtyfDljA" type="2002">
-        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Juncture/setRad"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_EAgwb6G5EeK2IOJtyfDljA"/>
+      <children xmi:type="notation:Node" xmi:id="_3J5xgKWuEeKPx9cgjTaqHA" type="2002">
+        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Juncture/setRadius"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3J5xgaWuEeKPx9cgjTaqHA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EAgwZ6G5EeK2IOJtyfDljA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EAgwaKG5EeK2IOJtyfDljA"/>
@@ -46,28 +46,16 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_EAgwX6G5EeK2IOJtyfDljA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="collaviz.ecore#//Juncture"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EAgwYKG5EeK2IOJtyfDljA" x="435" y="825" width="212" height="122"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EAgwYKG5EeK2IOJtyfDljA" x="435" y="825" width="217" height="123"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_EAgwcKG5EeK2IOJtyfDljA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_EAgwc6G5EeK2IOJtyfDljA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_EAgwdKG5EeK2IOJtyfDljA" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_EAgwfKG5EeK2IOJtyfDljA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="collaviz.ecore#//Ball/essaiAttr"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_EAgwfaG5EeK2IOJtyfDljA"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EAgwdaG5EeK2IOJtyfDljA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EAgwdqG5EeK2IOJtyfDljA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EAgwd6G5EeK2IOJtyfDljA"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_EAgweKG5EeK2IOJtyfDljA" type="5002">
-      <children xmi:type="notation:Node" xmi:id="_EAgwfqG5EeK2IOJtyfDljA" type="2002">
-        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Ball/essaiOpEref"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_EAgwf6G5EeK2IOJtyfDljA"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_EAp6QKG5EeK2IOJtyfDljA" type="2002">
-        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Ball/essaiOpEref2"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_EAp6QaG5EeK2IOJtyfDljA"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EAgweaG5EeK2IOJtyfDljA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_EAgweqG5EeK2IOJtyfDljA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EAgwe6G5EeK2IOJtyfDljA"/>

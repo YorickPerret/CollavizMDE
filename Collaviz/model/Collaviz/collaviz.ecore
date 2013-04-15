@@ -12,9 +12,8 @@
         eType="#//SupportedObject" eOpposite="#//SupportedObject/support"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Juncture" eSuperTypes="#//DeformableObject">
-    <eOperations name="setRad" eType="#//void">
-      <eParameters name="radius" upperBound="-1" eType="#//double"/>
-      <eParameters name="essai" eType="#//boolean"/>
+    <eOperations name="setRadius" eType="#//void">
+      <eParameters name="newRadius" eType="#//double"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="beginBall" lowerBound="1"
         eType="#//Ball">
@@ -27,7 +26,7 @@
         eType="#//Ball">
       <eAnnotations source="http://Collaviz">
         <details key="observability" value="true"/>
-        <details key="visualisable" value="false"/>
+        <details key="visualizable" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
@@ -35,18 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
         eType="#//double" defaultValueLiteral="0.5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject">
-    <eOperations name="essaiOpEref" eType="#//void">
-      <eParameters name="p1" upperBound="-1" eType="#//Quat4d"/>
-      <eParameters name="p2" upperBound="-1" eType="#//Ball"/>
-    </eOperations>
-    <eOperations name="essaiOpEref2" eType="#//void">
-      <eParameters name="p1" eType="#//Quat4d"/>
-      <eParameters name="p2" eType="#//Ball"/>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="essaiAttr" upperBound="-1"
-        eType="#//double" defaultValueLiteral="0.0"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ball" eSuperTypes="#//SupportedObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="Quat4d">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="#//double" defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="#//double" defaultValueLiteral="0"/>
