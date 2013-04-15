@@ -20,12 +20,14 @@
         eType="#//Ball">
       <eAnnotations source="http://Collaviz">
         <details key="observability" value="true"/>
+        <details key="visualizable" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="endBall" lowerBound="1"
         eType="#//Ball">
       <eAnnotations source="http://Collaviz">
         <details key="observability" value="true"/>
+        <details key="visualisable" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
