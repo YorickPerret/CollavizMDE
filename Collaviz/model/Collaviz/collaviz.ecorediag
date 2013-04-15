@@ -37,7 +37,7 @@
     </children>
     <children xmi:type="notation:Node" xmi:id="_EAgwZqG5EeK2IOJtyfDljA" type="5002">
       <children xmi:type="notation:Node" xmi:id="_3J5xgKWuEeKPx9cgjTaqHA" type="2002">
-        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Juncture/setRadius"/>
+        <element xmi:type="ecore:EOperation" href="collaviz.ecore#//Juncture/setNewRadius"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_3J5xgaWuEeKPx9cgjTaqHA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_EAgwZ6G5EeK2IOJtyfDljA"/>
