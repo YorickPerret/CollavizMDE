@@ -54,7 +54,6 @@ package JavaGenerator{
 			buffer.append(generateProcessModify(clazz))		
 			
 			if mustGenerateObservedPropertiesChanged(clazz) then
-				stdio.writeln(" mustGenerateObservedPropertiesChanged")
 				var listFeatures : Sequence<EStructuralFeature> init Sequence<EStructuralFeature>.new
 				listFeatures ?= getObservableFeatures(clazz)
 				buffer.append(generateObservedPropertiesChanged(listFeatures))

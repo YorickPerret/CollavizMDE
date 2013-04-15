@@ -74,7 +74,7 @@ package JavaGenerator{
 		operation isNotVisualisable(f : EStructuralFeature) : Boolean is do
    			result := f.eAnnotations.exists{ eannotation |
 	        				eannotation.details.exists { es |
-	        				es.key == "visualisable" and es.~value=="false"
+	        				es.key == "visualizable" and es.~value=="false"
 	        			}
 	        		}            
 		end
