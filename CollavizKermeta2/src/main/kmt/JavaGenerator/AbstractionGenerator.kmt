@@ -304,7 +304,7 @@ package JavaGenerator{
 			}
 			buffer.append("){\n")
 			
-			buffer.append("		//you have to add modifications.put(\"ParameterName\", val);\n		//for each paramater you want to update\n ")
+			buffer.append("		//you have to add modifications.put(\"ParameterName\", val);\n		//for each parameter you want to update\n ")
 			
 			buffer.append("	}\n\n")
 			   
